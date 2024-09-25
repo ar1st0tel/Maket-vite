@@ -7,8 +7,14 @@ import Menu from "./menu/Menu.tsx";
 
 
 const App = () => {
-    return ( <div>
-    <Menu/>
+    return (
+        <div className='app-wrapper'>
+            <Menu/>
+        </div>
+
+            )
+        }
+   {/* <Menu/>
     <HeroText/>
     <HeroHeader/>
     <Features/>
@@ -19,8 +25,6 @@ const App = () => {
     <banner/>
     <Footer/>
     <BG/>
-        </div>
-)
-}
+        </div>*/}
 
 export default App

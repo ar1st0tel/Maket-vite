@@ -1,13 +1,26 @@
 import react from "@vitejs/plugin-react";
-import SearchCommon from "./searchCommon/SearchCommon.tsx";
+import classes from "./Menu.module.css";
 
 const Menu = () => {
-    return (<div>
-        <SearchCommon/>
-        <Logo/>
-        <Buttons/>
-        <Nav/>
-    </div>)
-
+    return (
+        <div className='App-wrapper'>
+       <div> Logo
+           </div>
+        <div>
+            Discover
+            </div>
+        <div>
+            Creators
+            </div>
+        <div>
+                Stats
+                </div>
+        <div>
+            Search Area
+            </div>
+        <div> Button Wallet
+            </div>
+        </div>
+        )
 }
 export default Menu

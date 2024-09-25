@@ -1,0 +1,9 @@
+.app-wrapper {
+    margin: 0 auto;
+    width: 1024px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 5fr 3fr;
+    grid-template-columns: 2fr;
+   grid-template-areas:
+    "a" "b" "b" "b" "b" "c" "d"
+}
