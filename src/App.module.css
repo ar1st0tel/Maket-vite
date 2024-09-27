@@ -1,13 +1,27 @@
-.app-wrapper {
+.appWrapper {
     margin: 0 auto;
-    width: 100%;
-    gap: 40px;
-    padding-left: 8%;
-    display: grid;
-    grid-template-rows: 1fr repeat(4, 2fr);
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 5fr 3fr
+    width: 90%;
+    padding: 20px 10px;
+    background: aqua;
+    border: 1px solid gray;
 }
+.item {
 
+}
+.box {
+    display: grid;
+    grid-template-columns: 1fr 9fr 7fr 4fr;
+    gap: 0 20px;
+}
+.boxSearch {
+    border: 1px solid gray;
+    border-radius: 15px;
+    background: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0 20px;
+}
 /*
 #root {
   max-width: 1280px;

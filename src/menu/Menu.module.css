@@ -1,6 +1,7 @@
-.app-wrapper {
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+
+.fontInter {
+    font-family: Inter;
+}
+.fontPoppins {
+    font-family: Poppins;
 }

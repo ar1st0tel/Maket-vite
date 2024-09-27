@@ -1,28 +1,14 @@
 import react from "@vitejs/plugin-react";
-import classes from "./Menu.module.css";
-
+import Nav from "./nav/nav.tsx";
+import classes from "../App.module.css";
+import SearchArea from "./searchArea/searchArea.tsx";
 const Menu = () => {
     return (
-        <div className='app-wrapper'>
-       <div>
-           Logo
-           </div>
-        <div>
-            Discover
-            </div>
-        <div>
-            Creators
-            </div>
-        <div>
-            Sells
-            </div>
-        <div>
-            Stats
-            </div>
-        <div>
-            Search Area
-            </div>
-        <button>
+        <div className={classes.box}>
+           <img src='http://nordclan.com/uploads/7fd92b823a724f539f05e0feb0dd2ac7.png' alt='1'/> {/*logo*/}
+       <Nav/>
+        <SearchArea/>
+        <button className={classes.item}>
             Wallet
             </button>
         </div>
