@@ -1,11 +1,11 @@
 .app-wrapper {
     margin: 0 auto;
-    width: 1024px;
+    width: 100%;
+    gap: 40px;
+    padding-left: 8%;
     display: grid;
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 5fr 3fr;
-    grid-template-columns: 2fr;
-    grid-template-areas:
-    "a" "b" "b" "b" "b" "c" "d"
+    grid-template-rows: 1fr repeat(4, 2fr);
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 5fr 3fr
 }
 
 /*

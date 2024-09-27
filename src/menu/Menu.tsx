@@ -3,8 +3,9 @@ import classes from "./Menu.module.css";
 
 const Menu = () => {
     return (
-        <div className='App-wrapper'>
-       <div> Logo
+        <div className='app-wrapper'>
+       <div>
+           Logo
            </div>
         <div>
             Discover
@@ -13,13 +14,17 @@ const Menu = () => {
             Creators
             </div>
         <div>
-                Stats
-                </div>
+            Sells
+            </div>
+        <div>
+            Stats
+            </div>
         <div>
             Search Area
             </div>
-        <div> Button Wallet
-            </div>
+        <button>
+            Wallet
+            </button>
         </div>
         )
 }
