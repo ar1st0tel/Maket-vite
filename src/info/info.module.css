@@ -1,7 +1,8 @@
 .infoBox {
     display: grid;
-    grid-template-columns: 3fr 4fr;
+    grid-template-columns: 10fr 13fr;
     grid-template-rows: 5fr 1fr;
+    gap: 30px 50px;
     grid-template-areas:
     "item1 item3"
     "item2 item3"
@@ -19,13 +20,22 @@
 .item1Text {
     display: grid;
     grid-template-rows: 5fr 2fr;
-    align-items: end;
+    align-items: center;
 }
 .item2{
     grid-area: item2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .item3{
     grid-area: item3;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0 1vw;
+    grid-template-areas:
+    "pic1 pic1 pic1 pic2 pic3"
+    "pic1 pic1 pic1 "
 }
 .boldText {
     font-family: Poppins;
@@ -34,4 +44,24 @@
     line-height: 90px;
     letter-spacing: -3px;
     text-align: left;
+}
+.button1{
+    border-radius: 12px;
+    background: black;
+    color: white;
+}
+.button2{
+    border-radius: 12px;
+    border: 1.5px solid black;
+}
+.buttonCommon{
+    display: grid;
+    grid-template-columns: 12fr 10fr 11fr;
+    gap: 0 15px;
+    align-items: end;
+}
+.stat {
+    display: grid;
+    grid-template-rows: 2fr 1fr
+
 }

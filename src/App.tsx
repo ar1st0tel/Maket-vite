@@ -12,7 +12,7 @@ const App = () => {
             <div className={classes.background}>
                 <div className={classes.headerBack}>
                     <Menu/> </div>
-                <div className={classes.contentBack}> <Info /> </div>
+                <div className={classes.content1Back}> <Info /> </div>
                 <div className={classes.appWrapper}> content1 WIDE</div>
                 <div className={classes.contentBack}>content2</div>
                 <div className={classes.contentBack}>content3</div>

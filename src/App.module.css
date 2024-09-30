@@ -8,6 +8,11 @@
     border: 1px solid gray;
     margin-bottom: 100px;
 }
+.content1Back {
+    margin: 0 0 0 53px;
+    padding: 20px 10px;
+    border: 1px solid gray;
+}
 .contentBack {
     margin: 0 auto;
     width: 90%;
@@ -28,6 +33,7 @@
     width: 85%;
     display: grid;
     justify-items: center;
+    border: 1px solid red;
 }
 .box {
     display: grid;

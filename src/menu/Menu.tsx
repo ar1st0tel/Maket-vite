@@ -1,4 +1,3 @@
-import react from "@vitejs/plugin-react";
 import Nav from "./nav/nav.tsx";
 import classes from "../App.module.css";
 import SearchArea from "./searchArea/searchArea.tsx";
