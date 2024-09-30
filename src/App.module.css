@@ -1,26 +1,65 @@
-.appWrapper {
+.background{
+ background: #F9F9F9;
+}
+.headerBack {
     margin: 0 auto;
     width: 90%;
     padding: 20px 10px;
-    background: aqua;
+    border: 1px solid gray;
+    margin-bottom: 100px;
+}
+.contentBack {
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px 10px;
     border: 1px solid gray;
 }
-.item {
 
+.appWrapper {
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 10fr 1fr;
+    border: 1px solid green;
+}
+.banner {
+    margin: 0 auto;
+    width: 85%;
+    display: grid;
+    justify-items: center;
 }
 .box {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 9fr 7fr 4fr;
     gap: 0 20px;
+    border:1px solid orange;
+    color: #606060;
+;
 }
 .boxSearch {
     border: 1px solid gray;
     border-radius: 15px;
-    background: aliceblue;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0 20px;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    background: #EDEDED;
+}
+.boxWallet {
+    height: 100%;
+    color: #FFFFFF;
+    background: #141416;
+    border-radius: 16px;
+}
+.item {
+    padding: 0 20px;
+}
+.fontPoppins {
+    font-family: Poppins;
+    color: #C2C3CB;
 }
 /*
 #root {

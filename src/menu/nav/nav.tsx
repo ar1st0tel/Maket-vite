@@ -4,16 +4,16 @@ const Nav = () => {
     return (<div>
             <div className={classes.box}>
                 <div className={classes.item}>
-                    Discover
+                    DISCOVER
                 </div>
                 <div className={classes.item}>
-                    Creators
+                    CREATORS
                 </div>
                 <div className={classes.item}>
-                    Sells
+                    SELLS
                 </div>
                 <div className={classes.item}>
-                    Stats
+                    STATS
                 </div>
             </div>
         </div>

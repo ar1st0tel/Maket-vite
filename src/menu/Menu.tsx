@@ -5,11 +5,11 @@ import SearchArea from "./searchArea/searchArea.tsx";
 const Menu = () => {
     return (
         <div className={classes.box}>
-           <img src='http://nordclan.com/uploads/7fd92b823a724f539f05e0feb0dd2ac7.png' alt='1'/> {/*logo*/}
-       <Nav/>
-        <SearchArea/>
-        <button className={classes.item}>
-            Wallet
+            <img src='http://nordclan.com/uploads/7fd92b823a724f539f05e0feb0dd2ac7.png' alt='1'/> {/*img search*/}
+            <Nav/>
+            <SearchArea/>
+        <button className={classes.boxWallet}>
+            WALLET
             </button>
         </div>
         )
