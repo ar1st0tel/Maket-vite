@@ -1,7 +1,7 @@
 .infoBox {
     display: grid;
     grid-template-columns: 10fr 13fr;
-    grid-template-rows: 5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 30px 50px;
     grid-template-areas:
     "item1 item3"
@@ -26,16 +26,35 @@
     grid-area: item2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    height: 10vh;
 }
 .item3{
     grid-area: item3;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 0 1vw;
     grid-template-areas:
     "pic1 pic1 pic1 pic2 pic3"
-    "pic1 pic1 pic1 "
+    "pic1 pic1 pic1 pic4 pic3"
+    "pic0 pic0 pic0 pic4 pic3"
+}
+.bigPic {
+    display: grid;
+    border: 2px solid black;
+    grid-area: pic1;
+}
+.arrow{
+    display: grid;
+    grid-area: pic2;
+}
+.dots {
+    display: grid;
+    grid-area: pic3;
+}
+.smallPic {
+    display: grid;
+    grid-area: pic4;
 }
 .boldText {
     font-family: Poppins;
