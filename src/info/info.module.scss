@@ -12,6 +12,7 @@
     border: 1px solid orange;
 }
 .item1{
+    padding-left: 10px;
     grid-area: item1;
     display: grid;
     grid-template-rows: 4fr 1fr;
@@ -22,12 +23,14 @@
     grid-template-rows: 5fr 2fr;
     align-items: center;
 }
-.item2{
+.item2 {
+    padding-left: 10px;
     grid-area: item2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 10vh;
-}
+    place-content: center
+};
 .item3{
     grid-area: item3;
     display: grid;
@@ -42,34 +45,46 @@
     display: grid;
     border: 2px solid black;
     grid-area: pic1;
-    justify-content: center;
-    align-content: center;
+   /* justify-content: center;
+    justify-self: center;*/
+
 }
 .arrow {
     display: grid;
     grid-area: pic2;
     border: 2px solid black;
-    justify-content: center;
-    align-content: center;
+  /*  justify-content: center;
+    align-content: center;*/
     rotate: 7deg;
 }
 .dots {
     display: grid;
     grid-area: 1/5/3/6;
     border: 2px solid black;
+/*    justify-self: end;*/
 }
 .smallPic {
     display: grid;
     grid-area: 2/4/4/6;
     border: 2px solid black;
-   justify-content: end;
-    align-content: end;
+    width: 110%;
+    justify-self: center;
 }
-.buttonPicCommon{
+.smallPic img {
+    width: 100%;
+}
+.buttonGrid{
     display: grid;
     grid-area: 4/2/5/3;
     grid-template-columns: 1fr 1fr;
     border: 2px solid black;
+}
+.buttonCommon{
+    border-radius: 17px;
+    background: #f9f9f9;
+    .L{color: #929292;
+    }
+    .R{color: #23262F}
 }
 .boldText {
     font-family: Poppins;
