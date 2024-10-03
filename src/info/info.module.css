@@ -1,7 +1,7 @@
 .infoBox {
     display: grid;
     grid-template-columns: 10fr 13fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 35vh 15vh;
     gap: 30px 50px;
     grid-template-areas:
     "item1 item3"
@@ -31,13 +31,12 @@
 .item3{
     grid-area: item3;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 10vw);
+    grid-template-rows: repeat(2, 12vw) 6vh 6vh;
     gap: 0 1vw;
     grid-template-areas:
     "pic1 pic1 pic1 pic2 pic3"
-    "pic1 pic1 pic1 pic4 pic3"
-    "pic0 pic0 pic0 pic4 pic3"
+    "pic1 pic1 pic1 pic4 pic4"
 }
 .bigPic {
     display: grid;
@@ -47,14 +46,23 @@
 .arrow{
     display: grid;
     grid-area: pic2;
+    border: 2px solid black;
 }
 .dots {
     display: grid;
-    grid-area: pic3;
+    grid-area: 1/5/3/6;
+    border: 2px solid black;
 }
 .smallPic {
     display: grid;
-    grid-area: pic4;
+    grid-area: 2/4/4/6;
+    border: 2px solid black;
+}
+.buttonPicCommon{
+    display: grid;
+    grid-area: 4/2/5/3;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid black;
 }
 .boldText {
     font-family: Poppins;
@@ -81,6 +89,18 @@
 }
 .stat {
     display: grid;
-    grid-template-rows: 2fr 1fr
+    grid-template-rows: 2fr 1fr;
+}
+.strong{
+    font-family: Public Sans;
+    font-size: 36.77px;
+    font-weight: 600;
+    line-height: 45.96px;
+}
+.weak {
+    font-family: Inter;
+    font-size: 12.26px;
+    font-weight: 500;
+    line-height: 18.39px;
 
 }

@@ -3,14 +3,17 @@ import classes from '../../info.module.css'
 const Stats = () => {
     return (
         <>
-            <div className={classes.Stat}>
-                1
+            <div className={classes.stat}>
+                <div className={classes.strong}>430K+</div>
+                <div className={classes.weak}>Art Works</div>
             </div>
-            <div className={classes.Stat}>
-                2
+            <div className={classes.stat}>
+                <div className={classes.strong}>159K+</div>
+                <div className={classes.weak}>Creators</div>
             </div>
-            <div className={classes.Stat}>
-                3
+            <div className={classes.stat}>
+                <div className={classes.strong}>87K+</div>
+                <div className={classes.weak}>Collections</div>
             </div>
         </>
     )

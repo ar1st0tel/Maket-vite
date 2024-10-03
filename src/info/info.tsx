@@ -1,7 +1,7 @@
 import classes from "./info.module.css";
 import Preview from "./preview/preview.tsx";
 import Stats from "./preview/stats/stats.tsx";
-import Pic1, {Pic2, Pic3, Pic4} from "./preview/pics/pics.tsx";
+import Pic1, {ButtonPic, Pic2, Pic3, Pic4} from "./preview/pics/pics.tsx";
 
 const Info = () => {
     return (
@@ -12,6 +12,7 @@ const Info = () => {
                 <Pic2/>
                 <Pic3/>
                 <Pic4/>
+                <ButtonPic/>
             </div>
         </div>
     );
