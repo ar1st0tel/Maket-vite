@@ -5,7 +5,7 @@
   align-content: center;
   text-align: end;
   grid-template-columns: 4fr repeat(5, 3fr);
-  grid-template-rows: 10vh 7vh repeat(4, 10vh);
+  grid-template-rows: 10vh 7vh repeat(4, 10vh) ;
   grid-template-areas:
   "header header header header header header"
   "title title title title title title"
@@ -63,4 +63,10 @@
   .items {
     grid-area: items;   display: grid;
     grid-template-rows: repeat(4, 10vh);
+  }
+  .explore {
+    color: #ACADB9;
+    display: grid;
+    grid-template-columns: 9vh 3vh;
+    justify-content: end;
   }
