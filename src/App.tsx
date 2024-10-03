@@ -5,6 +5,7 @@ import classes from "./App.module.scss";
 import Menu from "./menu/Menu.tsx";
 import Info from "./info/info.tsx";
 import ContentWide from "./contentWide/contentWide.tsx";
+import Content2 from "./content2/content2.tsx";
 
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
                     <Menu/> </div>
                 <div className={classes.content1Back}> <Info /> </div>
                 <div className={classes.appWrapper}><ContentWide/></div>
-                <div className={classes.contentBack}>content2</div>
+                <div className={classes.contentBack}><Content2/></div>
                 <div className={classes.contentBack}>content3</div>
                 <div className={classes.contentBack}>advice</div>
                 <div className={classes.banner}>banner tight</div>

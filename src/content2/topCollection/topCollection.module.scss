@@ -1,0 +1,66 @@
+.table
+{
+  border: 1px solid black;
+  display: grid;
+  align-content: center;
+  text-align: end;
+  grid-template-columns: 4fr repeat(5, 3fr);
+  grid-template-rows: 10vh 7vh repeat(4, 10vh);
+  grid-template-areas:
+  "header header header header header header"
+  "title title title title title title"
+  "name volume h24 floor owners items"
+  "name volume h24 floor owners items"
+  "name volume h24 floor owners items"
+  "name volume h24 floor owners items"
+}
+
+  .header {
+    grid-area: header;
+    text-align: center;
+  }
+
+  .title {
+    grid-area: title;
+    display: grid;
+    grid-template-columns: 4fr repeat(5, 3fr);
+  }
+  .collection {
+    display: grid;
+    text-align: start;
+  }
+
+  .name {
+    grid-area: name;
+    display: grid;
+    grid-template-rows: repeat(4, 10vh);
+    text-align: start;
+  }
+
+  .volume {
+    grid-area: volume;
+    display: grid;
+    grid-template-rows: repeat(4, 10vh);
+  }
+
+  .h24 {
+    grid-area: h24;
+    display: grid;
+    grid-template-rows: repeat(4, 10vh);
+  }
+
+  .floor {
+    grid-area: floor;
+    display: grid;
+    grid-template-rows: repeat(4, 10vh);
+  }
+
+  .owners {
+    grid-area: owners;   display: grid;
+    grid-template-rows: repeat(4, 10vh);
+  }
+
+  .items {
+    grid-area: items;   display: grid;
+    grid-template-rows: repeat(4, 10vh);
+  }

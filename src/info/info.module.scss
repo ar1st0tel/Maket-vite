@@ -75,17 +75,11 @@
 }
 .buttonGrid{
     display: grid;
-    grid-area: 4/2/5/3;
+    grid-area: 3/1/4/4;
     grid-template-columns: 1fr 1fr;
     border: 2px solid black;
 }
-.buttonCommon{
-    border-radius: 17px;
-    background: #f9f9f9;
-    .L{color: #929292;
-    }
-    .R{color: #23262F}
-}
+
 .boldText {
     font-family: Poppins;
     font-size: 75px;

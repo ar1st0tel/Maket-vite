@@ -33,12 +33,3 @@ const Pic4 = () => {
     )
 }
 export {Pic4};
-const ButtonPic = () =>{
-    return <div className={classes.buttonGrid}>
-        <div className={classes.buttonCommon}>
-        <button className={classes}>L</button>
-        <button>R</button>
-        </div>
-    </div>
-}
-export {ButtonPic};
