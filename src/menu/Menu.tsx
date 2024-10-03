@@ -1,5 +1,5 @@
 import Nav from "./nav/nav.tsx";
-import classes from "../App.module.css";
+import classes from "../App.module.scss";
 import SearchArea from "./searchArea/searchArea.tsx";
 const Menu = () => {
     return (

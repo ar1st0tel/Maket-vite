@@ -1,4 +1,4 @@
-import classes from "./info.module.css";
+import classes from "./info.module.scss";
 import Preview from "./preview/preview.tsx";
 import Stats from "./preview/stats/stats.tsx";
 import Pic1, {ButtonPic, Pic2, Pic3, Pic4} from "./preview/pics/pics.tsx";

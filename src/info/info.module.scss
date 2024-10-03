@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 10fr 13fr;
     grid-template-rows: 35vh 15vh;
-    gap: 30px 50px;
+    gap: 30px 74px;
     grid-template-areas:
     "item1 item3"
     "item2 item3"
@@ -42,11 +42,16 @@
     display: grid;
     border: 2px solid black;
     grid-area: pic1;
+    justify-content: center;
+    align-content: center;
 }
-.arrow{
+.arrow {
     display: grid;
     grid-area: pic2;
     border: 2px solid black;
+    justify-content: center;
+    align-content: center;
+    rotate: 7deg;
 }
 .dots {
     display: grid;
@@ -57,6 +62,8 @@
     display: grid;
     grid-area: 2/4/4/6;
     border: 2px solid black;
+   justify-content: end;
+    align-content: end;
 }
 .buttonPicCommon{
     display: grid;

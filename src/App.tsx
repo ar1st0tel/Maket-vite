@@ -1,7 +1,7 @@
 import react from "@vitejs/plugin-react";
 import {useState} from "react";
-import './App.module.css'
-import classes from "./App.module.css";
+import './App.module.scss'
+import classes from "./App.module.scss";
 import Menu from "./menu/Menu.tsx";
 import Info from "./info/info.tsx";
 

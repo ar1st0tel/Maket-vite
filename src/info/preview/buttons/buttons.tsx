@@ -1,4 +1,4 @@
-import classes from '../../info.module.css'
+import classes from '../../info.module.scss'
 const Buttons = () => {
     return (
         <div className={classes.buttonCommon}>

@@ -1,4 +1,4 @@
-import classes from '../../App.module.css';
+import classes from '../../App.module.scss';
 const SearchArea = () => {
     return (<div className={classes.boxSearch}>
             <div className={classes.item}>

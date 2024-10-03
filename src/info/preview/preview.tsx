@@ -1,4 +1,4 @@
-import classes from "../info.module.css";
+import classes from "../info.module.scss";
 import Texts from "./texts/texts.tsx";
 import Buttons from "./buttons/buttons.tsx";
 
