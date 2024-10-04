@@ -1,4 +1,6 @@
-.table{background: #141416;
+.table {
+  background: #141416;
+  padding: 20px 0;
   width: 100%;
   color: #B9B9B9;
   display: grid;
@@ -6,13 +8,73 @@
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
   "line1 line1"
-  "line2 line2"
+  "line2 line2";
+  justify-items: center;
 }
+
+.box {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, auto);
+  gap: 0 4vw;
+  border: 1px solid orange;
+  color: #606060;
+}
+
+.box1 {
+  display: grid;
+  align-items: end;
+  grid-template-columns: repeat(4, auto);
+  gap: 0 4vw;
+  border: 1px solid orange;
+  color: #606060;
+}
+
 .line1 {
   grid-area: line1;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  gap: 5vw;
+  width: 90%;
+  padding: 25px 10px;
+  border-bottom: 1px solid #818181;
+
 }
+
 .line2 {
   grid-area: line2;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  gap: 5vw;
+  width: 90%;
+  padding: 25px 10px;
+  border-top: 1px solid #818181;
+}
+
+.logos {
+  display: grid;
+  justify-items: end;
+}
+
+.rights {
+  font-size: 12px;
+}
+
+.whiteLogo {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  font-size: 30px;
+}
+
+.a:active,
+.a:hover,
+.a {
+  text-decoration: none;
+  color: #606060;
 }

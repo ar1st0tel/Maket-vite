@@ -1,0 +1,55 @@
+.table {
+  display: grid;
+  grid-template-columns: 73fr 100fr;
+  grid-template-rows: 60vh;
+  gap: 10vw;
+}
+.left {
+display: grid;
+  grid-template-columns: repeat(2, 20vw);
+  grid-template-rows: 1px 5fr 1fr;
+  grid-template-areas:
+  "bord NOTHING"
+  "top top"
+  "bottom bottom ";
+  row-gap: 4vh;
+}
+.right{
+  display: grid;
+}
+.top{
+  display: grid;
+  grid-area: top;
+}
+.bottom{
+  display: grid;
+  grid-area: bottom;
+  grid-template-columns: repeat(3, 1fr);
+}
+.bord {
+  display: grid;
+  grid-area: bord;
+  border: 0.5px solid #201F1F;
+}
+.heroText {
+  display: grid;
+}
+.heroInfo {
+  font-family: Poppins;
+  font-size: 75px;
+  font-weight: 600;
+  line-height: 90px;
+  letter-spacing: -3px;
+  text-align: left;
+}
+.heroContext {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: justify;
+}
+.heroButton {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}

@@ -1,7 +1,7 @@
 import classes from '../../App.module.scss';
 
 const Nav = () => {
-    return (<div>
+    return (<div className={classes.nav}>
             <div className={classes.box}>
                 <div className={classes.item}>
                     DISCOVER

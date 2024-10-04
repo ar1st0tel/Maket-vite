@@ -7,6 +7,7 @@ import Menu from "./menu/Menu.tsx";
 import Content2 from "./content2/content2.tsx";
 import Content3 from "./content3/content3.tsx";
 import Footer from "./footer/footer.tsx";
+import Hero from "./Hero/hero.tsx";
 
 
 const App = () => {
@@ -14,8 +15,9 @@ const App = () => {
         <div>
             <div className={classes.background}>
                 <div className={classes.headerBack}>
-                    <Menu/> </div>
-               {/* <div className={classes.content1Back}> <Info/> </div>*/}
+                    <Menu/></div>
+                {/* <div className={classes.content1Back}> <Info/> </div>*/}
+                <div className={classes.content1Back}><Hero/></div>
                 <div className={classes.contentBack}><Content2/></div>
                 <div className={classes.contentBack}><Content3/></div>
                 <div className={classes.appWrapper}><Footer/></div>

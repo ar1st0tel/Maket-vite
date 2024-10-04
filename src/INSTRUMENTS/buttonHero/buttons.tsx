@@ -1,4 +1,4 @@
-import classes from '../../info.module.scss'
+import classes from './buttons.module.scss'
 const ButtonExplore = () => {
     return (
         <div>
@@ -6,7 +6,7 @@ const ButtonExplore = () => {
         </div>
     )
 }
-export default ButtonExplore
+export {ButtonExplore}
 
 const ButtonCreate =() => {
     return (

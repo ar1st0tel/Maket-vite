@@ -8,7 +8,7 @@ const Menu = () => {
             <Nav/>
             <SearchArea/>
         <button className={classes.boxWallet}>
-            WALLET
+            CONNECT WALLET
             </button>
         </div>
         )
