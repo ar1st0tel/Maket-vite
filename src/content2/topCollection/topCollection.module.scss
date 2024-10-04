@@ -2,7 +2,6 @@
 {
   border: 1px solid black;
   display: grid;
-  align-content: center;
   text-align: end;
   grid-template-columns: 4fr repeat(5, 3fr);
   grid-template-rows: 10vh 7vh repeat(4, 10vh) ;

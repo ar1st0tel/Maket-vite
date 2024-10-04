@@ -4,7 +4,7 @@ import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
 const TopCollection = () => {
     return (<div>
         <div className={classes.table}>
-            <div className={classes.header}>header</div>
+            <div className={classes.header}>Top Collection</div>
             <div className={classes.title}>
                 <div className={classes.collection}>Collection</div>
                 <div>Volume</div>

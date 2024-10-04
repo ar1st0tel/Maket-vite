@@ -1,5 +1,47 @@
 .table {
+  border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 2fr repeat(2, 13fr);
+  grid-template-rows: 5vh 10vh repeat(2, 35vh);
+  grid-template-areas:
+  "text text text text"
+  "filt filt filt filt"
+  "line1 line1 line1 line1"
+  "line2 line2 line2 line2";
+  ;
+}
+.text {
+  display: grid;
+  justify-content: center;
+  grid-area: text;
+  padding-bottom: 4vh;
+}
+.filt {
+  display: grid;
+  grid-area: filt;
+  justify-content: center;
+  padding-bottom: 8vh;
+}
+.line1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-area: line1;
+  gap: 4vw;
+  padding-bottom: 4vh;
+
+}
+.line2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-area: line2;
+  gap: 4vw;
+  padding-bottom: 4vh;
+}
+.item {
+  border: 1px solid black;
+}
+.explore {
+  display: grid;
+  justify-content: end;
+  color: #ACADB9;
 }
