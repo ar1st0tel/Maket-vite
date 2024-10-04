@@ -6,6 +6,7 @@ import Menu from "./menu/Menu.tsx";
 /*import Info from "./info/info.tsx";*/
 import Content2 from "./content2/content2.tsx";
 import Content3 from "./content3/content3.tsx";
+import Footer from "./footer/footer.tsx";
 
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
                {/* <div className={classes.content1Back}> <Info/> </div>*/}
                 <div className={classes.contentBack}><Content2/></div>
                 <div className={classes.contentBack}><Content3/></div>
-                <div className={classes.appWrapper}>footer</div>
+                <div className={classes.appWrapper}><Footer/></div>
             </div>
         </div>
     )

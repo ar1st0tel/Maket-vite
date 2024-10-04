@@ -1,20 +1,22 @@
+import classes from "./footer.module.scss"
+
 const Footer = () => {
     return (
-        <div>
-            <div>
-                <div>logo</div>
-                <div>DiveSea</div>
-                <div>Privacy Policy</div>
-                <div>Team & Conditions</div>
-                <div>About Us</div>
-                <div>Contact</div>
+        <div className={classes.table}>
+            <div className={classes.line1}>
+                <div className={classes.item1}>logo</div>
+                <div className={classes.item2}>DiveSea</div>
+                <div className={classes.item3}>Privacy Policy</div>
+                <div className={classes.item4}>Team & Conditions</div>
+                <div className={classes.item5}>About Us</div>
+                <div className={classes.item6}>Contact</div>
             </div>
-            <div>
-                <div>Rights</div>
-                <div>inst</div>
-                <div>linked</div>
-                <div>fb</div>
-                <div>twitter</div>
+            <div className={classes.line2}>
+                <div className={classes.item7}>Rights</div>
+                <div className={classes.item8}>inst</div>
+                <div className={classes.item9}>linked</div>
+                <div className={classes.item10}>fb</div>
+                <div className={classes.item11}>twitter</div>
             </div>
         </div>
     )
