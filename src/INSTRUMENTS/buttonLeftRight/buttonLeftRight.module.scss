@@ -1,4 +1,8 @@
-.Common { height: 100%;
+.Common {
+  display: grid;
+  width: 9vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   .Left {
     color: #929292;
     background: #FCFCFD;

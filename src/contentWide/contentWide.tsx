@@ -1,5 +1,5 @@
 import classes from "./contentWide.module.scss";
-import {ButtonPic} from "../info/preview/pics/buttonLeftRight/buttonLeftRight.tsx";
+import {ButtonPic} from "../INSTRUMENTS/buttonLeftRight/buttonLeftRight.tsx";
 
 const ContentWide = () => {
     return (
@@ -10,7 +10,7 @@ const ContentWide = () => {
             <div>
                 carousel
             </div>
-            <ButtonPic/>
+            <div className={classes.button}><ButtonPic/></div>
         </div>
     )
 }

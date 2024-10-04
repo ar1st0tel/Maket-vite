@@ -1,4 +1,5 @@
 import classes from "./topCollection.module.scss";
+import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
 
 const TopCollection = () => {
     return (<div>
@@ -49,9 +50,10 @@ const TopCollection = () => {
                 <div>Volume</div>
             </div>
         </div>
-            <div>
-                <div className={classes.explore}>Explore All <img src="http://nordclan.com/uploads/46970e9cd94e4efa89ae9410b424208f.png" alt="1"/></div>
+            <div className={classes.explore}>
+                <ExploreAll/>
             </div>
+
         </div>
     )
 }

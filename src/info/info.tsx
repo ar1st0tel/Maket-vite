@@ -2,7 +2,7 @@ import classes from "./info.module.scss";
 import Preview from "./preview/preview.tsx";
 import Stats from "./preview/stats/stats.tsx";
 import Pic1, {Pic2, Pic3, Pic4} from "./preview/pics/pics.tsx";
-import {ButtonPic} from "./preview/pics/buttonLeftRight/buttonLeftRight.tsx";
+import {ButtonPic} from "../INSTRUMENTS/buttonLeftRight/buttonLeftRight.tsx";
 
 const Info = () => {
     return (
