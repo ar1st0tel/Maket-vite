@@ -1,26 +1,42 @@
 import classes from "./exploreMarketplace.module.scss";
 import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
+import SunGlass1 from "../../IMG/SunGlass1.png"
+import Category from "../../IMG/Category.png"
+import Collection from "../../IMG/Collection.png"
+import Price from "../../IMG/Price.png"
+import Card from "./card/card.tsx";
 
-const ExploreMarketplace = () =>{
+const ExploreMarketplace = () => {
     return (<div>
-        <div className={classes.table}>
-            <div className={classes.text}>Text</div>
-            <div className={classes.filt}>
-                All Category Collections Price
+            <div className={classes.table}>
+                <div className={classes.text}>Explore Marketplace</div>
+                <div className={classes.filt}>
+                    <button className={classes.buttonBorder}>All</button>
+                    <button className={classes.buttonBorder}>
+                        <div className={classes.buttonAlign}>
+                            <img src={Category} alt="1"/>Category
+                        </div>
+                    </button>
+                    <button className={classes.buttonBorder}>
+                        <div className={classes.buttonAlign}><img src={Collection} alt="1"/>Collection</div>
+                    </button>
+                    <button className={classes.buttonBorder}>
+                        <div className={classes.buttonAlign}><img src={Price} alt="1"/>Price</div>
+                    </button>
+                </div>
+                <div className={classes.line1}>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </div>
+                <div className={classes.line2}>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                </div>
             </div>
-            <div className={classes.line1}>
-                <div className={classes.item}>img1</div>
-                <div className={classes.item}>img2</div>
-                <div className={classes.item}>img3</div>
-                <div className={classes.item}>img4</div>
-            </div>
-            <div className={classes.line2}>
-                <div className={classes.item}>img5</div>
-                <div className={classes.item}>img6</div>
-                <div className={classes.item}>img7</div>
-                <div className={classes.item}>img8</div>
-            </div>
-        </div>
             <div className={classes.explore}>
                 <ExploreAll/>
             </div>

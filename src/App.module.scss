@@ -1,6 +1,5 @@
 .background{
  background: #F9F9F9;
-    max-width: 1440px;
     width: 100%;
     margin:0 auto;
 }
@@ -8,29 +7,14 @@
     margin: 0 auto;
     width: 90%;
     padding: 20px 10px;
-    border: 1px solid gray;
     margin-bottom: 50px;
 }
-.content1Back {
-    margin: 0 auto;;
-    padding: 20px 0 20px 66px;
-    border: 1px solid gray;
-}
+
 .contentBack {
     margin: 0 auto;
     width: 90%;
     padding: 20px 10px;
-    border: 1px solid gray;
 }
-
-.appWrapper {
-    margin: 0 auto;
-    display: grid;
-    justify-items: center;
-    grid-auto-columns: 1fr;
-    border: 1px solid green;
-}
-
 .nav {
     display: grid;
 }
@@ -43,17 +27,30 @@
 .box {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(4, auto);
-    gap: 0 20px;
-    border:1px solid orange;
+    grid-template-columns: 7vw repeat(3, auto);
+    gap: 0 4vw;
     color: #606060;
-;
 }
+
+.boxSmall {
+    display: grid;
+    align-items: center;
+    grid-template-columns:repeat(4, auto);
+    gap: 0 3vw;
+    color: #606060;
+}
+.searchArea{
+    border: none;
+    font-family: Poppins;
+    resize: none;
+    background: none;
+    align-content: center;
+    outline: none;
+    }
 .boxSearch {
-    border: 1px solid gray;
     border-radius: 15px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 3vw auto;
     align-items: center;
     gap: 20px;
     height: 100%;
@@ -65,8 +62,13 @@
     background: #141416;
     border-radius: 16px;
 }
-.item {
-    padding-left: 20px;
+.item:active,
+.item:hover,
+.item
+{
+    text-decoration: none;
+    color: #606060;
+    justify-self: center;
 }
 .fontPoppins {
     font-family: Poppins;

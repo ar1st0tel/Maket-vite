@@ -1,19 +1,20 @@
 import classes from "../footer.module.scss";
+import {NavLink} from "react-router-dom";
 
 const FootLine1 = () => {
     return (<div>
             <div className={classes.box}>
                 <div>
-                    <a className={classes.a} href="#S">Privacy Policy</a>
+                    <NavLink className={classes.a} to="#S">Privacy Policy</NavLink>
                 </div>
                 <div>
-                    <a className={classes.a} href="#S">Team & Conditions</a>
+                    <NavLink className={classes.a} to="#S">Team & Conditions</NavLink>
                 </div>
                 <div>
-                    <a className={classes.a} href="#S">About Us</a>
+                    <NavLink className={classes.a} to="#S">About Us</NavLink>
                 </div>
                 <div>
-                    <a className={classes.a} href="#S">Contact</a>
+                    <NavLink className={classes.a} to="#S">Contact</NavLink>
                 </div>
             </div>
         </div>

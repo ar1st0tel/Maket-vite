@@ -1,8 +1,8 @@
 import classes from "./topCollection.module.scss";
 import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
-
+import LineTC from "./lineTC/lineTC.tsx";
 const TopCollection = () => {
-    return (<div>
+    return (<div className={classes.font}>
         <div className={classes.table}>
             <div className={classes.header}>Top Collection</div>
             <div className={classes.title}>
@@ -13,7 +13,13 @@ const TopCollection = () => {
                 <div>Owners</div>
                 <div>Items</div>
             </div>
-            <div className={classes.name}>
+            <div className={classes.line}>
+                <LineTC/>
+                <LineTC/>
+                <LineTC/>
+                <LineTC/>
+            </div>
+            {/*<div className={classes.name}>
                 <div>Alex Ca.</div>
                 <div>Alex Ca.</div>
                 <div>Alex Ca.</div>
@@ -48,7 +54,7 @@ const TopCollection = () => {
                 <div>Volume</div>
                 <div>Volume</div>
                 <div>Volume</div>
-            </div>
+            </div>*/}
         </div>
             <div className={classes.explore}>
                 <ExploreAll/>

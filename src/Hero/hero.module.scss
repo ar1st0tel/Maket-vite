@@ -1,8 +1,8 @@
 .table {
   display: grid;
-  grid-template-columns: 73fr 100fr;
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: 60vh;
-  gap: 5vw;
+  gap: 3vw;
 }
 .left {
 display: grid;
@@ -17,7 +17,7 @@ display: grid;
 .right{
   display: grid;
   grid-template-columns: 3fr 2fr;
-  gap: 2vw;
+  gap: 1vw;
 }
 .smlPics {
   display: grid;
@@ -25,7 +25,9 @@ display: grid;
   grid-template-rows: 15vh auto;
   grid-template-areas:
   "arrow dots"
-  "pic pic"
+  "pic pic";
+  gap:1vw 1vw;
+  justify-items: end;
 }
 .arrow {
 display: grid;
@@ -37,6 +39,14 @@ display: grid;
 }
 .pic {
   grid-area: pic;
+}
+.rect2 {
+  backdrop-filter: blur(100px);
+  width: 100%;
+}
+.rect3 {
+  backdrop-filter: blur(100px);
+  width: 91%;
 }
 .top{
   display: grid;
@@ -57,20 +67,25 @@ display: grid;
 }
 .heroInfo {
   font-family: Poppins;
-  font-size: 75px;
+  font-size: 100px;
   font-weight: 600;
   line-height: 90px;
   letter-spacing: -3px;
   text-align: left;
+  color: black;
 }
 .heroContext {
   font-family: Inter;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 28px;
   text-align: justify;
 }
-.heroButton {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
+.buttonGap{
+  display: flex;
+  gap: 2vw;
+}
+.content1Back {
+  margin: 0 auto;;
+  padding: 20px 0 20px 5vw;
 }

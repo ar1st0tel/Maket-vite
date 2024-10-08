@@ -8,15 +8,21 @@
   grid-template-areas:
   "header header header header header header"
   "title title title title title title"
+  "line line line line line line"
+   "line line line line line line"
+   "line line line line line line"
+   "line line line line line line"
+
+  /*"name volume h24 floor owners items"
   "name volume h24 floor owners items"
-  "name volume h24 floor owners items"
-  "name volume h24 floor owners items"
-  "name volume h24 floor owners items"
+  "name volume h24 floor owners items"*/
 }
 
   .header {
     grid-area: header;
     text-align: center;
+    color: black;
+    font-size: 40px;
   }
 
   .title {
@@ -67,4 +73,11 @@
     display: grid;
     justify-content: end;
     color: #ACADB9;
+  }
+  .font {
+    font-family: Poppins;
+  }
+  .line {
+    display: grid;
+    grid-area: line;
   }

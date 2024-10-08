@@ -7,7 +7,7 @@ import Dots from "../IMG/Dots.png"
 import Rectangle3Small from "../IMG/Rectangle3Small.png"
 
 const Hero = () => {
-    return (
+    return ( <div className={classes.content1Back}>
         <div className={classes.table}>
             <div className={classes.left}>
                 <div className={classes.bord}></div>
@@ -18,10 +18,7 @@ const Hero = () => {
                             <div>Discover, Create and Sell NFTs On Our NFT Marketplace</div>
                             <div>With Over Thousands Of NFTs And Get a <strong>$20 bonus.</strong></div>
                         </div>
-                        <div className={classes.heroButton}>
-                            <ButtonExplore/>
-                            <ButtonCreate/>
-                        </div>
+                        <div className={classes.buttonGap}><ButtonExplore/><ButtonCreate/></div>
                     </div>
                 </div>
                 <div className={classes.bottom}><Stats/></div>
@@ -36,6 +33,7 @@ const Hero = () => {
                     <div className={classes.pic}><img src={Rectangle3Small} alt="1"/></div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

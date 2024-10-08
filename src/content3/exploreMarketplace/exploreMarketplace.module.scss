@@ -2,29 +2,36 @@
   border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 5vh 10vh repeat(2, 35vh);
+  grid-template-rows: 5vh 10vh repeat(2, 45vh);
   grid-template-areas:
   "text text text text"
   "filt filt filt filt"
   "line1 line1 line1 line1"
   "line2 line2 line2 line2";
   ;
+  row-gap: 3vh;
+  justify-items: center;
 }
 .text {
   display: grid;
   justify-content: center;
   grid-area: text;
-  padding-bottom: 4vh;
+  color: black;
+  font-size: 40px;
+  font-family: Poppins;
 }
 .filt {
   display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1vw;
   grid-area: filt;
   justify-content: center;
   padding-bottom: 8vh;
 }
 .line1 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 280px);
+  height: 400px;
   grid-area: line1;
   gap: 4vw;
   padding-bottom: 4vh;
@@ -32,16 +39,69 @@
 }
 .line2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 280px);
   grid-area: line2;
+  height: 400px;
   gap: 4vw;
   padding-bottom: 4vh;
 }
 .item {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 75% 25%;
   border: 1px solid black;
+  grid-template-areas:
+  "img"
+  "description";
+  align-items: center;
+  background: #ffffff;
+  border-radius: 23px;
+}
+.img {
+  grid-area: img;
+  justify-self: center;
+}
+.description {
+  grid-area: description;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+  "name space"
+  "info bid";
+  justify-items: center;
 }
 .explore {
   display: grid;
   justify-content: end;
   color: #ACADB9;
+}
+.buttonBorder{
+  border: 2px solid black;
+}
+.name {
+  grid-area: name;
+  color: #141416;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.info {
+  grid-area: info;
+  color: #94A3B8;
+  font-size: 14px;
+}
+
+.bid {
+  grid-area: bid;
+  font-size: 14px;
+}
+.buttonBid {
+  height: 50%;
+  color: white;
+  background: #201F1F;
+}
+.buttonAlign {
+  display: flex;
+  align-items: center;
 }
