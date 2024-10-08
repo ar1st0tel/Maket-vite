@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 73fr 100fr;
   grid-template-rows: 60vh;
-  gap: 10vw;
+  gap: 5vw;
 }
 .left {
 display: grid;
@@ -16,6 +16,27 @@ display: grid;
 }
 .right{
   display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2vw;
+}
+.smlPics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15vh auto;
+  grid-template-areas:
+  "arrow dots"
+  "pic pic"
+}
+.arrow {
+display: grid;
+  grid-area: arrow;
+  rotate: -7deg;
+}
+.dots {
+  grid-area: dots;
+}
+.pic {
+  grid-area: pic;
 }
 .top{
   display: grid;

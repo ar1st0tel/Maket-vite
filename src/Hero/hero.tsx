@@ -1,7 +1,10 @@
 import classes from "./hero.module.scss";
 import {ButtonCreate, ButtonExplore} from "../INSTRUMENTS/buttonHero/buttons.tsx";
 import Stats from "../INSTRUMENTS/stats/stats.tsx";
-
+import Rectangle3 from "../IMG/Rectangle3.png";
+import Arrow from "../IMG/Arrow.png"
+import Dots from "../IMG/Dots.png"
+import Rectangle3Small from "../IMG/Rectangle3Small.png"
 
 const Hero = () => {
     return (
@@ -23,7 +26,16 @@ const Hero = () => {
                 </div>
                 <div className={classes.bottom}><Stats/></div>
             </div>
-            <div className={classes.right}>tab2</div>
+            <div className={classes.right}>
+                <div className={classes.BigPic}>
+                    <img src={Rectangle3} alt="1"/>
+                </div>
+                <div className={classes.smlPics}>
+                    <div className={classes.arrow}><img src={Arrow} alt="1"/> </div>
+                    <div className={classes.dots}><img src={Dots} alt="1"/></div>
+                    <div className={classes.pic}><img src={Rectangle3Small} alt="1"/></div>
+                </div>
+            </div>
         </div>
     )
 }

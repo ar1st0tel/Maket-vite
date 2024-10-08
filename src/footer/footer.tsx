@@ -1,7 +1,7 @@
 import classes from "./footer.module.scss"
 import FootLine1 from "./footLine1/FootLine1.tsx";
 import FootLine2 from "./footLine2/FootLine2.tsx";
-
+import LogoWhite from "../IMG/LogoWhite.png"
 
 const Footer = () => {
     return (
@@ -9,7 +9,7 @@ const Footer = () => {
             <div className={classes.line1}>
                 <a className={classes.a} href="#S">
                     <div className={classes.whiteLogo}><img
-                        src="http://nordclan.com/uploads/cb08b348936d4971a1d9976f2830529f.png" alt="1"/> DiveSea
+                        src={LogoWhite} alt="1"/> DiveSea
                     </div>
                 </a>
                     <FootLine1/>
