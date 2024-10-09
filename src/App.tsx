@@ -9,8 +9,7 @@ import PageCreators from "./pages/creators/pageCreators.tsx";
 import PageSells from "./pages/sells/pageSells.tsx";
 import PageStats from "./pages/stats/pageStats.tsx";
 
-
-const App = () => {
+function App () {
     useEffect(() => {
         WebFont.load({
             google: {
@@ -18,6 +17,7 @@ const App = () => {
             }
         });
     }, []);
+
     return (
         <BrowserRouter>
             <div className={classes.background}>
