@@ -1,11 +1,12 @@
 import classes from "../exploreMarketplace.module.scss";
 import SunGlass1 from "../../../IMG/SunGlass1.png";
+import {NavLink} from "react-router-dom";
 
 
 const Card = () => {
     return (
         <div className={classes.item}>
-            <img src={SunGlass1} className={classes.img} alt="1"/>
+            <NavLink to="#s" className={classes.img} ><img src={SunGlass1} alt="1"/></NavLink>
             <div className={classes.description}>
                 <div className={classes.name}>Sun-Glass
                 </div>

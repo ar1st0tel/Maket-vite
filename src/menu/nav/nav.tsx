@@ -1,5 +1,4 @@
 import classes from '../../App.module.scss';
-import Discover from "./discover/discover.tsx";
 import {NavLink} from "react-router-dom";
 
 const Nav = () => {
@@ -23,3 +22,12 @@ const Nav = () => {
     )
 }
 export default Nav
+
+const Discover = () => {
+    return (
+        <div className={classes.a}>
+            DISCOVER
+        </div>
+    )
+}
+export  {Discover};

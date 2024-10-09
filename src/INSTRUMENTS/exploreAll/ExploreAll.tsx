@@ -1,4 +1,4 @@
-import classes from "./ExploreAll.module.scss";
+import classes from "../../content3/exploreMarketplace/exploreMarketplace.module.scss"
 
 const ExploreAll = () =>{
     return (<div className={classes.explore}>

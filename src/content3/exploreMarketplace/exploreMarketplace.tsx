@@ -1,6 +1,4 @@
 import classes from "./exploreMarketplace.module.scss";
-import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
-import SunGlass1 from "../../IMG/SunGlass1.png"
 import Category from "../../IMG/Category.png"
 import Collection from "../../IMG/Collection.png"
 import Price from "../../IMG/Price.png"
@@ -24,23 +22,48 @@ const ExploreMarketplace = () => {
                         <div className={classes.buttonAlign}><img src={Price} alt="1"/>Price</div>
                     </button>
                 </div>
-                <div className={classes.line1}>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                </div>
-                <div className={classes.line2}>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                </div>
-            </div>
-            <div className={classes.explore}>
-                <ExploreAll/>
+                <CardLine/>
+                <CardLine/>
             </div>
         </div>
     )
 }
 export default ExploreMarketplace
+
+const ExploreMarketplace1 = () => {
+    return (<div>
+            <div className={classes.table}>
+                <div className={classes.text}>Explore Marketplace</div>
+                <div className={classes.filt}>
+                    <button className={classes.buttonBorder}>
+                        <div className={classes.buttonAlign}>
+                            <img src={Category} alt="1"/>Category
+                        </div>
+                    </button>
+                    <button className={classes.buttonBorder}>
+                        <div className={classes.buttonAlign}><img src={Collection} alt="1"/>Collection</div>
+                    </button>
+                    <button className={classes.buttonBorder}>
+                        <div className={classes.buttonAlign}><img src={Price} alt="1"/>Price</div>
+                    </button>
+                </div>
+                <CardLine/>
+                <CardLine/>
+                <CardLine/>
+            </div>
+        </div>
+    )
+}
+export {ExploreMarketplace1};
+
+const CardLine = () => {
+    return (
+        <div className={classes.line}>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+        </div>
+    )
+}
+export {CardLine};

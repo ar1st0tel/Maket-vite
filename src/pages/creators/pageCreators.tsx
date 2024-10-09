@@ -1,5 +1,5 @@
-import Menu from "../menu/Menu.tsx";
-import Footer from "../footer/footer.tsx";
+import Menu from "../../menu/Menu.tsx";
+import Footer from "../../footer/footer.tsx";
 
 
 const PageCreators = () =>{

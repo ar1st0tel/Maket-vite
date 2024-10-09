@@ -74,6 +74,27 @@
     font-family: Poppins;
     color: #C2C3CB;
 }
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttonBorder{
+    border: 2px solid black;
+}
+.a:active
+{
+    color: black;
+}
+.loading {
+    from{
+    transform: rotate(0deg);}
+    to {
+    transform:(360deg)}
+    display: flex;
+    justify-content: center;
+    margin: 250px 0 250px 0
+}
 /*
 #root {
   max-width: 1280px;
