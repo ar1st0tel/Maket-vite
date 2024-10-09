@@ -16,7 +16,7 @@ const Hero = () => {
                         <div className={classes.heroInfo}>Discover And Create NFTs</div>
                         <div className={classes.heroContext}>
                             <div>Discover, Create and Sell NFTs On Our NFT Marketplace</div>
-                            <div>With Over Thousands Of NFTs And Get a <strong>$20 bonus.</strong></div>
+                            <div>With Over Thousands Of NFTs And Get a <strong className={classes.black}>$20 bonus.</strong></div>
                         </div>
                         <div className={classes.buttonGap}><ButtonExplore/><ButtonCreate/></div>
                     </div>
