@@ -16,12 +16,12 @@ display: grid;
 }
 .right{
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: repeat(2, auto);
   gap: 1vw;
 }
 .smlPics {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: 15vh auto;
   grid-template-areas:
   "arrow dots"
