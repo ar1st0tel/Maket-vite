@@ -25,7 +25,7 @@ export const CardSlice = createSlice({
                 action.payload
             ]
         },
-        fetchCards: (state: initialStateType, action: {type: string, payload:initialStateType}) => {
+        fetchCards: (state: initialStateType, action: {type: string, payload:CardSlice[]}) => {
             state.cards = action.payload
         },
         getCards: (state, action) => {
