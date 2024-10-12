@@ -1,0 +1,8 @@
+.line {
+  display: grid;
+  grid-template-columns: 4fr repeat(5, 3fr);
+}
+.name {
+  display: grid;
+  text-align: start;
+}
