@@ -1,10 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit'
-import CardReducer from '../cards/CardSlice.ts'
 import {useDispatch, useSelector} from "react-redux";
+import {CardReducer} from "../cards/CardSlice.ts";
 
 export const store = configureStore({
     reducer: {
         cardReducer: CardReducer
+
     },
 })
 

@@ -7,9 +7,13 @@ interface ProductApiClient {
 }
 
 interface ProductsApiClient {
-    Products: ProductApiClient[];
+    data: ProductApiClient[];
 }
-export const productApiClient = {
+type ProductApiClientType = {
+    getProduct(): Promise<ProductsApiClient>;
+}
+
+export const productApiClient:ProductApiClientType = {
     getProduct() {
         return axios.get<ProductsApiClient>("http://localhost:3000/items").then((response) => response.data)
     },

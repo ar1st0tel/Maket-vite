@@ -19,16 +19,16 @@ export const CardSlice = createSlice({
     name: "Card",
     initialState,
     reducers: {
+        fetchCards: (state: initialStateType, action: {type: string, payload:CardSlice[]}) => {
+            state.cards = action.payload
+        },
         addCard: (state: initialStateType, action: {type: string, payload: CardSlice}) => {
             state.cards = [
                 ...state.cards,
                 action.payload
             ]
         },
-        fetchCards: (state: initialStateType, action: {type: string, payload:initialStateType}) => {
-            state.cards = action.payload
-        },
-        getCards: (state, action) => {
+        setCards: (state, action) => {
             state.cards = [
                 ...state.cards,
                 ...action.payload
@@ -37,8 +37,8 @@ export const CardSlice = createSlice({
     }
 })
 
-export const {addCard,fetchCards,getCards} = CardSlice.actions;
-export default CardSlice.reducer
+export const {addCard,fetchCards,setCards} = CardSlice.actions;
+export const {reducer: CardReducer} = CardSlice
 
 // Типизация стора
 // Апишка + типизация апишки

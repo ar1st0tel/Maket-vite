@@ -7,7 +7,7 @@ import {store} from "./reduxTest/store/Store.ts";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <Provider store={store()}>
+      <Provider store={store}>
     <App />
   </Provider>
   </StrictMode>,
