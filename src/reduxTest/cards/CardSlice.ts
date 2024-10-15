@@ -1,4 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {fetchCardsAsync} from "../../client/products/asyncThunk/AsyncThunk.ts";
 
 export interface CardSlice {
     id: string,
@@ -15,27 +16,46 @@ const initialState: initialStateType = {
     cards: []
 }
 
+
 export const CardSlice = createSlice({
     name: "Card",
     initialState,
     reducers: {
-        fetchCards: (state: initialStateType, action: {type: string, payload:CardSlice[]}) => {
+        fetchCards: (state: initialStateType, action: PayloadAction<CardSlice[], string>) => {
             state.cards = action.payload
         },
-        addCard: (state: initialStateType, action: {type: string, payload: CardSlice}) => {
+        addCard: (state: initialStateType, action: PayloadAction<CardSlice, string>) => {
             state.cards = [
                 ...state.cards,
                 action.payload
             ]
         },
-        setCards: (state, action) => {
+       /*setCards: (state: initialStateType, action: {type: string, payload:CardSlice[]}) => {
             state.cards = [
                 ...state.cards,
                 ...action.payload
             ]
-        }
+        },*/
+    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchCardsAsync.pending,(state:initialStateType, action: PayloadAction<CardSlice, string>) => {
+                state.cards = action.payload
+        })
     }
 })
+
+
+// Typescript generics!
+//  type Generic<T> = {someField: T, anotherField: any}
+// разберись что такое PayloadAction
+
+// type PayloadAction<P = void, T = string> = {
+//     payload: P;
+//     type: T;
+// }
+
+// типизируй свой Action в addCase
+
 
 export const {addCard,fetchCards,setCards} = CardSlice.actions;
 export const {reducer: CardReducer} = CardSlice

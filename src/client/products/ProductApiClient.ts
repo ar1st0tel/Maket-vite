@@ -1,5 +1,5 @@
 import axios from "axios";
-interface ProductApiClient {
+interface IProductApiClient {
     id: string,
     name: string,
     price: string,
@@ -7,7 +7,7 @@ interface ProductApiClient {
 }
 
 interface ProductsApiClient {
-    data: ProductApiClient[];
+    data: IProductApiClient[];
 }
 type ProductApiClientType = {
     getProduct(): Promise<ProductsApiClient>;
