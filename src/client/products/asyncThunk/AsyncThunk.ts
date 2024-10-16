@@ -9,7 +9,7 @@ interface ICardApi {
 }
 
 export interface CardsApi {
-    data: ICardApi[];
+    data: ICardApi[],
 }
 type fetchCardsAsync = {
     getProduct(): Promise<CardsApi>;

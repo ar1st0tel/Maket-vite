@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {fetchCardsAsync} from "../../client/products/asyncThunk/AsyncThunk.ts";
 
-export interface CardSlice {
+interface CardSlice {
     id: string,
     name: string,
     price: string,
@@ -9,38 +9,52 @@ export interface CardSlice {
 }
 
 type initialStateType = {
+    isPending: boolean,
+    isLoading: boolean,
+    isError: boolean,
     cards: CardSlice[]
 }
-
 const initialState: initialStateType = {
-    cards: []
+    cards: [],
+    isPending: false,
+    isError: false,
+    isLoading: false,
 }
 
-
 export const CardSlice = createSlice({
-    name: "Card",
+    name: "OneCard",
     initialState,
     reducers: {
-        fetchCards: (state: initialStateType, action: PayloadAction<CardSlice[], string>) => {
+        fetchCards: (state: initialStateType, action: PayloadAction<CardSlice[]>) => {
             state.cards = action.payload
         },
-        addCard: (state: initialStateType, action: PayloadAction<CardSlice, string>) => {
+        addCard: (state: initialStateType, action: PayloadAction<CardSlice>) => {
             state.cards = [
                 ...state.cards,
                 action.payload
             ]
         },
-       /*setCards: (state: initialStateType, action: {type: string, payload:CardSlice[]}) => {
-            state.cards = [
-                ...state.cards,
-                ...action.payload
-            ]
-        },*/
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchCardsAsync.pending,(state:initialStateType, action: PayloadAction<CardSlice, string>) => {
-                state.cards = action.payload
+        builder
+            .addCase(fetchCardsAsync.pending,(state) => {
+                state.isPending = true;
+                state.isLoading = false;
+                state.isError = false;
         })
+        builder
+            .addCase(fetchCardsAsync.fulfilled,(state,  action) => {
+                    state.isPending = false;
+                    state.isLoading = true;
+                    state.isError = false;
+                    state.cards = action.payload.data
+            })
+        builder
+            .addCase(fetchCardsAsync.rejected,(state) => {
+                state.isPending = false;
+                state.isLoading = true;
+                state.isError = true
+            })
     }
 })
 
@@ -56,8 +70,7 @@ export const CardSlice = createSlice({
 
 // типизируй свой Action в addCase
 
-
-export const {addCard,fetchCards,setCards} = CardSlice.actions;
+export const {addCard,fetchCards,} = CardSlice.actions;
 export const {reducer: CardReducer} = CardSlice
 
 // Типизация стора

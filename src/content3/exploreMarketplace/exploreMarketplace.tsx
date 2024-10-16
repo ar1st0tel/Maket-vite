@@ -8,8 +8,8 @@ const ExploreMarketplace = () => {
     return (<div>
             <div className={classes.table}>
                 <div className={classes.text}>Explore Marketplace</div>
-                <div className={classes.filt}>
-                    <button className={classes.buttonBorder}>All</button>
+                <div className={`${classes.filt} ${classes.buttonBorder}`}>
+                    <button>All</button>
                     <button className={classes.buttonBorder}>
                         <div className={classes.buttonAlign}>
                             <img src={Category} alt="1"/>Category
@@ -22,8 +22,7 @@ const ExploreMarketplace = () => {
                         <div className={classes.buttonAlign}><img src={Price} alt="1"/>Price</div>
                     </button>
                 </div>
-                <CardLine/>
-                <CardLine/>
+                <CardCase/>
             </div>
         </div>
     )
@@ -47,18 +46,19 @@ const ExploreMarketplace1 = () => {
                         <div className={classes.buttonAlign}><img src={Price} alt="1"/>Price</div>
                     </button>
                 </div>
-                <CardLine/>
-                <CardLine/>
-                <CardLine/>
+                <CardCase/>
             </div>
         </div>
     )
 }
 export {ExploreMarketplace1};
 
-const CardLine = () => {
+const CardCase = () => {
     return (
         <div className={classes.line}>
+            <Card/>
+            <Card/>
+            <Card/>
             <Card/>
             <Card/>
             <Card/>
@@ -66,4 +66,4 @@ const CardLine = () => {
         </div>
     )
 }
-export {CardLine};
+export {CardCase};

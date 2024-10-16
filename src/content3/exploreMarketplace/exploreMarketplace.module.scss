@@ -18,6 +18,12 @@
   gap: 1vw;
   justify-content: center;
   padding-bottom: 8vh;
+
+  .buttonBorder:hover,
+  .buttonBorder:active
+  {
+    border: 2px solid black;
+  }
 }
 .line {
   display: grid;
@@ -56,9 +62,6 @@
   display: grid;
   justify-content: end;
   color: #ACADB9;
-}
-.buttonBorder{
-  border: 2px solid black;
 }
 .name {
   grid-area: name;
