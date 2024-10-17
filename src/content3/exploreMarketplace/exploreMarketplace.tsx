@@ -3,6 +3,9 @@ import Category from "../../IMG/Category.png"
 import Collection from "../../IMG/Collection.png"
 import Price from "../../IMG/Price.png"
 import Card from "./card/card.tsx";
+import card from "./card/card.tsx";
+import {CardSlice} from "../../reduxTest/cards/CardSlice.ts";
+import {useAppSelector} from "../../reduxTest/store/Store.ts";
 
 const ExploreMarketplace = () => {
     return (<div>
@@ -54,15 +57,24 @@ const ExploreMarketplace1 = () => {
 export {ExploreMarketplace1};
 
 const CardCase = () => {
+    useAppSelector((state) => state.CardSlice.cards)
     return (
         <div className={classes.line}>
+            {CardSlice[].map(CardSlice=>(
+                <CardSlice
+                key={CardSlice.id}
+                id={CardSlice.id}
+                name={CardSlice.name}
+                price={CardSlice.price}
+                img={CardSlice.img}/>
+            ))}
+            {/*<Card/>
             <Card/>
             <Card/>
             <Card/>
             <Card/>
             <Card/>
-            <Card/>
-            <Card/>
+            <Card/>*/}
         </div>
     )
 }

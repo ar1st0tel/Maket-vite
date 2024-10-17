@@ -16,7 +16,7 @@ export default ContentDiscover;
 const LoadingImg = () => {
     return (
         <div className={classes.loading}>
-            <img src={Loading} alt="1"/>
+            <img className={classes.rotate} src={Loading} alt="1"/>
         </div>
     )
 }
