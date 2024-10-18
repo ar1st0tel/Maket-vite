@@ -23,17 +23,15 @@ const PageMain = connector(({cards, isLoaded, isError, isPending, fetchCardsAsyn
     const [message, setMessage] = useState(false);
     useEffect(()=> {
         fetchCardsAsync()
-    }, [fetchCardsAsync]);
+    }, []);
 
 
 
     // потом удалить
-    useEffect(() => {
         console.log("Cards data updated:", cards);
         console.log("isLoaded:", isLoaded);
         console.log("isPending:", isPending);
         console.log("isError:", isError);
-    }, [cards, isLoaded, isPending, isError]);
 
 
 
@@ -49,7 +47,7 @@ const PageMain = connector(({cards, isLoaded, isError, isPending, fetchCardsAsyn
         }
         return () => clearTimeout(delay)
 
-    }, [cards]);
+    }, []);
 
     if (isPending) {
         return <div>...loading...</div>

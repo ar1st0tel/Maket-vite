@@ -47,7 +47,7 @@ export const CardSlice: Slice<initialStateType> = createSlice({
                     state.isPending = false;
                     state.isLoaded = true;
                     state.isError = false;
-                    state.cards = action.payload.data
+                    state.cards = [...action.payload]
                 console.log("Action payload:", action.payload);
             })
         builder

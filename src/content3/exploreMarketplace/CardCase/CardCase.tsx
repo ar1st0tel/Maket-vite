@@ -1,21 +1,15 @@
-import {useAppDispatch, useAppSelector} from "../../../reduxTest/store/Store.ts";
-import {useEffect} from "react";
-import {fetchCardsAsync} from "../../../client/products/asyncThunk/AsyncThunk.ts";
+import {useAppSelector} from "../../../reduxTest/store/Store.ts";
 import classes from "../exploreMarketplace.module.scss";
 import Card from "../card/card.tsx";
 import {CardSlice} from "../../../reduxTest/cards/CardSlice.ts";
 
 const CardCase = () => {
-    const dispatch = useAppDispatch();
     const CardArray = useAppSelector((state) => state.CardSlice.cards as CardSlice[])
     const Pending = useAppSelector((state) => state.CardSlice.isPending)
     const Error = useAppSelector((state) => state.CardSlice.isError)
 
     /*const [message, setMessage] = useState(false);*/
 
-    useEffect(() => {
-        dispatch(fetchCardsAsync());
-    }, [dispatch]);
 
     /*useEffect(() => {
     let delay: number;

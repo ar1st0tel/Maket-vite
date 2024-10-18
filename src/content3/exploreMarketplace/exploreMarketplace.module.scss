@@ -32,6 +32,10 @@
   gap: 4vw;
   padding-bottom: 4vh;
 }
+.priceLine {
+  display: flex;
+  align-items: center;
+}
 .item {
   display: grid;
   grid-template-columns: 100%;

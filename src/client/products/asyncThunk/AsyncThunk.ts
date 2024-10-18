@@ -8,9 +8,8 @@ interface ICardApi {
     img: string,
 }
 
-export interface CardsApi {
-    data: ICardApi[],
-}
+export type CardsApi = ICardApi[]
+
 type fetchCardsAsync = {
     getProduct(): Promise<CardsApi>;
 }

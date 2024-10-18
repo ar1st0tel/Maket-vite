@@ -1,5 +1,5 @@
 import classes from "../exploreMarketplace.module.scss";
-
+import Ethereum from "../../../IMG/Ethereum.png"
 
 const Card = (props: {
     id: string,
@@ -9,13 +9,13 @@ const Card = (props: {
 }) => {
     return (
         <div className={classes.item} key={props.id}>
-            {/*<a href="#s" className={classes.img}> */}<img src={props.img} alt={props.name}/>{/*</a>*/}
+           <img className={classes.img} src={props.img} alt={props.name}/>
             <div className={classes.description}>
                 <div className={classes.name}>{props.name}
                 </div>
                 <div className={classes.info}>
                     <div>Current bid</div>
-                    <div>'img' {props.price}</div>
+                    <div className={classes.priceLine}><img src={Ethereum} alt="1"/> {props.price}</div>
                 </div>
                 <div className={classes.bid}>
                     <button className={classes.buttonBid}>PLACE BID</button>
