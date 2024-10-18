@@ -48,6 +48,10 @@
   background: #ffffff;
   border-radius: 23px;
 }
+.item:hover {
+  border: 1px solid firebrick;
+  border-radius: 50px;
+}
 .img {
   grid-area: img;
   justify-self: center;
