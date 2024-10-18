@@ -11,26 +11,50 @@ import {useEffect, useState} from "react";
 const connector = connect(
     (state: RootState) => ({
         cards: state.CardSlice.cards,
-        isLoading: state.CardSlice.isLoading,
+        isLoaded: state.CardSlice.isLoaded,
         isError: state.CardSlice.isError,
         isPending: state.CardSlice.isPending
     }), {fetchCardsAsync}
 )
 type Props = ConnectedProps<typeof connector>
 
-const PageMain = connector(({cards, isLoading, isError, isPending}: Props) => {
-    const [Data, setData] = useState([])
+const PageMain = connector(({cards, isLoaded, isError, isPending}: Props) => {
+    /*const [Data, setData] = useState([])*/
+    const [message, setMessage] = useState(false);
     useEffect(()=> {
         fetchCardsAsync()
-    }, [])
-    return (
-        <div>
-            <Menu/>
-            <Hero/>
-            <Content2/>
-            <Content3/>
-            <Footer/>
-        </div>
-    )
+    }, []);
+
+    useEffect(() => {
+        let delay: number;
+        if (!cards || cards.length === 0) {
+            delay = setTimeout(() => {
+                setMessage(true);
+            }, 3000);
+        }
+        return () => clearTimeout(delay)
+
+    }, [cards]);
+
+    if (isPending) {
+        return <div>...loading...</div>
+    }
+    if (isError) {
+        return <div>ERROR!</div>
+    }
+    if (!cards || cards.length === 0) {
+        return (message ? 'Something is wrong!' : null)
+    }
+    if (isLoaded) {
+        return (
+            <div>
+                <Menu/>
+                <Hero/>
+                <Content2/>
+                <Content3/>
+                <Footer/>
+            </div>
+        )
+    }
 })
 export default PageMain

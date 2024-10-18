@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction, Slice} from "@reduxjs/toolkit";
 import {fetchCardsAsync} from "../../client/products/asyncThunk/AsyncThunk.ts";
 
 interface CardSlice {
@@ -10,7 +10,7 @@ interface CardSlice {
 
 type initialStateType = {
     isPending: boolean,
-    isLoading: boolean,
+    isLoaded: boolean,
     isError: boolean,
     cards: CardSlice[]
 }
@@ -18,10 +18,10 @@ const initialState: initialStateType = {
     cards: [],
     isPending: false,
     isError: false,
-    isLoading: false,
+    isLoaded: false,
 }
 
-export const CardSlice = createSlice({
+export const CardSlice: Slice<initialStateType> = createSlice({
     name: "OneCard",
     initialState,
     reducers: {
@@ -39,36 +39,24 @@ export const CardSlice = createSlice({
         builder
             .addCase(fetchCardsAsync.pending,(state) => {
                 state.isPending = true;
-                state.isLoading = false;
+                state.isLoaded = false;
                 state.isError = false;
         })
         builder
             .addCase(fetchCardsAsync.fulfilled,(state,  action) => {
                     state.isPending = false;
-                    state.isLoading = true;
+                    state.isLoaded = true;
                     state.isError = false;
                     state.cards = action.payload.data
             })
         builder
             .addCase(fetchCardsAsync.rejected,(state) => {
                 state.isPending = false;
-                state.isLoading = true;
+                state.isLoaded = true;
                 state.isError = true
             })
     }
 })
-
-
-// Typescript generics!
-//  type Generic<T> = {someField: T, anotherField: any}
-// разберись что такое PayloadAction
-
-// type PayloadAction<P = void, T = string> = {
-//     payload: P;
-//     type: T;
-// }
-
-// типизируй свой Action в addCase
 
 export const {addCard,fetchCards,} = CardSlice.actions;
 export const {reducer: CardReducer} = CardSlice

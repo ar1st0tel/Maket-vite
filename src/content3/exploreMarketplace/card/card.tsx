@@ -9,7 +9,7 @@ const Card = (props: {
 }) => {
     return (
         <div className={classes.item} key={props.id}>
-            <a href="#s" className={classes.img} ><img src={props.img} alt={props.name}/></a>
+            {/*<a href="#s" className={classes.img}> */}<img src={props.img} alt={props.name}/>{/*</a>*/}
             <div className={classes.description}>
                 <div className={classes.name}>{props.name}
                 </div>
