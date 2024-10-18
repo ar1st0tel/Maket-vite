@@ -3,10 +3,11 @@ import {useEffect} from "react";
 import {fetchCardsAsync} from "../../../client/products/asyncThunk/AsyncThunk.ts";
 import classes from "../exploreMarketplace.module.scss";
 import Card from "../card/card.tsx";
+import {CardSlice} from "../../../reduxTest/cards/CardSlice.ts";
 
 const CardCase = () => {
     const dispatch = useAppDispatch();
-    const CardArray = useAppSelector((state) => state.CardSlice.cards)
+    const CardArray = useAppSelector((state) => state.CardSlice.cards as CardSlice[])
     const Pending = useAppSelector((state) => state.CardSlice.isPending)
     const Error = useAppSelector((state) => state.CardSlice.isError)
 
@@ -34,11 +35,11 @@ const CardCase = () => {
         return <div>ERROR!</div>;
     }
     /*if (!CardArray || CardArray.length === 0) {
-        return (message ? 'some shit happened' : null)
+        return (message ? 'Warning' : null)
     }*/
     return (
         <div className={classes.line}>
-            {CardArray.map((cardItem)=>(
+            {CardArray.map((cardItem: CardSlice)=>(
                 <Card
                     key={cardItem.id}
                     id={cardItem.id}

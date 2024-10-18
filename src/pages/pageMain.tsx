@@ -18,19 +18,34 @@ const connector = connect(
 )
 type Props = ConnectedProps<typeof connector>
 
-const PageMain = connector(({cards, isLoaded, isError, isPending}: Props) => {
+const PageMain = connector(({cards, isLoaded, isError, isPending, fetchCardsAsync}: Props) => {
     /*const [Data, setData] = useState([])*/
     const [message, setMessage] = useState(false);
     useEffect(()=> {
         fetchCardsAsync()
-    }, []);
+    }, [fetchCardsAsync]);
+
+
+
+    // потом удалить
+    useEffect(() => {
+        console.log("Cards data updated:", cards);
+        console.log("isLoaded:", isLoaded);
+        console.log("isPending:", isPending);
+        console.log("isError:", isError);
+    }, [cards, isLoaded, isPending, isError]);
+
+
+
+
+
 
     useEffect(() => {
         let delay: number;
         if (!cards || cards.length === 0) {
             delay = setTimeout(() => {
                 setMessage(true);
-            }, 3000);
+            }, 1000);
         }
         return () => clearTimeout(delay)
 
@@ -43,7 +58,7 @@ const PageMain = connector(({cards, isLoaded, isError, isPending}: Props) => {
         return <div>ERROR!</div>
     }
     if (!cards || cards.length === 0) {
-        return (message ? 'Something is wrong!' : null)
+        return <div>{message ? 'Something is wrong!' : null}</div>
     }
     if (isLoaded) {
         return (
@@ -56,5 +71,6 @@ const PageMain = connector(({cards, isLoaded, isError, isPending}: Props) => {
             </div>
         )
     }
+    return null;
 })
 export default PageMain
