@@ -5,9 +5,9 @@ const Nav = () => {
     return (
             <div className={classes.nav}>
                 <div className={classes.boxSmall}>
-                        <NavLink to="/discover" className={classes.item}>
+                        <a href="/discover" className={classes.item}>
                            <Discover />
-                        </NavLink>
+                        </a>
                         <NavLink to="/creators" className={classes.item}>
                             CREATORS
                         </NavLink>

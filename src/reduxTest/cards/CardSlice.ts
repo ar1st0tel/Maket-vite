@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction, Slice} from "@reduxjs/toolkit";
-import {fetchCardsAsync} from "../../client/products/asyncThunk/AsyncThunk.ts";
+import {fetchCardsAsync} from "../../client/products/asyncThunk/fetchCardsAsync.ts";
 
 export interface CardSlice {
     id: string,

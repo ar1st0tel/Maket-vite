@@ -5,7 +5,7 @@ import Content3 from "../content3/content3.tsx";
 import Footer from "../footer/footer.tsx";
 import {connect, ConnectedProps} from "react-redux";
 import {RootState} from "../reduxTest/store/Store.ts";
-import {fetchCardsAsync} from "../client/products/asyncThunk/AsyncThunk.ts";
+import {fetchCardsAsync} from "../client/products/asyncThunk/fetchCardsAsync.ts";
 import {useEffect, useState} from "react";
 
 const connector = connect(
@@ -22,21 +22,16 @@ const PageMain = connector(({cards, isLoaded, isError, isPending, fetchCardsAsyn
     /*const [Data, setData] = useState([])*/
     const [message, setMessage] = useState(false);
     useEffect(()=> {
-        fetchCardsAsync()
-    }, []);
+        fetchCardsAsync(8)
+    }, [fetchCardsAsync]);
 
 
-
-    // потом удалить
-        console.log("Cards data updated:", cards);
+       /* console.log("Cards data updated:", cards);
         console.log("isLoaded:", isLoaded);
         console.log("isPending:", isPending);
         console.log("isError:", isError);
-
-
-
-
-
+        чисто проверка
+*/
 
     useEffect(() => {
         let delay: number;

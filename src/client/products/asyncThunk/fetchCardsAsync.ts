@@ -10,14 +10,15 @@ interface ICardApi {
 
 export type CardsApi = ICardApi[]
 
-type fetchCardsAsync = {
+/*type fetchCardsAsync = {
     getProduct(): Promise<CardsApi>;
-}
+}*/
 
 export const fetchCardsAsync =  createAsyncThunk(
     'cards/fetchCards',
-    async () => {
-        const response = await axios.get<CardsApi>(`http://localhost:3000/items`)
+    async (limit: number | undefined) => {
+        const url = limit ? `http://localhost:3000/items?_limit=${limit}` : `http://localhost:3000/items`
+        const response = await axios.get<CardsApi>(url)
         return response.data;
     }
 )

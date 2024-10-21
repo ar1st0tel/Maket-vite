@@ -28,6 +28,8 @@ display: grid;
   "pic pic";
   gap:1vw 1vw;
   justify-items: end;
+  object-fit: fill;
+  width: 100%;
 }
 .arrow {
 display: grid;
@@ -81,6 +83,7 @@ display: grid;
   line-height: 28px;
   text-align: justify;
   color: #676767;
+  display: grid;
 }
 .buttonGap{
   display: flex;
@@ -89,6 +92,7 @@ display: grid;
 .content1Back {
   margin: 0 auto;;
   padding: 20px 0 20px 5vw;
+  display: grid;
 }
 .black {
   color: black;

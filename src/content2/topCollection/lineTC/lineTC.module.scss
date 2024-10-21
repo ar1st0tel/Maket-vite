@@ -1,8 +1,30 @@
 .line {
   display: grid;
   grid-template-columns: 4fr repeat(5, 3fr);
+  align-items: center;
 }
 .name {
   display: grid;
   text-align: start;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "pic name"
+  "pic author";
+}
+.nameCard {
+  grid-area: name;
+}
+.pic {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: pic;
+}
+.author {
+  grid-area: author;
+}
+.value {
+  display: flex;
+  justify-content: flex-end;
 }
