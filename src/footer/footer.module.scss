@@ -15,7 +15,8 @@
   display: grid;
   align-items: center;
   grid-template-columns: repeat(4, auto);
-  gap: 0 4vw;
+  gap: 70px;
+  justify-items: end;
   color: #606060;
 }
 
@@ -23,7 +24,7 @@
   display: grid;
   align-items: end;
   grid-template-columns: repeat(4, auto);
-  gap: 0 4vw;
+  gap: 54px;
   color: #606060;
 }
 
@@ -60,7 +61,8 @@
 }
 
 .rights {
-  font-size: 12px;
+  font-size: 17px;
+  width: 286px;
 }
 
 .whiteLogo {
