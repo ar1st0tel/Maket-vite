@@ -1,10 +1,12 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit'
 import {useDispatch, useSelector} from "react-redux";
 import {CardReducer} from "../cards/CardSlice.ts";
+import {LineReducer} from "../linesCollections/LineSlice.ts";
 
 
 const reducers = combineReducers({
-    CardSlice: CardReducer
+    CardSlice: CardReducer,
+    LineSlice: LineReducer
 })
 export const store = configureStore({
     reducer: reducers,

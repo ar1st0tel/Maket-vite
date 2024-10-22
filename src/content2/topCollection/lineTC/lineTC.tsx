@@ -6,7 +6,7 @@ const LineTC = (props: {
     "pic": string,
     "name": string,
     "author": string,
-    "volume": number,
+    "volume": string,
     "dayPercent": string,
     "floorPrice": number,
     "owners": number,
@@ -15,7 +15,7 @@ const LineTC = (props: {
     return (
         <div className={classes.line} key={props.id}>
             <div className={classes.name}>
-                <img className={classes.pic} alt={props.name} loading="lazy"/>
+                <img className={classes.pic} src={props.pic} alt={props.name} loading="lazy"/>
                 <div className={classes.nameCard}>
                     {props.name}
             </div>
@@ -33,7 +33,7 @@ const LineTC = (props: {
                 <img src={Ethereum} alt='1'/> {props.floorPrice}
             </div>
             <div className={classes.value}>
-                {props.owners}
+                {props.owners}K
             </div>
             <div className={classes.value}> {props.items}
             </div>

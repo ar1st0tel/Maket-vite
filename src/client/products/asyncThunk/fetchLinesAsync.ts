@@ -7,7 +7,7 @@ interface ILinesApi {
     "pic": string,
     "name": string,
     "author": string,
-    "volume": number,
+    "volume": string,
     "dayPercent": string,
     "floorPrice": number,
     "owners": number,
@@ -18,7 +18,7 @@ export type LinesApi = ILinesApi[]
 export const fetchLinesAsync =  createAsyncThunk(
     'lines/fetchLines',
     async (limit:number | undefined) => {
-        const url = (limit? `http://localhost:3000/collections?_limit=${limit}` :`http://localhost:3000/collections`);
+        const url = limit? `http://localhost:3000/collections?_limit=${limit}` :`http://localhost:3000/collections`;
         const response = await axios.get<LinesApi>(url);
         return response.data;
     }

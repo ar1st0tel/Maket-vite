@@ -25,7 +25,6 @@ const PageMain = connector(({cards, isLoaded, isError, isPending, fetchCardsAsyn
         fetchCardsAsync(8)
     }, [fetchCardsAsync]);
 
-
        /* console.log("Cards data updated:", cards);
         console.log("isLoaded:", isLoaded);
         console.log("isPending:", isPending);

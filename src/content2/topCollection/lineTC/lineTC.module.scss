@@ -2,12 +2,14 @@
   display: grid;
   grid-template-columns: 4fr repeat(5, 3fr);
   align-items: center;
+  border-bottom: 1px solid #EBE9E9;
 }
 .name {
   display: grid;
   text-align: start;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
+  align-items: center;
   grid-template-areas:
   "pic name"
   "pic author";

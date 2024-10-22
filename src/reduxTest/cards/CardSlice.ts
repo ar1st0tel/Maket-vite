@@ -22,7 +22,7 @@ const initialState: initialStateType = {
 }
 
 export const CardSlice: Slice<initialStateType> = createSlice({
-    name: "OneCard",
+    name: "SliceOfCards",
     initialState,
     reducers: {
         fetchCards: (state: initialStateType, action: PayloadAction<CardSlice[]>) => {
@@ -59,7 +59,7 @@ export const CardSlice: Slice<initialStateType> = createSlice({
     }
 })
 
-export const {addCard,fetchCards,} = CardSlice.actions;
+export const {addCard,fetchCards} = CardSlice.actions;
 export const {reducer: CardReducer} = CardSlice
 
 // Типизация стора

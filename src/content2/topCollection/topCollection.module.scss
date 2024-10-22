@@ -1,16 +1,12 @@
 .table
 {
-  border: 1px solid black;
   display: grid;
   text-align: end;
-  grid-template-rows: 10vh 7vh repeat(4, 10vh) ;
+  grid-template-rows: 10vh 7vh auto ;
   grid-template-areas:
-  "header header header header header header"
-  "title title title title title title"
-  "line line line line line line"
-   "line line line line line line"
-   "line line line line line line"
-   "line line line line line line"
+  "header"
+  "title"
+  "line"
 /*можно попробовать убрать все грид-темплейт-ареа*/
   /*"name volume h24 floor owners items"
   "name volume h24 floor owners items"
