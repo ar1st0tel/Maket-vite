@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction, Slice} from "@reduxjs/toolkit";
-import {fetchCardsAsync} from "../../client/products/asyncThunk/fetchCardsAsync.ts";
+import {fetchCardsAsync} from "../../client/asyncThunk/fetchCardsAsync.ts";
 
 export interface CardSlice {
     id: string,
@@ -48,7 +48,6 @@ export const CardSlice: Slice<initialStateType> = createSlice({
                     state.isLoaded = true;
                     state.isError = false;
                     state.cards = [...action.payload]
-                console.log("Action payload:", action.payload);
             })
         builder
             .addCase(fetchCardsAsync.rejected,(state) => {

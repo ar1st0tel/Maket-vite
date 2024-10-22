@@ -12,6 +12,7 @@ const LineTC = (props: {
     "owners": number,
     "items": number
 }) =>{
+    const color = parseFloat(props.dayPercent) > 0 ? classes.green : classes.red
     return (
         <div className={classes.line} key={props.id}>
             <div className={classes.name}>
@@ -26,8 +27,8 @@ const LineTC = (props: {
             <div className={classes.value}>
                 <img src={Ethereum} alt='1'/> {props.volume}
             </div>
-            <div className={classes.value}>
-                {props.dayPercent}
+            <div className={classes.value}> <span className={color}>
+                {props.dayPercent}</span>
             </div>
             <div className={classes.value}>
                 <img src={Ethereum} alt='1'/> {props.floorPrice}

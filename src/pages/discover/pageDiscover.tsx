@@ -3,7 +3,7 @@ import Footer from "../../footer/footer.tsx";
 import ContentDiscover, {LoadingImg} from "./contentDiscover.tsx";
 import {connect, ConnectedProps} from "react-redux";
 import {RootState} from "../../reduxTest/store/Store.ts";
-import {fetchCardsAsync} from "../../client/products/asyncThunk/fetchCardsAsync.ts";
+import {fetchCardsAsync} from "../../client/asyncThunk/fetchCardsAsync.ts";
 import {useEffect} from "react";
 
 

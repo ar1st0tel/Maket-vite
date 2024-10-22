@@ -1,7 +1,6 @@
 .table {
   background: #141416;
-  padding: 20px 0;
-  width: 100%;
+  width: 1440px;
   color: #B9B9B9;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -34,9 +33,10 @@
   grid-template-columns: 1fr 1fr;
   align-content: center;
   align-items: center;
-  gap: 5vw;
-  width: 90%;
-  padding: 25px 10px;
+  width: 1251px;
+  padding: 92px 0 25px 0;
+  margin-left: 96px;
+  margin-right: 96px;
   border-bottom: 1px solid #818181;
 
 }
@@ -47,10 +47,11 @@
   grid-template-columns: 1fr 1fr;
   align-content: center;
   align-items: center;
-  gap: 5vw;
-  width: 90%;
-  padding: 25px 10px;
+  width: 1251px;
+  padding: 57px 0 81px 0;
   border-top: 1px solid #818181;
+  margin-left: 96px;
+  margin-right: 96px;
 }
 
 .logos {
@@ -77,6 +78,7 @@
   color: #606060;
 }
 .appWrapper {
+  width: 1440px;
   margin: 0 auto;
   display: grid;
   justify-items: center;

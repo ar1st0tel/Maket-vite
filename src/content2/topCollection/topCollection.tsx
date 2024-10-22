@@ -2,7 +2,7 @@ import classes from "./topCollection.module.scss";
 import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
 import LineTC from "./lineTC/lineTC.tsx";
 import {connect, ConnectedProps} from "react-redux";
-import {fetchLinesAsync} from "../../client/products/asyncThunk/fetchLinesAsync.ts";
+import {fetchLinesAsync} from "../../client/asyncThunk/fetchLinesAsync.ts";
 import {RootState} from "../../reduxTest/store/Store.ts";
 import TableTitle from "./TableTitle/TableTitle.tsx";
 import {LineSlice} from "../../reduxTest/linesCollections/LineSlice.ts";
@@ -20,7 +20,7 @@ type CollectionProps = ConnectedProps<typeof connector>
 const TopCollection = connector(({LineArray, isError, isPending, isLoaded, fetchLinesAsync}: CollectionProps) => {
 
     useEffect(() => {
-        fetchLinesAsync()
+        fetchLinesAsync(4)
     }, [fetchLinesAsync]);
 
     if (isPending) {
@@ -38,19 +38,20 @@ const TopCollection = connector(({LineArray, isError, isPending, isLoaded, fetch
                     <TableTitle/>
                     <div className={classes.line}>
                         {LineArray.map((lineItem: LineSlice) => (
-                            <LineTC
-                                key={lineItem.id}
-                                id={lineItem.id}
-                                pic={lineItem.pic}
-                                name={lineItem.name}
-                                author={lineItem.author}
-                                volume={lineItem.volume}
-                                dayPercent={lineItem.dayPercent}
-                                floorPrice={lineItem.floorPrice}
-                                owners={lineItem.owners}
-                                items={lineItem.items}
-                            />
-                        ))}
+                                <LineTC
+                                    key={lineItem.id}
+                                    id={lineItem.id}
+                                    pic={lineItem.pic}
+                                    name={lineItem.name}
+                                    author={lineItem.author}
+                                    volume={lineItem.volume}
+                                    dayPercent={lineItem.dayPercent}
+                                    floorPrice={lineItem.floorPrice}
+                                    owners={lineItem.owners}
+                                    items={lineItem.items}
+                                />
+                            )
+                        )}
                     </div>
                 </div>
                 <div className={classes.explore}>
@@ -64,3 +65,4 @@ const TopCollection = connector(({LineArray, isError, isPending, isLoaded, fetch
 })
 
 export default TopCollection
+

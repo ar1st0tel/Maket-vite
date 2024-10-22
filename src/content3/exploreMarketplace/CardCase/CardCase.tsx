@@ -2,7 +2,7 @@ import classes from "../exploreMarketplace.module.scss";
 import Card from "../card/card.tsx";
 import {CardSlice} from "../../../reduxTest/cards/CardSlice.ts";
 import {connect, ConnectedProps} from "react-redux";
-import {fetchCardsAsync} from "../../../client/products/asyncThunk/fetchCardsAsync.ts";
+import {fetchCardsAsync} from "../../../client/asyncThunk/fetchCardsAsync.ts";
 /*import {useState} from "react";*/
 /*import Pagination from "../paginator/Paginator.tsx";*/
 import {RootState} from "../../../reduxTest/store/Store.ts";
@@ -48,9 +48,7 @@ const CardCase = connector(({CardArray, isPending, isError}: CardCaseProps) =>{
     }
 
 
-return (
-    <div>
-        <div className={classes.line}>
+return (<div className={classes.line}>
             {CardArray.map((cardItem: CardSlice) => (
                 <Card
                     key={cardItem.id}
@@ -60,7 +58,6 @@ return (
                     img={cardItem.img}
                 />
             ))}
-        </div>
         {/*<Pagination
             onNextPageClick={handleNextPageClick}
             onPrevPageClick={handlePrevPageClick}

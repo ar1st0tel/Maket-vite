@@ -3,6 +3,8 @@
   grid-template-columns: 4fr repeat(5, 3fr);
   align-items: center;
   border-bottom: 1px solid #EBE9E9;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
 }
 .name {
   display: grid;
@@ -16,6 +18,7 @@
 }
 .nameCard {
   grid-area: name;
+  font-weight: bold;
 }
 .pic {
   display: grid;
@@ -29,4 +32,12 @@
 .value {
   display: flex;
   justify-content: flex-end;
+}
+
+.green {
+  color: #10C352
+}
+
+.red {
+  color: red;
 }

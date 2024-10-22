@@ -5,7 +5,7 @@ import Content3 from "../content3/content3.tsx";
 import Footer from "../footer/footer.tsx";
 import {connect, ConnectedProps} from "react-redux";
 import {RootState} from "../reduxTest/store/Store.ts";
-import {fetchCardsAsync} from "../client/products/asyncThunk/fetchCardsAsync.ts";
+import {fetchCardsAsync} from "../client/asyncThunk/fetchCardsAsync.ts";
 import {useEffect, useState} from "react";
 
 const connector = connect(
@@ -56,9 +56,9 @@ const PageMain = connector(({cards, isLoaded, isError, isPending, fetchCardsAsyn
         return (
             <div>
                 <Menu/>
-                <Hero/>
+                {/*<Hero/>
                 <Content2/>
-                <Content3/>
+                <Content3/>*/}
                 <Footer/>
             </div>
         )
