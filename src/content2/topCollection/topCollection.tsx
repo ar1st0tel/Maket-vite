@@ -33,7 +33,7 @@ const TopCollection = connector(({LineArray, isError, isPending, isLoaded, fetch
         return <div>There are no collections unfortunately</div>;
     }
     if (isLoaded) {
-        return (<div className={classes.font}>
+        return (<>
                 <div className={classes.table}>
                     <TableTitle/>
                     <div className={classes.line}>
@@ -58,7 +58,7 @@ const TopCollection = connector(({LineArray, isError, isPending, isLoaded, fetch
                     <ExploreAll/>
                 </div>
 
-            </div>
+            </>
         )
     }
     return null

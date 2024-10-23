@@ -1,3 +1,5 @@
+.button1:active,
+.button1:hover,
 .button1 {
   border-radius: 12px;
   background: black;
@@ -6,12 +8,18 @@
   width: 180px;
   font-size: 16px;
   letter-spacing: 1px;
+  text-decoration: none;
 }
+.button2:active,
+.button2:hover,
 .button2{
   border-radius: 12px;
   border: 1.5px solid black;
   height: 6vh;
   font-size: 16px;
   width: 148px;
+  line-height: 24px;
   letter-spacing: 1px;
+  color: #000000;
+  text-decoration: none;
 }

@@ -1,5 +1,6 @@
 .table
 {
+  font-family: Poppins;
   display: grid;
   text-align: end;
   grid-template-rows: 10vh 7vh auto ;
@@ -38,9 +39,6 @@
     display: grid;
     justify-content: end;
     color: #ACADB9;
-  }
-  .font {
-    font-family: Poppins;
   }
   .line {
     display: grid;

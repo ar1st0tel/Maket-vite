@@ -2,7 +2,6 @@
     display: grid;
  background: #F9F9F9;
     max-width: 1440px;
-    width: 1440px;
     margin:0 auto;
 
 }
@@ -63,12 +62,15 @@
     height: 57px;
     background: #EDEDED;
 }
+.boxWallet:active,
+.boxWallet:hover,
 .boxWallet {
     width: 200px;
     height: 57px;
     color: #FFFFFF;
     background: #141416;
     border-radius: 16px;
+    text-decoration: none;
 }
 .item:active,
 .item:hover,

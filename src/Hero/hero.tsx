@@ -24,7 +24,10 @@ const Hero = () => {
                 <div className={classes.bottom}><Stats/></div>
             </div>
             <div className={classes.right}>
+                <div className={classes.containerPic}>
                     <img className={classes.bigPic} src={Rectangle3} alt="1"/>
+                    <div></div>
+                </div>
                 <div className={classes.smlPics}>
                     <div className={classes.arrow}><img src={Arrow} alt="1"/> </div>
                     <div className={classes.dots}><img src={Dots} alt="1"/></div>
