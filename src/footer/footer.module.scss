@@ -35,9 +35,7 @@
   align-content: center;
   align-items: center;
   width: 1251px;
-  padding: 92px 0 25px 0;
-  margin-left: 96px;
-  margin-right: 96px;
+  margin: 0 auto;
   border-bottom: 1px solid #818181;
 
 }
@@ -49,10 +47,9 @@
   align-content: center;
   align-items: center;
   width: 1251px;
-  padding: 57px 0 81px 0;
+  padding: 57px 0 57px 0;
   border-top: 1px solid #818181;
-  margin-left: 96px;
-  margin-right: 96px;
+  margin: 0 auto;
 }
 
 .logos {
@@ -81,7 +78,6 @@
 }
 .appWrapper {
   width: 1440px;
-  margin: 0 auto;
   display: grid;
   justify-items: center;
   grid-auto-columns: 1fr;

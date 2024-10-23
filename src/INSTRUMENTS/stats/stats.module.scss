@@ -7,9 +7,15 @@
   font-size: 36.77px;
   font-weight: 600;
   line-height: 45.96px;
+  display: grid;
+  align-items: end;
 }
 .weak {
   font-family: Inter;
   font-size: 14px;
   font-weight: 500;
-  line-height: 18.39px}
+  line-height: 18.39px;
+  display: grid;
+  align-items: center;
+  color: #848586;
+}

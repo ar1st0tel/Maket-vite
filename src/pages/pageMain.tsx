@@ -56,8 +56,8 @@ const PageMain = connector(({cards, isLoaded, isError, isPending, fetchCardsAsyn
         return (
             <div>
                 <Menu/>
-                {/*<Hero/>
-                <Content2/>
+                <Hero/>
+                {/*<Content2/>
                 <Content3/>*/}
                 <Footer/>
             </div>

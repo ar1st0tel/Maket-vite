@@ -1,25 +1,15 @@
 .background{
     display: grid;
  background: #F9F9F9;
+    max-width: 1440px;
     width: 1440px;
     margin:0 auto;
 
 }
 .headerBack {
-    margin: 45px auto 111px auto;
-    width: 1251px;
+    margin-top: 45px;
+    margin-bottom: 45px;
     display: grid;
-}
-    @media screen and (max-width: 1024px) {
-    .headerBack {
-        margin: 32px auto 79px auto;
-        width: 890px;
-    }
-}
-@media screen and (max-width: 375px) {
-    .headerBack {
-        margin: 30px 30px 74px 30px;
-    }
 }
 
 .contentBack {
@@ -31,8 +21,6 @@
 .nav {
     display: grid;
     width: 445px;
-    margin-right: 107px;
-    margin-left: 57px;
 }
 @media screen and (max-width: 400px)  {
     .nav {
@@ -43,6 +31,8 @@
 .box {
     display: grid;
     align-items: center;
+    justify-items: center;
+    margin-bottom: 7vh;
     grid-template-columns:repeat(4, auto);
     color: #606060;
 }
@@ -65,12 +55,11 @@
     }
 .boxSearch {
     width: 350px;
-    margin-right: 30px;
     border-radius: 15px;
     display: grid;
-    grid-template-columns: 3vw auto;
+    grid-template-columns: 4vw auto;
     align-items: center;
-    gap: 25px;
+    justify-self: end;
     height: 57px;
     background: #EDEDED;
 }
