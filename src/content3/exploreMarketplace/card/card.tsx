@@ -1,18 +1,20 @@
 import classes from "../exploreMarketplace.module.scss";
-import SunGlass1 from "../../../IMG/SunGlass1.png";
-import {NavLink} from "react-router-dom";
-
-
-const Card = () => {
+import Ethereum from "../../../IMG/Ethereum.png"
+const Card = (props: {
+    id: string,
+    name: string,
+    price: string,
+    img: string
+}) => {
     return (
-        <div className={classes.item}>
-            <NavLink to="#s" className={classes.img} ><img src={SunGlass1} alt="1"/></NavLink>
+        <div className={classes.item} key={props.id}>
+           <img className={classes.img} src={props.img} alt={props.name} loading="lazy"/>
             <div className={classes.description}>
-                <div className={classes.name}>Sun-Glass
+                <div className={classes.name}>{props.name}
                 </div>
                 <div className={classes.info}>
                     <div>Current bid</div>
-                    <div>'img' price</div>
+                    <div className={classes.priceLine}><img src={Ethereum} alt="1"/> {props.price}</div>
                 </div>
                 <div className={classes.bid}>
                     <button className={classes.buttonBid}>PLACE BID</button>
@@ -22,3 +24,9 @@ const Card = () => {
     )
 }
 export default Card
+
+//props
+//map[] parent
+//key={idText} div
+// div = link (вместо имг)
+//

@@ -13,7 +13,7 @@ const Hero = () => {
                 <div className={classes.bord}></div>
                 <div className={classes.top}>
                     <div className={classes.heroText}>
-                        <div className={classes.heroInfo}>Discover And Create NFTs</div>
+                        <div className={classes.heroInfo}>Discover And <div> Create NFTs</div></div>
                         <div className={classes.heroContext}>
                             <div>Discover, Create and Sell NFTs On Our NFT Marketplace</div>
                             <div>With Over Thousands Of NFTs And Get a <strong className={classes.black}>$20 bonus.</strong></div>
@@ -24,7 +24,10 @@ const Hero = () => {
                 <div className={classes.bottom}><Stats/></div>
             </div>
             <div className={classes.right}>
-                    <img className={classes.BigPic} src={Rectangle3} alt="1"/>
+                <div className={classes.containerPic}>
+                    <img className={classes.bigPic} src={Rectangle3} alt="1"/>
+                    <div></div>
+                </div>
                 <div className={classes.smlPics}>
                     <div className={classes.arrow}><img src={Arrow} alt="1"/> </div>
                     <div className={classes.dots}><img src={Dots} alt="1"/></div>

@@ -1,7 +1,6 @@
 .table {
   background: #141416;
-  padding: 20px 0;
-  width: 100%;
+  width: 1440px;
   color: #B9B9B9;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -16,7 +15,8 @@
   display: grid;
   align-items: center;
   grid-template-columns: repeat(4, auto);
-  gap: 0 4vw;
+  gap: 70px;
+  justify-items: end;
   color: #606060;
 }
 
@@ -24,7 +24,7 @@
   display: grid;
   align-items: end;
   grid-template-columns: repeat(4, auto);
-  gap: 0 4vw;
+  gap: 54px;
   color: #606060;
 }
 
@@ -34,9 +34,8 @@
   grid-template-columns: 1fr 1fr;
   align-content: center;
   align-items: center;
-  gap: 5vw;
-  width: 90%;
-  padding: 25px 10px;
+  width: 1251px;
+  margin: 0 auto;
   border-bottom: 1px solid #818181;
 
 }
@@ -47,10 +46,10 @@
   grid-template-columns: 1fr 1fr;
   align-content: center;
   align-items: center;
-  gap: 5vw;
-  width: 90%;
-  padding: 25px 10px;
+  width: 1251px;
+  padding: 57px 0 57px 0;
   border-top: 1px solid #818181;
+  margin: 0 auto;
 }
 
 .logos {
@@ -59,7 +58,8 @@
 }
 
 .rights {
-  font-size: 12px;
+  font-size: 17px;
+  width: 286px;
 }
 
 .whiteLogo {
@@ -77,7 +77,7 @@
   color: #606060;
 }
 .appWrapper {
-  margin: 0 auto;
+  width: 1440px;
   display: grid;
   justify-items: center;
   grid-auto-columns: 1fr;

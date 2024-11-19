@@ -1,80 +1,43 @@
 .table
 {
-  border: 1px solid black;
+  font-family: Poppins;
   display: grid;
   text-align: end;
-  grid-template-rows: 10vh 7vh repeat(4, 10vh) ;
+  row-gap: 2vh;
+  grid-template-rows: repeat(3, auto) ;
   grid-template-areas:
-  "header header header header header header"
-  "title title title title title title"
-  "line line line line line line"
-   "line line line line line line"
-   "line line line line line line"
-   "line line line line line line"
+  "header"
+  "title"
+  "line"
 /*можно попробовать убрать все грид-темплейт-ареа*/
   /*"name volume h24 floor owners items"
   "name volume h24 floor owners items"
   "name volume h24 floor owners items"*/
 }
-
   .header {
-    grid-area: header;
     text-align: center;
     color: black;
-    font-size: 40px;
+    font-size: 45px;
   }
 
   .title {
-    grid-area: title;
     display: grid;
     grid-template-columns: 4fr repeat(5, 3fr);
+    color: #93989A;
   }
   .collection {
     display: grid;
     text-align: start;
   }
 
-  .name {
-    grid-area: name;
-    display: grid;
-    grid-template-rows: repeat(4, 10vh);
-    text-align: start;
-  }
-
-  .volume {
-    grid-area: volume;
-    display: grid;
-    grid-template-rows: repeat(4, 10vh);
-  }
-
-  .h24 {
-    grid-area: h24;
-    display: grid;
-    grid-template-rows: repeat(4, 10vh);
-  }
-
-  .floor {
-    grid-area: floor;
-    display: grid;
-    grid-template-rows: repeat(4, 10vh);
-  }
-
-  .owners {
-    grid-area: owners;   display: grid;
-    grid-template-rows: repeat(4, 10vh);
-  }
-
   .items {
-    grid-area: items;   display: grid;
+    display: grid;
     grid-template-rows: repeat(4, 10vh);
   }
   .explore {
     display: grid;
     justify-content: end;
     color: #ACADB9;
-  }
-  .font {
-    font-family: Poppins;
   }
   .line {
     display: grid;

@@ -1,24 +1,38 @@
 .background{
- background: #F9F9F9;
-    width: 100%;
+    display: grid;
+    background: #F9F9F9;
+    width: 1440px;
     margin:0 auto;
 }
+
+@media screen and (max-width: 1024px) {
+    .background{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .background{
+        max-width: 100%;
+    }
+}
 .headerBack {
-    margin: 0 auto;
-    width: 90%;
-    padding: 20px 10px;
-    margin-bottom: 50px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    display: grid;
 }
 
 .contentBack {
     margin: 0 auto;
     width: 90%;
     padding: 20px 10px;
+    display: grid;
 }
 .nav {
     display: grid;
+    width: 445px;
 }
-@media screen and (max-width: 400px)  {
+@media screen and (max-width: 375px)  {
     .nav {
         display: none;
     }
@@ -27,8 +41,9 @@
 .box {
     display: grid;
     align-items: center;
-    grid-template-columns: 7vw repeat(3, auto);
-    gap: 0 4vw;
+    justify-items: center;
+    margin-bottom: 7vh;
+    grid-template-columns:repeat(4, auto);
     color: #606060;
 }
 
@@ -42,25 +57,44 @@
 .searchArea{
     border: none;
     font-family: Poppins;
+    font-size: 16px;
     resize: none;
     background: none;
     align-content: center;
     outline: none;
     }
 .boxSearch {
+    width: 350px;
     border-radius: 15px;
     display: grid;
-    grid-template-columns: 3vw auto;
+    grid-template-columns: 4vw auto;
     align-items: center;
-    gap: 20px;
-    height: 100%;
+    justify-self: end;
+    height: 57px;
     background: #EDEDED;
 }
+@media screen and (max-width: 400px)  {
+    .boxSearch {
+        display: none;
+    }
+
+}
+
+.boxWallet:active,
+.boxWallet:hover,
 .boxWallet {
-    height: 100%;
+    width: 200px;
+    height: 57px;
     color: #FFFFFF;
     background: #141416;
     border-radius: 16px;
+    text-decoration: none;
+}
+@media screen and (max-width: 400px)  {
+    .boxWallet {
+        display: none;
+    }
+
 }
 .item:active,
 .item:hover,
@@ -87,13 +121,13 @@
     color: black;
 }
 .loading {
-    from{
-    transform: rotate(0deg);}
-    to {
-    transform:(360deg)}
     display: flex;
     justify-content: center;
-    margin: 250px 0 250px 0
+    margin: 100px 0;
+}
+.rotate {
+    transition: transform .8s;
+    transform: rotate(360deg);
 }
 /*
 #root {
