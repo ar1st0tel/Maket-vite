@@ -3,13 +3,16 @@ import Category from "../../IMG/Category.png"
 import Collection from "../../IMG/Collection.png"
 import Price from "../../IMG/Price.png"
 import {CardCase} from "./CardCase/CardCase.tsx";
+import {useLocation} from "react-router-dom";
 
 const ExploreMarketplace = () => {
+    const location = useLocation();
+    const hideButton:boolean = location.pathname === "/discover";
     return (<div>
             <div className={classes.table}>
                 <div className={classes.text}>Explore Marketplace</div>
                 <div className={`${classes.filt} ${classes.buttonBorder}`}>
-                    <button className={classes.buttonBorder}>All</button>
+                    {!hideButton && (<button className={classes.buttonBorder}>All</button>)}
                     <button className={classes.buttonBorder}>
                         <div className={classes.buttonAlign}>
                             <img src={Category} alt="1"/>Category

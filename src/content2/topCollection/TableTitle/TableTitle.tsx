@@ -2,7 +2,7 @@ import classes from "../topCollection.module.scss";
 
 const TableTitle = () => {
     return(
-        <div>
+        <div className={classes.gap}>
             <div className={classes.header}>Top Collection</div>
             <div className={classes.title}>
                 <div className={classes.collection}>Collection</div>

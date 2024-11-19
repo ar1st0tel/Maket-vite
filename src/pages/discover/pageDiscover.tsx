@@ -36,7 +36,7 @@ const PageDiscover = connector(({cards, isLoaded, isError, isPending, fetchCards
         return (<div>
                 <Menu/>
                 <ContentDiscover/>
-                <LoadingImg/>
+              {/*  <LoadingImg/>*/}
                 <Footer/>
             </div>
         )

@@ -1,9 +1,20 @@
 .background{
     display: grid;
- background: #F9F9F9;
-    max-width: 1440px;
+    background: #F9F9F9;
+    width: 1440px;
     margin:0 auto;
+}
 
+@media screen and (max-width: 1024px) {
+    .background{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .background{
+        max-width: 100%;
+    }
 }
 .headerBack {
     margin-top: 45px;
@@ -21,7 +32,7 @@
     display: grid;
     width: 445px;
 }
-@media screen and (max-width: 400px)  {
+@media screen and (max-width: 375px)  {
     .nav {
         display: none;
     }
@@ -62,6 +73,13 @@
     height: 57px;
     background: #EDEDED;
 }
+@media screen and (max-width: 400px)  {
+    .boxSearch {
+        display: none;
+    }
+
+}
+
 .boxWallet:active,
 .boxWallet:hover,
 .boxWallet {
@@ -71,6 +89,12 @@
     background: #141416;
     border-radius: 16px;
     text-decoration: none;
+}
+@media screen and (max-width: 400px)  {
+    .boxWallet {
+        display: none;
+    }
+
 }
 .item:active,
 .item:hover,
@@ -99,7 +123,7 @@
 .loading {
     display: flex;
     justify-content: center;
-    margin: 250px 0 250px 0;
+    margin: 100px 0;
 }
 .rotate {
     transition: transform .8s;

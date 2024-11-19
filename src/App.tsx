@@ -8,6 +8,7 @@ import PageDiscover from "./pages/discover/pageDiscover.tsx";
 import PageCreators from "./pages/creators/pageCreators.tsx";
 import PageSells from "./pages/sells/pageSells.tsx";
 import PageStats from "./pages/stats/pageStats.tsx";
+import MobilePage from "./MobileComponents/MobilePage.tsx";
 
 function App () {
     useEffect(() => {
@@ -27,6 +28,7 @@ function App () {
                     <Route path="/creators" element={<PageCreators/>}/>
                     <Route path="/sells" element={<PageSells/>}/>
                     <Route path="/stats" element={<PageStats/>}/>
+                    <Route path="/mobile" element={<MobilePage/>}/>
                 </Routes>
             </div>
         </BrowserRouter>

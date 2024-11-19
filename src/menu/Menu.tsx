@@ -5,7 +5,7 @@ import LogoBlack from "../IMG/LogoBlack.png"
 const Menu = () => {
     return (<div className={classes.headerBack}>
         <div className={classes.box}>
-            <img src={LogoBlack} alt='1'/> {/*img Logo*/}
+            <a href='http://localhost:5173/'><img src={LogoBlack} alt='1'/></a> {/*img Logo*/}
             <Nav/>
             <SearchArea/>
         <button className={classes.boxWallet}>

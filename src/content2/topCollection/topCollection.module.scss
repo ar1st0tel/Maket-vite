@@ -3,7 +3,8 @@
   font-family: Poppins;
   display: grid;
   text-align: end;
-  grid-template-rows: 10vh 7vh auto ;
+  row-gap: 2vh;
+  grid-template-rows: repeat(3, auto) ;
   grid-template-areas:
   "header"
   "title"
@@ -13,18 +14,16 @@
   "name volume h24 floor owners items"
   "name volume h24 floor owners items"*/
 }
-
   .header {
-    grid-area: header;
     text-align: center;
     color: black;
-    font-size: 40px;
+    font-size: 45px;
   }
 
   .title {
-    grid-area: title;
     display: grid;
     grid-template-columns: 4fr repeat(5, 3fr);
+    color: #93989A;
   }
   .collection {
     display: grid;
@@ -32,7 +31,7 @@
   }
 
   .items {
-    grid-area: items;   display: grid;
+    display: grid;
     grid-template-rows: repeat(4, 10vh);
   }
   .explore {

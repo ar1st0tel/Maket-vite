@@ -2,6 +2,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media screen and (max-width: 400px)  {
+  .table {
+    grid-template-columns: 1fr;
+  }
+
+}
 .left {
   display: grid;
   justify-content: space-around;
@@ -12,11 +18,22 @@
   "top top"
   "bottom bottom ";
 }
+@media screen and (max-width: 400px)  {
+  .left {
+    justify-content: center;
+
+  }
+}
 .right{
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 2vw;
   justify-content: end;
+}
+@media screen and (max-width: 400px)  {
+  .right {
+    justify-content: center;
+  }
 }
 .smlPics {
   display: grid;
@@ -118,6 +135,7 @@ display: grid;
 .content1Back {
   margin: 0 auto;;
   display: grid;
+  padding-bottom: 20vh;
 }
 .black {
   color: black;

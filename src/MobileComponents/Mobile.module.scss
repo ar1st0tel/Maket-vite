@@ -1,0 +1,45 @@
+.mobileWrapper {
+  width: 100%;
+}
+.headerMobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 30px;
+  border-bottom: 1px solid #CBCBCB;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.leftHeaderMobile{
+  display: flex;
+  align-items: center;
+}
+.rightHeaderMobile {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heroMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topic {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.buttonsLine {
+  display: flex;
+}
+.mainInfo
+{
+  font-weight: 600;
+  font-size: 47px;
+  line-height: 57px;
+}

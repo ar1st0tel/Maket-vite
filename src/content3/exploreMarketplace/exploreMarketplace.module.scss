@@ -1,8 +1,8 @@
 .table {
   display: grid;
-  grid-template-rows: 5vh 10vh repeat(2, 45vh);
+  grid-template-rows: 5vh 10vh repeat(2, auto);
+  grid-auto-rows: auto;
   row-gap: 5vh;
-  justify-items: center;
 }
 .text {
   display: grid;
@@ -27,11 +27,14 @@
 }
 .line {
   display: grid;
-  grid-template-columns: repeat(4, 280px);
-  height: 400px;
+  grid-template-columns: repeat(4, auto);
   gap: 4vw;
-  padding-bottom: 4vh;
 }
+/*@media screen and (max-width: 375px){
+  .line {
+    grid-template-columns: 1fr
+  }
+}*/
 .priceLine {
   display: flex;
   align-items: center;
