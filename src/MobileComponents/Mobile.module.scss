@@ -27,6 +27,8 @@
 .topic {
   display: flex;
   align-items: center;
+  font-size: 10px;
+  gap: 2vw;
 }
 
 .text {
@@ -36,10 +38,20 @@
 }
 .buttonsLine {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 4vw;
 }
 .mainInfo
 {
   font-weight: 600;
   font-size: 47px;
   line-height: 57px;
+}
+.mainText {
+  font-size: 12px;
+}
+.blackText {
+  color: black;
+  font-weight: 700;
 }

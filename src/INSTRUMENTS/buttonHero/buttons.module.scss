@@ -4,9 +4,7 @@
   border-radius: 12px;
   background: black;
   color: white;
-  height: 57px;
-  width: 180px;
-  font-size: 16px;
+  max-height: 57px;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -15,11 +13,22 @@
 .button2{
   border-radius: 12px;
   border: 1.5px solid black;
-  height: 57px;
-  font-size: 16px;
-  width: 148px;
+  max-height: 57px;
   line-height: 24px;
   letter-spacing: 1px;
   color: #000000;
   text-decoration: none;
+}
+@media screen and (max-width: 375px)
+{
+  .button1:active,
+  .button1:hover,
+  .button1 {
+    font-size: 12px;
+  }
+  .button2:active,
+  .button2:hover,
+  .button2{
+    font-size: 12px;
+  }
 }

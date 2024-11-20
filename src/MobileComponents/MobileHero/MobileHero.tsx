@@ -11,8 +11,9 @@ const MobileHero = () => {
                 <div className={classes.mainInfo}>
                     Discover And Create NFTs
                 </div>
-                <div>
-                    Discover, Create and Sell NFTs On Our NFT Marketplace With Over Thousands Of NFTs And Get a $20 bonus.
+                <div className={classes.mainText}>
+                    <p>Discover, Create and Sell NFTs On Our NFT Marketplace</p>
+                    <p> With Over Thousands Of NFTs And Get a <span className={classes.blackText}>$20 bonus.</span></p>
                 </div>
             </div>
             <div className={classes.buttonsLine}>
