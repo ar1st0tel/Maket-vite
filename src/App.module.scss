@@ -11,7 +11,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: var(--max-width)) {
     .background{
         max-width: 100%;
     }

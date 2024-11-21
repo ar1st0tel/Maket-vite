@@ -1,6 +1,11 @@
 import classes from "../Mobile.module.scss";
 import Line from '../../IMG/Line.png'
+import TrustPilot from "../../IMG/TrustPilot.png"
+import TrustPilotName from "../../IMG/TrustPilotName.png"
+import Stars from '../../IMG/Stars.png'
 import {ButtonCreate, ButtonExplore} from "../../INSTRUMENTS/buttonHero/buttons.tsx";
+import {HeroPictures} from "../../Hero/hero.tsx";
+
 const MobileHero = () => {
     return (
         <div className={classes.heroMobile}>
@@ -20,12 +25,17 @@ const MobileHero = () => {
                 <ButtonExplore/>
                 <ButtonCreate/>
             </div>
-            <div>
-                trustpilot
+            <div className={classes.trustPilot}>
+                <div style={{display: "flex"}}>
+                    <img src={TrustPilot} alt="Green star"/>
+                    <img src={TrustPilotName} style={{alignSelf: "end"}} alt="trustpilot"/>
+                </div>
+                <div style={{display: "flex", alignItems: "center", gap:7}}>
+                    <img src={Stars} alt="stars"/>
+                    <span>4900+</span>
+                </div>
             </div>
-            <div>
-                pictures
-            </div>
+            <HeroPictures />
         </div>
     )
 }

@@ -9,6 +9,7 @@ import PageCreators from "./pages/creators/pageCreators.tsx";
 import PageSells from "./pages/sells/pageSells.tsx";
 import PageStats from "./pages/stats/pageStats.tsx";
 import MobilePage from "./MobileComponents/MobilePage.tsx";
+import './variables/variables.scss'
 
 function App () {
     useEffect(() => {
