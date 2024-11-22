@@ -17,19 +17,24 @@
   display: flex;
   justify-content: flex-end;
 }
-
 .heroMobile {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 30px;
 }
-
+.topCollectionMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30px;
+}
 .topic {
   display: flex;
   align-items: center;
   font-size: 10px;
   gap: 2vw;
+  color: #201F1F;
 }
 
 .text {
@@ -49,9 +54,12 @@
   font-weight: 600;
   font-size: 47px;
   line-height: 57px;
+  color: #141416;
+  letter-spacing: -2px;
 }
 .mainText {
   font-size: 12px;
+  color: #676767;
 }
 .blackText {
   color: black;
@@ -62,4 +70,21 @@ display: flex;
   align-items: center;
   gap: 16px;
   margin: 20px 0;
+}
+.tableTopCollection {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: Poppins, "sans-serif";
+  color: #93989A;
+}
+.tableLine {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #E8E8E8;
+  padding-bottom: 7px;
 }

@@ -4,7 +4,6 @@ import TrustPilot from "../../IMG/TrustPilot.png"
 import TrustPilotName from "../../IMG/TrustPilotName.png"
 import Stars from '../../IMG/Stars.png'
 import {ButtonCreate, ButtonExplore} from "../../INSTRUMENTS/buttonHero/buttons.tsx";
-import {HeroPictures} from "../../Hero/hero.tsx";
 
 const MobileHero = () => {
     return (
@@ -35,7 +34,6 @@ const MobileHero = () => {
                     <span>4900+</span>
                 </div>
             </div>
-            <HeroPictures />
         </div>
     )
 }
