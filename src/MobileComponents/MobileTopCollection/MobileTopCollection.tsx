@@ -51,7 +51,7 @@ const MobileTopCollection = connector(({LineArray, isError, isPending, isLoaded,
                     Volume
                 </span>
                 </div>
-                <div className={classes.kek}>
+                <div className={classes.lines}>
                     {LineArray.map((lineItem: LineSlice) => (
                             <MobileLineTC
                                 key={lineItem.id}

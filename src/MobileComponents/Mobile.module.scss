@@ -101,7 +101,7 @@ display: flex;
 }
 .linePic {
   display: flex;
-  align-items: center;
+  width: 60px;
 }
 .footerMobile {
   display: flex;
@@ -164,8 +164,26 @@ display: flex;
   max-width: 44.5px;
   height: auto;
 }
-.kek {
+.lines {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+.bigContainer {
+  display: flex;
+  align-self: center;
+}
+.smallContainer {
+  background: white;
+  position: absolute;
+  align-self: end;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  left: 60px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
 }

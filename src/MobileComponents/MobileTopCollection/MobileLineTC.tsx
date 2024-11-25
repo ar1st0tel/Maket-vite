@@ -14,7 +14,12 @@ const MobileLineTC = (props: {
         <div className={classes.tableLine} key={props.id}>
             <div className={classes.picAndName}>
                 <div className={classes.linePic}>
-                    <span><img className={classes.previewPic} src={props.pic} alt={props.name} loading="lazy"/></span>
+                    <span className={classes.bigContainer}>
+                        <img className={classes.previewPic} src={props.pic} alt={props.name} loading="lazy"/>
+                    </span>
+                    <div className={classes.smallContainer}>
+                        {props.id}
+                    </div>
                 </div>
                 <div className={classes.nameAndAuthor}>
                     <span style={{fontWeight: 500}}>{props.name} </span>
