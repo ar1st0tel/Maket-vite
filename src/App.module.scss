@@ -3,6 +3,7 @@
     background: #F9F9F9;
     width: 1440px;
     margin:0 auto;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1024px) {
@@ -11,7 +12,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: var(--max-width)) {
     .background{
         max-width: 100%;
     }
@@ -56,7 +57,7 @@
 }
 .searchArea{
     border: none;
-    font-family: Poppins;
+    font-family: Poppins,"sans-serif";
     font-size: 16px;
     resize: none;
     background: none;
@@ -105,7 +106,7 @@
     justify-self: center;
 }
 .fontPoppins {
-    font-family: Poppins;
+    font-family: Poppins, "sans-serif";
     color: #C2C3CB;
 }
 .table {

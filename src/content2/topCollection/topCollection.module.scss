@@ -1,6 +1,6 @@
 .table
 {
-  font-family: Poppins;
+  font-family: Poppins, "sans-serif";
   display: grid;
   text-align: end;
   row-gap: 2vh;
@@ -18,6 +18,8 @@
     text-align: center;
     color: black;
     font-size: 45px;
+    margin-bottom: 80px;
+    font-weight: 500;
   }
 
   .title {
