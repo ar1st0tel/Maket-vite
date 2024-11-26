@@ -103,7 +103,7 @@ position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10%;
+    height: 8%;
     background: url(".././IMG/Rectangle3Small.png") no-repeat center/cover;
     filter: blur(36px);
     z-index: 0;
@@ -113,7 +113,7 @@ position: relative;
   .containerSmlPic {
     width: 116px;
     height: 172px;
-    overflow: hidden;
+    overflow: visible;
     align-self: end;
   }
   .pic {
@@ -121,14 +121,6 @@ position: relative;
     height: auto;
     object-fit: cover;
   }
-}
-.rect2 {
-  backdrop-filter: blur(100px);
-  width: 100%;
-}
-.rect3 {
-  backdrop-filter: blur(100px);
-  width: 91%;
 }
 .top{
   display: grid;

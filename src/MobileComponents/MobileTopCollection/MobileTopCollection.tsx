@@ -38,8 +38,9 @@ const MobileTopCollection = connector(({LineArray, isError, isPending, isLoaded,
                     justifyContent: "center",
                     marginBottom: 40,
                     fontSize: 30,
-                    fontWeight: 600,
+                    fontWeight: 500,
                     fontFamily: "Poppins, sans-serif",
+                    color: "#141416",
                 }}>
                     <span> Top Collection</span>
                 </div>

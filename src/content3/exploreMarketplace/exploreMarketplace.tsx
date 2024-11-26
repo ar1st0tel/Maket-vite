@@ -19,9 +19,10 @@ const ExploreMarketplace = () => {
     }, []);
     const location = useLocation();
     const hideButton: boolean = location.pathname === "/discover" || isMobile;
+    const topicNFT: boolean = location.pathname === "/discover"
     return (
         <div className={classes.table}>
-            <div className={classes.text}>Explore Marketplace</div>
+            <div className={classes.text}>{!topicNFT ? "Explore Marketplace" : "Discover NFTs"}</div>
             <div className={`${classes.filters} ${classes.buttonBorder}`}>
                 {!hideButton && (<button className={classes.buttonBorder}>All</button>)}
                 <button className={classes.buttonBorder}>
