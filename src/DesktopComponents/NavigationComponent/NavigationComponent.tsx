@@ -5,7 +5,7 @@ import LogoBlack from "../../IMG/LogoBlack.png"
 const NavigationComponent = () => {
     return (<div className={classes.headerBack}>
         <div className={classes.box}>
-            <a href='/public'><img src={LogoBlack} alt='1'/></a> {/*img Logo*/}
+            <a href='/'><img src={LogoBlack} alt='1'/></a> {/*img Logo*/}
             <NavigationTitles/>
             <SearchArea/>
         <button className={classes.boxWallet}>
