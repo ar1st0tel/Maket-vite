@@ -1,9 +1,9 @@
 import {useEffect} from "react";
 import './App.module.scss'
 import WebFont from "webfontloader";
-import MobileVersion from "./MobileComponents/MobileVersion.tsx";
+import MobileVersion from "./DevicesVersions/MobileVersion/MobileVersion.tsx";
 import {useMediaQuery} from "react-responsive";
-import DesktopVersion from "./DesktopVersion/DesktopVersion.tsx";
+import DesktopVersion from "./DevicesVersions/DesktopVersion/DesktopVersion.tsx";
 
 function App () {
     useEffect(() => {

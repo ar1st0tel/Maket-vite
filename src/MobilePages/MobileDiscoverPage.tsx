@@ -1,10 +1,11 @@
-import ExploreMarketplace from "./ExploreMarketplaceFolder/ExploreMarketplace.tsx";
-import classes from "../../App.module.scss";
-import ExploreAll from "../../HelpersComponents/ExploreAll/ExploreAll.tsx";
-import {useEffect, useState} from "react";
+import MobileHeader from "../MobileComponents/MobileHeaderComponent/MobileHeader.tsx";
+import MobileExploreMarketplace from "../MobileComponents/MobileExploreMarketplaceComponent/MobileExploreMarketplace.tsx";
+import MobileFooter from "../MobileComponents/MobileFooterComponent/MobielFooter.tsx";
 import {connect, ConnectedProps} from "react-redux";
-import {RootState} from "../../ReduxFeatures/Store/Store.ts";
-import {fetchCardsAsync} from "../../Api/AsyncThunk/FetchCardsAsync.ts";
+import {RootState} from "../ReduxFeatures/Store/Store.ts";
+import {fetchCardsAsync} from "../Api/AsyncThunk/FetchCardsAsync.ts";
+import {useEffect, useState} from "react";
+
 
 const connector = connect(
     (state: RootState) => ({
@@ -15,12 +16,12 @@ const connector = connect(
     }), {fetchCardsAsync}
 )
 type Props = ConnectedProps<typeof connector>
-
-const ExploreMarketplaceComponent = connector(({cards, isLoaded, isError, isPending, fetchCardsAsync}: Props) => {
+const MobileDiscoverPage = connector(({cards, isLoaded, isError, isPending, fetchCardsAsync}: Props) => {
     const [message, setMessage] = useState(false);
     useEffect(() => {
         fetchCardsAsync(8)
     }, [fetchCardsAsync]);
+
 
     useEffect(() => {
         let delay: number;
@@ -43,12 +44,11 @@ const ExploreMarketplaceComponent = connector(({cards, isLoaded, isError, isPend
         return <div>{message ? 'Something is wrong!' : null}</div>
     }
     if (isLoaded) {
-        return (<div className={classes.contentBack}>
-                <ExploreMarketplace/>
-                <ExploreAll/>
-            </div>
-        )
+        return (<>
+            <MobileHeader/>
+            <MobileExploreMarketplace/>
+            <MobileFooter/>
+        </>)
     }
-    return null
-});
-export default ExploreMarketplaceComponent;
+})
+export default MobileDiscoverPage;

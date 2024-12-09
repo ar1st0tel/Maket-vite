@@ -1,23 +1,23 @@
 import classes from "./TopBanner.module.scss";
-import {ButtonCreate, ButtonExplore} from "../../INSTRUMENTS/buttonHero/buttons.tsx";
-import Stats from "../../INSTRUMENTS/stats/stats.tsx";
-import Rectangle3 from "../../IMG/Rectangle3.png";
-import Arrow from "../../IMG/Arrow.png"
-import Dots from "../../IMG/Dots.png"
-import Rectangle3Small from "../../IMG/Rectangle3Small.png"
+import {ButtonCreate, ButtonExplore} from "../../HelpersComponents/ExploreAndCreateButtonsTopBanner/ExploreAndCreateButtons.tsx";
+import Stats from "../../HelpersComponents/stats/Stats.tsx";
+import Rectangle3 from "../../Pictures/Rectangle3.png";
+import Arrow from "../../Pictures/Arrow.png"
+import Dots from "../../Pictures/Dots.png"
+import Rectangle3Small from "../../Pictures/Rectangle3Small.png"
 
 const TopBannerComponent = () => {
     return (<div className={classes.content1Back}>
             <div className={classes.table}>
-                <HeroText/>
-                <HeroPictures/>
+                <TopBannerText/>
+                <TopBannerPictures/>
             </div>
         </div>
     )
 }
 export default TopBannerComponent
 
-export const HeroPictures = () => {
+export const TopBannerPictures = () => {
     return (
         <div className={classes.right}>
             <div className={classes.containerBigPic}>
@@ -38,7 +38,7 @@ export const HeroPictures = () => {
     )
 }
 
-const HeroText = () => {
+const TopBannerText = () => {
     return (
         <div className={classes.left}>
             <div className={classes.bord}></div>

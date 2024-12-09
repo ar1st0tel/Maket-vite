@@ -1,7 +1,7 @@
 import NavigationTitles from "./NavigationTitles/NavigationTitles.tsx";
 import classes from "../../App.module.scss";
 import SearchArea from "./SearchArea/SearchArea.tsx";
-import LogoBlack from "../../IMG/LogoBlack.png"
+import LogoBlack from "../../Pictures/LogoBlack.png"
 const NavigationComponent = () => {
     return (<div className={classes.headerBack}>
         <div className={classes.box}>

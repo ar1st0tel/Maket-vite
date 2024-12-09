@@ -1,11 +1,11 @@
 import classes from "../ExploreMarketplace.module.scss";
 import Card from "../Card/card.tsx";
-import {CardSlice} from "../../../../reduxTest/cards/CardSlice.ts";
+import {CardSlice} from "../../../../ReduxFeatures/CardSlice/CardSlice.ts";
 import {connect, ConnectedProps} from "react-redux";
 import {fetchCardsAsync} from "../../../../Api/AsyncThunk/FetchCardsAsync.ts";
 /*import {useState} from "react";*/
 /*import Pagination from "../Paginator/Paginator.tsx";*/
-import {RootState} from "../../../../reduxTest/store/Store.ts";
+import {RootState} from "../../../../ReduxFeatures/Store/Store.ts";
 
 //Закомментировал Пагинатор
 //В {CardArray.map((cardItem: CardSlice) => ( заменить CardArray на currentItems чтобы работало
