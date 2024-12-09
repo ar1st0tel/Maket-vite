@@ -1,4 +1,4 @@
-import classes from "../topCollection.module.scss";
+import classes from "../TopCollection.module.scss";
 
 const TableTitle = () => {
     return(

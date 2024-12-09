@@ -1,4 +1,4 @@
-import TopCollection from "./topCollection/topCollection.tsx";
+import TopCollection from "./topCollection/TopCollection.tsx";
 import classes from "../App.module.scss";
 
 const Content2 = () => {

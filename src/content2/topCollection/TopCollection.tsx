@@ -1,6 +1,6 @@
-import classes from "./topCollection.module.scss";
+import classes from "./TopCollection.module.scss";
 import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
-import LineTC from "./lineTC/lineTC.tsx";
+import LineTC from "./LineTC/LineTC.tsx";
 import {connect, ConnectedProps} from "react-redux";
 import {fetchLinesAsync} from "../../client/asyncThunk/fetchLinesAsync.ts";
 import {RootState} from "../../reduxTest/store/Store.ts";
