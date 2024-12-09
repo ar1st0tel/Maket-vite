@@ -1,6 +1,6 @@
 import classes from '../../App.module.scss';
 import {NavLink} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const Nav = () => {
 
