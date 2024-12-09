@@ -6,7 +6,7 @@ const SearchArea = () => {
 
                 <img className={classes.item} src={Search} alt='1'/>
 
-            <textarea className={classes.searchArea} placeholder="Search Art Work / Creator"></textarea>
+            <input className={classes.searchArea} placeholder="Search Art Work / Creator"/>
         </div>
     )
 }
