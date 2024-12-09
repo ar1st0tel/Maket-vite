@@ -1,7 +1,7 @@
 import classes from "./Footer.module.scss"
 import FootLine1 from "./FootLine1/FootLine1.tsx";
 import FootLine2 from "./FootLine2/FootLine2.tsx";
-import LogoWhite from "../../IMG/LogoWhite.png"
+import LogoWhite from "../../Pictures/LogoWhite.png"
 import {NavLink} from "react-router-dom";
 
 const FooterComponent = () => {

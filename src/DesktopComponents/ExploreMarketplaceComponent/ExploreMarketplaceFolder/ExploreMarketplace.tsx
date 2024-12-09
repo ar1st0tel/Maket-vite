@@ -1,7 +1,7 @@
 import classes from "./ExploreMarketplace.module.scss";
-import Category from "../../../IMG/Category.png"
-import Collection from "../../../IMG/Collection.png"
-import Price from "../../../IMG/Price.png"
+import Category from "../../../Pictures/Category.png"
+import Collection from "../../../Pictures/Collection.png"
+import Price from "../../../Pictures/Price.png"
 import {CardCase} from "./CardCase/CardCase.tsx";
 import {useLocation} from "react-router-dom";
 import React, {useEffect} from "react";
@@ -18,8 +18,8 @@ const ExploreMarketplace = () => {
         }
     }, []);
     const location = useLocation();
-    const hideButton: boolean = location.pathname === "/discover" || isMobile;
-    const topicNFT: boolean = location.pathname === "/discover"
+    const hideButton: boolean = location.pathname === "/Discover" || isMobile;
+    const topicNFT: boolean = location.pathname === "/Discover"
     return (
         <div className={classes.table}>
             <div className={classes.text}>{!topicNFT ? "Explore Marketplace" : "Discover NFTs"}</div>

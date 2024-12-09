@@ -1,5 +1,5 @@
 import classes from "./LineTC.module.scss"
-import Ethereum from "../../../../IMG/Ethereum.png"
+import Ethereum from "../../../../Pictures/Ethereum.png"
 
 const LineTC = (props: {
     "id": number,
