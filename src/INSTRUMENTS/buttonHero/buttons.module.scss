@@ -5,6 +5,7 @@
   background: black;
   color: white;
   max-height: 57px;
+  height: 57px;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -14,6 +15,7 @@
   border-radius: 12px;
   border: 1.5px solid black;
   max-height: 57px;
+  height: 57px;
   line-height: 24px;
   letter-spacing: 1px;
   color: #000000;
@@ -25,10 +27,12 @@
   .button1:hover,
   .button1 {
     font-size: 12px;
+    max-height: 41px;
   }
   .button2:active,
   .button2:hover,
   .button2{
     font-size: 12px;
+    max-height: 41px;
   }
 }

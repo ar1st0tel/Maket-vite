@@ -5,6 +5,7 @@ import PageDiscover from "../pages/discover/pageDiscover.tsx";
 import PageCreators from "../pages/creators/pageCreators.tsx";
 import PageSells from "../pages/sells/pageSells.tsx";
 import PageStats from "../pages/stats/pageStats.tsx";
+import PageTest from "../pages/pageTest.tsx";
 
 const DesktopVersion= () => {
     return(
@@ -16,6 +17,7 @@ const DesktopVersion= () => {
                     <Route path="/creators" element={<PageCreators/>}/>
                     <Route path="/sells" element={<PageSells/>}/>
                     <Route path="/stats" element={<PageStats/>}/>
+                    <Route path="/test" element={<PageTest/>}/>
                 </Routes>
             </div>
         </BrowserRouter>
