@@ -10,62 +10,6 @@ function PageTest() {
 
 export default PageTest;
 
-export const VotingApp = () => {
-
-    interface Candidates {
-        id: number,
-        name: string,
-        votes: number
-        isLiar: boolean
-    }
-
-    const [totalVotes, setTotalVotes] = useState<number>(0);
-    const [options, setOptions] = useState<Candidates[]>([
-            {id: 1, name: "Lol", votes: 0, isLiar: true},
-            {id: 2, name: "Kek", votes: 0, isLiar: true},
-            {id: 3, name: "Cheburek", votes: 0, isLiar: false},
-        ]
-    );
-
-    useEffect(() => {
-        const allVotes = options.reduce((sum, options) => sum + options.votes, 0)
-        setTotalVotes(allVotes)
-    }, [options])
-
-    const putVote = (id: number) => {
-        setOptions(options.map(option =>
-            option.id === id ? {...option, votes: option.votes + 1} : option))
-    }
-
-    const resetVotes = () => {
-        setOptions(options.map(option => ({
-            ...option, votes: 0
-        })))
-    }
-
-    return (<div>
-            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
-                <div>
-                    <h1>App for votes</h1>
-                    <ul>
-                        {options.map(option => (
-                            <li key={option.id}>
-                                {option.name} has {option.votes} votes
-                                <button onClick={() => putVote(option.id)}>
-                                    put your voice in!
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div>
-                    <button onClick={() => resetVotes()}>Reset votes!</button>
-                    <span style={{display: "flex", justifyContent: "center"}}>Total votes! {totalVotes}</span>
-                </div>
-            </div>
-        </div>
-    )
-}
 
 
 export const ToDoList = () => {
@@ -125,6 +69,65 @@ export const ToDoList = () => {
                         </li>
                     )}
                 </ul>
+            </div>
+        </div>
+    )
+}
+
+
+
+export const VotingApp = () => {
+
+    interface Candidates {
+        id: number,
+        name: string,
+        votes: number
+        isLiar: boolean
+    }
+
+    const [totalVotes, setTotalVotes] = useState<number>(0);
+    const [options, setOptions] = useState<Candidates[]>([
+            {id: 1, name: "Lol", votes: 0, isLiar: true},
+            {id: 2, name: "Kek", votes: 0, isLiar: true},
+            {id: 3, name: "Cheburek", votes: 0, isLiar: false},
+        ]
+    );
+
+    useEffect(() => {
+        const allVotes = options.reduce((sum, options) => sum + options.votes, 0)
+        setTotalVotes(allVotes)
+    }, [options])
+
+    const putVote = (id: number) => {
+        setOptions(options.map(option =>
+            option.id === id ? {...option, votes: option.votes + 1} : option))
+    }
+
+    const resetVotes = () => {
+        setOptions(options.map(option => ({
+            ...option, votes: 0
+        })))
+    }
+
+    return (<div>
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
+                <div>
+                    <h1>App for votes</h1>
+                    <ul>
+                        {options.map(option => (
+                            <li key={option.id}>
+                                {option.name} has {option.votes} votes
+                                <button onClick={() => putVote(option.id)}>
+                                    put your voice in!
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div>
+                    <button onClick={() => resetVotes()}>Reset votes!</button>
+                    <span style={{display: "flex", justifyContent: "center"}}>Total votes! {totalVotes}</span>
+                </div>
             </div>
         </div>
     )

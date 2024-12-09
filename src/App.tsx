@@ -2,7 +2,6 @@ import {useEffect} from "react";
 import './App.module.scss'
 import WebFont from "webfontloader";
 import MobileVersion from "./MobileComponents/MobileVersion.tsx";
-import './variables/variables.scss'
 import {useMediaQuery} from "react-responsive";
 import DesktopVersion from "./DesktopVersion/DesktopVersion.tsx";
 
