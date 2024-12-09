@@ -23,7 +23,7 @@ const Nav = () => {
                         CREATORS
                     </NavLink>
                     <NavLink to="/sells" className={classes.item} onClick={() => changeColor("SELLS")}
-                             style={{color: selectedItem === "SELLS " ? 'black' : 'gray', cursor: 'pointer'}}>
+                             style={{color: selectedItem === "SELLS" ? 'black' : 'gray', cursor: 'pointer'}}>
                         SELLS
                     </NavLink>
                     <NavLink to="/stats" className={classes.item} onClick={() => changeColor("STATS")}
