@@ -1,4 +1,4 @@
-import ExploreMarketplace from "../../content3/exploreMarketplace/exploreMarketplace.tsx";
+import ExploreMarketplace from "../../DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
 import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
 
 const MobileExploreMarketplace = () => {

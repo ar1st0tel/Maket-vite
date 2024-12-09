@@ -3,7 +3,7 @@ import MobileExploreMarketplace from "../MobileExploreMarketplace/MobileExploreM
 import MobileFooter from "../MobileFooter/MobielFooter.tsx";
 import {connect, ConnectedProps} from "react-redux";
 import {RootState} from "../../reduxTest/store/Store.ts";
-import {fetchCardsAsync} from "../../client/asyncThunk/fetchCardsAsync.ts";
+import {fetchCardsAsync} from "../../Api/AsyncThunk/FetchCardsAsync.ts";
 import {useEffect, useState} from "react";
 
 

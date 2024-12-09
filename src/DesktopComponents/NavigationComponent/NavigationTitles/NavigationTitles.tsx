@@ -1,12 +1,12 @@
-import classes from '../../App.module.scss';
+import classes from '../../../App.module.scss';
 import {NavLink} from "react-router-dom";
 
-const Nav = () => {
+const NavigationTitles = () => {
     return (
             <div className={classes.nav}>
                 <div className={classes.boxSmall}>
                         <a href="/discover" className={classes.item}>
-                           <Discover />
+                           DISCOVER
                         </a>
                         <NavLink to="/creators" className={classes.item}>
                             CREATORS
@@ -21,13 +21,5 @@ const Nav = () => {
             </div>
     )
 }
-export default Nav
+export default NavigationTitles
 
-const Discover = () => {
-    return (
-        <div className={classes.a}>
-            DISCOVER
-        </div>
-    )
-}
-export  {Discover};

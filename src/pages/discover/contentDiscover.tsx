@@ -1,7 +1,7 @@
 import classes from "../../App.module.scss";
 
 import Loading from "../../IMG/Loading.png";
-import ExploreMarketplace from "../../content3/exploreMarketplace/exploreMarketplace.tsx";
+import ExploreMarketplace from "../../DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
 
 const ContentDiscover = () => {
     return (<div className={classes.contentBack}>

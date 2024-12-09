@@ -1,11 +1,11 @@
 import classes from "./TopCollection.module.scss";
-import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
+import ExploreAll from "../../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
 import LineTC from "./LineTC/LineTC.tsx";
 import {connect, ConnectedProps} from "react-redux";
-import {fetchLinesAsync} from "../../client/asyncThunk/fetchLinesAsync.ts";
-import {RootState} from "../../reduxTest/store/Store.ts";
+import {fetchLinesAsync} from "../../../Api/AsyncThunk/FetchLinesAsync.ts";
+import {RootState} from "../../../reduxTest/store/Store.ts";
 import TableTitle from "./TableTitle/TableTitle.tsx";
-import {LineSlice} from "../../reduxTest/linesCollections/LineSlice.ts";
+import {LineSlice} from "../../../reduxTest/linesCollections/LineSlice.ts";
 import {useEffect} from "react";
 
 const connector = connect(

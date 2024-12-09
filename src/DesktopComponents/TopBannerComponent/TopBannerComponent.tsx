@@ -1,12 +1,12 @@
-import classes from "./hero.module.scss";
-import {ButtonCreate, ButtonExplore} from "../INSTRUMENTS/buttonHero/buttons.tsx";
-import Stats from "../INSTRUMENTS/stats/stats.tsx";
-import Rectangle3 from "../IMG/Rectangle3.png";
-import Arrow from "../IMG/Arrow.png"
-import Dots from "../IMG/Dots.png"
-import Rectangle3Small from "../IMG/Rectangle3Small.png"
+import classes from "./TopBanner.module.scss";
+import {ButtonCreate, ButtonExplore} from "../../INSTRUMENTS/buttonHero/buttons.tsx";
+import Stats from "../../INSTRUMENTS/stats/stats.tsx";
+import Rectangle3 from "../../IMG/Rectangle3.png";
+import Arrow from "../../IMG/Arrow.png"
+import Dots from "../../IMG/Dots.png"
+import Rectangle3Small from "../../IMG/Rectangle3Small.png"
 
-const Hero = () => {
+const TopBannerComponent = () => {
     return (<div className={classes.content1Back}>
             <div className={classes.table}>
                 <HeroText/>
@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
     )
 }
-export default Hero
+export default TopBannerComponent
 
 export const HeroPictures = () => {
     return (

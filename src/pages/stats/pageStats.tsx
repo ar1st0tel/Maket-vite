@@ -1,14 +1,14 @@
 
 
-import Menu from "../../menu/Menu.tsx";
-import Footer from "../../footer/footer.tsx";
+import NavigationComponent from "../../DesktopComponents/NavigationComponent/NavigationComponent.tsx";
+import FooterComponent from "../../DesktopComponents/FooterComponent/FooterComponent.tsx";
 
 
 const PageStats = () =>{
     return (
         <div>
-            <Menu/>
-            <Footer/>
+            <NavigationComponent/>
+            <FooterComponent/>
         </div>
     )
 }

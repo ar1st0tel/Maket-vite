@@ -1,17 +1,17 @@
-import Menu from "../menu/Menu.tsx";
-import Hero from "../Hero/hero.tsx";
-import Content2 from "../content2/Content2.tsx";
-import Content3 from "../content3/content3.tsx";
-import Footer from "../footer/footer.tsx";
+import NavigationComponent from "../DesktopComponents/NavigationComponent/NavigationComponent.tsx";
+import TopBannerComponent from "../DesktopComponents/TopBannerComponent/TopBannerComponent.tsx";
+import TopCollectionComponent from "../DesktopComponents/TopCollectionComponent/TopCollectionComponent.tsx";
+import ExploreMarketplaceComponent from "../DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceComponent.tsx";
+import FooterComponent from "../DesktopComponents/FooterComponent/FooterComponent.tsx";
 
 const PageMain = () => {
         return (
             <div>
-                <Menu/>
-                <Hero/>
-                <Content2/>
-                <Content3/>
-                <Footer/>
+                <NavigationComponent/>
+                <TopBannerComponent/>
+                <TopCollectionComponent/>
+                <ExploreMarketplaceComponent/>
+                <FooterComponent/>
             </div>
         )
     }

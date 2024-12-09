@@ -1,5 +1,5 @@
-import classes from '../../App.module.scss';
-import Search from "../../IMG/Search.png"
+import classes from '../../../App.module.scss';
+import Search from "../../../IMG/Search.png"
 
 const SearchArea = () => {
     return (<div className={classes.boxSearch}>

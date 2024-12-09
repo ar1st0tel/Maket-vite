@@ -1,10 +1,10 @@
-import ExploreMarketplace from "./exploreMarketplace/exploreMarketplace.tsx";
-import classes from "../App.module.scss";
-import ExploreAll from "../INSTRUMENTS/exploreAll/ExploreAll.tsx";
+import ExploreMarketplace from "./ExploreMarketplaceFolder/ExploreMarketplace.tsx";
+import classes from "../../App.module.scss";
+import ExploreAll from "../../INSTRUMENTS/exploreAll/ExploreAll.tsx";
 import {useEffect, useState} from "react";
 import {connect, ConnectedProps} from "react-redux";
-import {RootState} from "../reduxTest/store/Store.ts";
-import {fetchCardsAsync} from "../client/asyncThunk/fetchCardsAsync.ts";
+import {RootState} from "../../reduxTest/store/Store.ts";
+import {fetchCardsAsync} from "../../Api/AsyncThunk/FetchCardsAsync.ts";
 
 const connector = connect(
     (state: RootState) => ({
@@ -16,7 +16,7 @@ const connector = connect(
 )
 type Props = ConnectedProps<typeof connector>
 
-const Content3 = connector(({cards, isLoaded, isError, isPending, fetchCardsAsync}: Props) => {
+const ExploreMarketplaceComponent = connector(({cards, isLoaded, isError, isPending, fetchCardsAsync}: Props) => {
     const [message, setMessage] = useState(false);
     useEffect(() => {
         fetchCardsAsync(8)
@@ -51,4 +51,4 @@ const Content3 = connector(({cards, isLoaded, isError, isPending, fetchCardsAsyn
     }
     return null
 });
-export default Content3
+export default ExploreMarketplaceComponent;

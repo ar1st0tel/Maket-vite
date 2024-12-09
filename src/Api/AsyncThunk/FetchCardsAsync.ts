@@ -10,10 +10,6 @@ interface ICardApi {
 
 export type CardsApi = ICardApi[]
 
-/*type fetchCardsAsync = {
-    getProduct(): Promise<CardsApi>;
-}*/
-
 export const fetchCardsAsync =  createAsyncThunk(
     'cards/fetchCards',
     async (limit: number | undefined) => {

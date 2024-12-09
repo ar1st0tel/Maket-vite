@@ -1,9 +1,9 @@
-import Menu from "../../menu/Menu.tsx";
-import Footer from "../../footer/footer.tsx";
+import NavigationComponent from "../../DesktopComponents/NavigationComponent/NavigationComponent.tsx";
+import FooterComponent from "../../DesktopComponents/FooterComponent/FooterComponent.tsx";
 import ContentDiscover, {LoadingImg} from "./contentDiscover.tsx";
 import {connect, ConnectedProps} from "react-redux";
 import {RootState} from "../../reduxTest/store/Store.ts";
-import {fetchCardsAsync} from "../../client/asyncThunk/fetchCardsAsync.ts";
+import {fetchCardsAsync} from "../../Api/AsyncThunk/FetchCardsAsync.ts";
 import {useEffect} from "react";
 
 
@@ -34,10 +34,10 @@ const PageDiscover = connector(({cards, isLoaded, isError, isPending, fetchCards
     }
     if (isLoaded) {
         return (<div>
-                <Menu/>
+                <NavigationComponent/>
                 <ContentDiscover/>
                 <LoadingImg/>
-                <Footer/>
+                <FooterComponent/>
             </div>
         )
     }

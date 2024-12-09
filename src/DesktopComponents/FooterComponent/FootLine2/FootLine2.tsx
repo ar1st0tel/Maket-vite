@@ -1,8 +1,8 @@
-import classes from "../footer.module.scss";
-import Inst from "../../IMG/Inst.png";
-import FB from "../../IMG/FB.png";
-import LinkedIn from "../../IMG/LinkedIn.png";
-import Twitter from "../../IMG/Twitter.png";
+import classes from "../Footer.module.scss";
+import Inst from "../../../IMG/Inst.png";
+import FB from "../../../IMG/FB.png";
+import LinkedIn from "../../../IMG/LinkedIn.png";
+import Twitter from "../../../IMG/Twitter.png";
 import {NavLink} from "react-router-dom";
 
 const FootLine2 = () => {

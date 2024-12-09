@@ -2658,7 +2658,7 @@ function handleThunkCaseReducerDefinition({
   reducerName
 }, reducerDefinition, context, cAT) {
   if (!cAT) {
-    throw new Error(false ? formatProdErrorMessage(18) : "Cannot use `create.asyncThunk` in the built-in `createSlice`. Use `buildCreateSlice({ creators: { asyncThunk: asyncThunkCreator } })` to create a customised version of `createSlice`.");
+    throw new Error(false ? formatProdErrorMessage(18) : "Cannot use `create.AsyncThunk` in the built-in `createSlice`. Use `buildCreateSlice({ creators: { AsyncThunk: asyncThunkCreator } })` to create a customised version of `createSlice`.");
   }
   const {
     payloadCreator,

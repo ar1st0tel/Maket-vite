@@ -1,5 +1,5 @@
-import classes from "../exploreMarketplace.module.scss";
-import Ethereum from "../../../IMG/Ethereum.png"
+import classes from "../ExploreMarketplace.module.scss";
+import Ethereum from "../../../../IMG/Ethereum.png"
 
 const Card = (props: {
     id: string,

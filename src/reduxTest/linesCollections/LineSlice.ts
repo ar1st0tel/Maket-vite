@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {fetchLinesAsync} from "../../client/asyncThunk/fetchLinesAsync.ts";
+import {fetchLinesAsync} from "../../Api/AsyncThunk/FetchLinesAsync.ts";
 
 
 export interface LineSlice {

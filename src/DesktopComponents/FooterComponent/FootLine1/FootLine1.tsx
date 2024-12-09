@@ -1,4 +1,4 @@
-import classes from "../footer.module.scss";
+import classes from "../Footer.module.scss";
 import {NavLink} from "react-router-dom";
 
 const FootLine1 = () => {

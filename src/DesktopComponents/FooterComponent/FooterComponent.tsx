@@ -1,10 +1,10 @@
-import classes from "./footer.module.scss"
-import FootLine1 from "./footLine1/FootLine1.tsx";
-import FootLine2 from "./footLine2/FootLine2.tsx";
-import LogoWhite from "../IMG/LogoWhite.png"
+import classes from "./Footer.module.scss"
+import FootLine1 from "./FootLine1/FootLine1.tsx";
+import FootLine2 from "./FootLine2/FootLine2.tsx";
+import LogoWhite from "../../IMG/LogoWhite.png"
 import {NavLink} from "react-router-dom";
 
-const Footer = () => {
+const FooterComponent = () => {
     return (<div className={classes.appWrapper}>
         <div className={classes.table}>
             <div className={classes.line1}>
@@ -25,4 +25,4 @@ const Footer = () => {
         </div>
     )
 }
-export default Footer;
+export default FooterComponent;

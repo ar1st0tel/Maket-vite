@@ -4,7 +4,7 @@ import MobileLineTC from "./MobileLineTC.tsx";
 import {LineSlice} from "../../reduxTest/linesCollections/LineSlice.ts";
 import {connect, ConnectedProps} from "react-redux";
 import {RootState} from "../../reduxTest/store/Store.ts";
-import {fetchLinesAsync} from "../../client/asyncThunk/fetchLinesAsync.ts";
+import {fetchLinesAsync} from "../../Api/AsyncThunk/FetchLinesAsync.ts";
 import {useEffect} from "react";
 
 const connector = connect(
