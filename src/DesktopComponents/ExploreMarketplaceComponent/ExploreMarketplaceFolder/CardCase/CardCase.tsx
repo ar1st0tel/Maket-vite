@@ -1,5 +1,5 @@
 import classes from "../ExploreMarketplace.module.scss";
-import Card from "../Card/card.tsx";
+import Card from "../Card/Card.tsx";
 import {CardSlice} from "../../../../ReduxFeatures/CardSlice/CardSlice.ts";
 import {connect, ConnectedProps} from "react-redux";
 import {fetchCardsAsync} from "../../../../Api/AsyncThunk/FetchCardsAsync.ts";

@@ -6,6 +6,7 @@ export interface CardSlice {
     name: string,
     price: string,
     img: string,
+    description?: string,
 }
 
 type initialStateType = {

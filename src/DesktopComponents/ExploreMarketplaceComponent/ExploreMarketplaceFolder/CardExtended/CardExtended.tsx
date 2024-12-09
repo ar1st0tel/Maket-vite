@@ -1,11 +1,15 @@
 import classes from "../ExploreMarketplace.module.scss";
 import Ethereum from "../../../../Pictures/Ethereum.png"
 
-const Card = (props: {
+const CardExtended = (props: {
     id: string,
     name: string,
     price: string,
-    img: string
+    img: string,
+    description: string,
+    author: string,
+    owner: string,
+    timeOfEnd: string
 }) => {
     return (
         <div className={classes.item} key={props.id}>
@@ -13,8 +17,15 @@ const Card = (props: {
                 <img className={classes.img} src={props.img} alt={props.name} loading="lazy"/>
             </div>
             <div className={classes.description}>
-                <div className={classes.name}>{props.name}
+                <div className={classes.name}>
+                    <div>
+                        {props.name}
+                    </div>
+                    <div>
+                        {props.description}
+                    </div>
                 </div>
+                <div className={classes.authorAndOwner}></div>
                 <div className={classes.lineInfo}>
                     <div className={classes.info}>
                         <div>Current bid</div>
@@ -28,10 +39,6 @@ const Card = (props: {
         </div>
     )
 }
-export default Card
+export default CardExtended;
 
-//props
-//map[] parent
-//key={idText} div
-// div = link (вместо имг)
-//
+

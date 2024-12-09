@@ -1,18 +1,60 @@
-import {useEffect, useState} from "react";
+/*import {useEffect, useState} from "react";*/
+import classes from "./TEST.module.scss"
+import Ethereum from ".//../Pictures/Ethereum.png"
 
 
 function PAGE_TEST_ANOTHER_PROJECT() {
     return (<div>
-        <ToDoList/>
+      {/*  <ToDoList/>
         <VotingApp/>
+        <Counter />
+        <CardExtended/>*/}
     </div>)
 }
 
 export default PAGE_TEST_ANOTHER_PROJECT;
 
+const CardExtended = (props: {
+    id: string,
+    name: string,
+    price: string,
+    img: string,
+    description: string,
+    author: string,
+    owner: string,
+    timeOfEnd: string
+}) => {
+    return (
+        <div className={classes.item} key={props.id}>
+            <div className={classes.cardContainer}>
+                <img className={classes.img} src={props.img} alt={props.name} loading="lazy"/>
+            </div>
+            <div className={classes.nameAndDescription}>
+                <div className={classes.name}>
+                    <div>
+                        {props.name}
+                    </div>
+                    <div>
+                        {props.description}
+                    </div>
+                </div>
+                <div className={classes.authorAndOwner}></div>
+                <div className={classes.lineInfo}>
+                    <div className={classes.info}>
+                        <div>Current bid</div>
+                        <div className={classes.priceLine}><img src={Ethereum} alt="1"/> {props.price}</div>
+                    </div>
+                    <div className={classes.bid}>
+                        <button className={classes.buttonBid}>PLACE BID</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+export  {CardExtended};
 
-
-export const ToDoList = () => {
+/*export const ToDoList = () => {
 
     interface Tasks {
         id: number,
@@ -132,3 +174,21 @@ export const VotingApp = () => {
         </div>
     )
 }
+
+const Counter = () => {
+    const [count, setCount] = useState(0);
+
+    const incr= () => setCount(count + 1 );
+    const decr = () => setCount( count - 1);
+    const reset = () => setCount (0);
+
+    return (<div>
+            <button onClick={ incr }>+</button>
+            <button onClick={ decr }>-</button>
+            <button onClick={ reset }>reset</button>
+            <ul> Count: {count}</ul>
+        </div>
+    )
+}
+export { Counter }*/
+
