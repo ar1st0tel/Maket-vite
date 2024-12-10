@@ -1,6 +1,7 @@
-.item {
+.card {
   display: flex;
   flex-direction: row;
+  background: #FAFAFA;
 }
 .authorAndOwner {
   display: flex;
@@ -10,7 +11,10 @@
   display: flex;
   flex-direction: column;
 }
-.name {
+.cardName {
   display: flex;
   flex-direction: column;
+}
+.picContainer {
+  display: flex;
 }
