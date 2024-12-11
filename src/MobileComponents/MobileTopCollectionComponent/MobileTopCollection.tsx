@@ -1,6 +1,6 @@
-import classes from "../../DevicesVersions/MobileVersion/MobileVersion.module.scss";
+import classes from "./MobileTopCollection.module.scss";
 import ExploreAll from "../../HelpersComponents/ExploreAll/ExploreAll.tsx";
-import MobileLineTC from "./MobileLineTC.tsx";
+import MobileLineTC from "./MobileLineTC/MobileLineTC.tsx";
 import { LineSlice } from "../../ReduxFeatures/LineSlice/LineSlice.ts";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "../../ReduxFeatures/Store/Store.ts";
@@ -42,17 +42,7 @@ const MobileTopCollection = connector(
     if (isLoaded) {
       return (
         <div className={classes.topCollectionMobile}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: 40,
-              fontSize: 30,
-              fontWeight: 500,
-              fontFamily: "Poppins, sans-serif",
-              color: "#141416",
-            }}
-          >
+          <div className={classes.title}>
             <span> Top Collection</span>
           </div>
           <div className={classes.tableTopCollection}>
@@ -61,15 +51,7 @@ const MobileTopCollection = connector(
           </div>
           <div className={classes.lines}>
             {LineArray.map((lineItem: LineSlice) => (
-              <MobileLineTC
-                key={lineItem.id}
-                id={lineItem.id}
-                pic={lineItem.pic}
-                name={lineItem.name}
-                author={lineItem.author}
-                volume={lineItem.volume}
-                dayPercent={lineItem.dayPercent}
-              />
+              <MobileLineTC key={lineItem.id} line={lineItem} />
             ))}
           </div>
           <ExploreAll />
