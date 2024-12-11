@@ -1,20 +1,24 @@
 .card {
   display: flex;
   flex-direction: row;
-  background: #FAFAFA;
+  background: #fafafa;
 }
+
 .authorAndOwner {
   display: flex;
   flex-direction: row;
 }
-.nameAndDescription{
+
+.nameAndDescription {
   display: flex;
   flex-direction: column;
 }
+
 .cardName {
   display: flex;
   flex-direction: column;
 }
+
 .picContainer {
   display: flex;
 }

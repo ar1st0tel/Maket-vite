@@ -6,14 +6,15 @@ import {RootState} from "../ReduxFeatures/Store/Store.ts";
 import {fetchCardsAsync} from "../Api/AsyncThunk/FetchCardsAsync.ts";
 import {CardSlice} from "../ReduxFeatures/CardSlice/CardSlice.ts";*/
 
-
 function PAGE_TEST_ANOTHER_PROJECT() {
-    return (<div>
+  return (
+    <div>
       {/*   <ToDoList/>
         <VotingApp/>
         <Counter />
         <CardExtendedComponent/>*/}
-    </div>)
+    </div>
+  );
 }
 
 export default PAGE_TEST_ANOTHER_PROJECT;
@@ -241,4 +242,3 @@ const Counter = () => {
     )
 }
 export { Counter }*/
-
