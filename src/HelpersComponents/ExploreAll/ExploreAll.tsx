@@ -1,11 +1,12 @@
 import classes from "./ExploreAll.module.scss";
+import { NavLink } from "react-router-dom";
 
 const ExploreAll = () => {
   return (
     <div className={classes.explore}>
-      <a className={classes.link} href="#S">
+      <NavLink className={classes.link} to="#S">
         Explore All →
-      </a>
+      </NavLink>
     </div>
   );
 };
