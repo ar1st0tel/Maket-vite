@@ -1,6 +1,6 @@
 import MobileHeader from "../MobileComponents/MobileHeaderComponent/MobileHeader.tsx";
 import MobileExploreMarketplace from "../MobileComponents/MobileExploreMarketplaceComponent/MobileExploreMarketplace.tsx";
-import MobileFooter from "../MobileComponents/MobileFooterComponent/MobielFooter.tsx";
+import MobileFooter from "../MobileComponents/MobileFooterComponent/MobileFooter.tsx";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "../ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "../Api/AsyncThunk/FetchCardsAsync.ts";
@@ -25,7 +25,7 @@ const MobileDiscoverPage = connector(
     }, [fetchCardsAsync]);
 
     useEffect(() => {
-      let delay: number;
+      let delay: ReturnType<typeof setTimeout>;
       if (!cards || cards.length === 0) {
         delay = setTimeout(() => {
           setMessage(true);

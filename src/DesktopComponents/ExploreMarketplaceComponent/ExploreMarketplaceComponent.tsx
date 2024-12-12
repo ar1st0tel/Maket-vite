@@ -3,8 +3,8 @@ import classes from "./ExploreMarketplaceComponent.module.scss";
 import ExploreAll from "../../HelpersComponents/ExploreAll/ExploreAll.tsx";
 import { useEffect, useState } from "react";
 import { connect, ConnectedProps } from "react-redux";
-import { RootState } from "../../ReduxFeatures/Store/Store.ts";
-import { fetchCardsAsync } from "../../Api/AsyncThunk/FetchCardsAsync.ts";
+import { RootState } from "@/ReduxFeatures/Store/Store.ts";
+import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import { cardsOnPage } from "../../MobilePages/MobileDiscoverPage.tsx";
 import { LoadingImg } from "../../DesktopPages/Discover/ContentAndLoading/ContentAndLoading.tsx";
 
@@ -15,7 +15,7 @@ const connector = connect(
     isError: state.CardSlice.isError,
     isPending: state.CardSlice.isPending,
   }),
-  { fetchCardsAsync },
+  { fetchCardsAsync }
 );
 type Props = ConnectedProps<typeof connector>;
 
@@ -27,7 +27,7 @@ const ExploreMarketplaceComponent = connector(
     }, [fetchCardsAsync]);
 
     useEffect(() => {
-      let delay: number;
+      let delay: ReturnType<typeof setTimeout>;
       if (!cards || cards.length === 0) {
         delay = setTimeout(() => {
           setMessage(true);
@@ -54,6 +54,6 @@ const ExploreMarketplaceComponent = connector(
       );
     }
     return null;
-  },
+  }
 );
 export default ExploreMarketplaceComponent;

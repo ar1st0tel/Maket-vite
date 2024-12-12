@@ -1,10 +1,10 @@
 import classes from "./MobileTopCollection.module.scss";
 import ExploreAll from "../../HelpersComponents/ExploreAll/ExploreAll.tsx";
 import MobileLineTC from "./MobileLineTC/MobileLineTC.tsx";
-import { LineSlice } from "../../ReduxFeatures/LineSlice/LineSlice.ts";
+import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 import { connect, ConnectedProps } from "react-redux";
-import { RootState } from "../../ReduxFeatures/Store/Store.ts";
-import { fetchLinesAsync } from "../../Api/AsyncThunk/FetchLinesAsync.ts";
+import { RootState } from "@/ReduxFeatures/Store/Store.ts";
+import { fetchLinesAsync } from "@/Api/AsyncThunk/FetchLinesAsync.ts";
 import { useEffect } from "react";
 
 const connector = connect(
@@ -14,10 +14,10 @@ const connector = connect(
     isPending: state.LineSlice.isPending,
     isLoaded: state.LineSlice.isLoaded,
   }),
-  { fetchLinesAsync },
+  { fetchLinesAsync }
 );
 type CollectionProps = ConnectedProps<typeof connector>;
-const collectionsOnPage = 4;
+export const linesOnPage = 4;
 const MobileTopCollection = connector(
   ({
     LineArray,
@@ -27,7 +27,7 @@ const MobileTopCollection = connector(
     fetchLinesAsync,
   }: CollectionProps) => {
     useEffect(() => {
-      fetchLinesAsync(collectionsOnPage);
+      fetchLinesAsync(linesOnPage);
     }, [fetchLinesAsync]);
 
     if (isPending) {
@@ -59,6 +59,6 @@ const MobileTopCollection = connector(
       );
     }
     return null;
-  },
+  }
 );
 export default MobileTopCollection;

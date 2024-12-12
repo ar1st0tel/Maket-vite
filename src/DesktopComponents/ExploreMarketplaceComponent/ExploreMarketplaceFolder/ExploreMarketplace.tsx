@@ -4,19 +4,10 @@ import Collection from "../../../Pictures/Collection.png";
 import Price from "../../../Pictures/Price.png";
 import { CardCase } from "./CardCase/CardCase.tsx";
 import { useLocation } from "react-router-dom";
-import React, { useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const ExploreMarketplace = () => {
-  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 375);
-  useEffect(() => {
-    const handleSizeChange = () => {
-      setIsMobile(window.innerWidth <= 375);
-    };
-    window.addEventListener("resize", handleSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleSizeChange);
-    };
-  }, []);
+  const isMobile = useMediaQuery({ query: "(max-width: 375px)" });
   const location = useLocation();
   const hideButton: boolean = location.pathname === "/Discover" || isMobile;
   const topicNFT: boolean = location.pathname === "/Discover";

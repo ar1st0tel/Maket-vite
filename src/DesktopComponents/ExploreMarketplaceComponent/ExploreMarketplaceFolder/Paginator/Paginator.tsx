@@ -15,27 +15,15 @@ export type PaginatorProps = {
 
 const Pagination = (props: PaginatorProps) => {
   const { nav = null, onPrevPageClick, onNextPageClick, disable } = props;
-  const handleNextPageClick = () => {
-    onNextPageClick();
-  };
-  const handlePrevPageClick = () => {
-    onPrevPageClick();
-  };
   return (
     <div>
-      <button
-        onClick={handlePrevPageClick}
-        disabled={disable.left}
-      >{`<`}</button>
+      <button onClick={onPrevPageClick} disabled={disable.left}>{`<`}</button>
       {nav && (
         <span>
           {nav.current}/{nav.total}
         </span>
       )}
-      <button
-        onClick={handleNextPageClick}
-        disabled={disable.right}
-      >{`>`}</button>
+      <button onClick={onNextPageClick} disabled={disable.right}>{`>`}</button>
     </div>
   );
 };

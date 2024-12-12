@@ -3,10 +3,8 @@ import Line from "../../Pictures/Line.png";
 import TrustPilot from "../../Pictures/TrustPilot.png";
 import TrustPilotName from "../../Pictures/TrustPilotName.png";
 import Stars from "../../Pictures/Stars.png";
-import {
-  ButtonCreate,
-  ButtonExplore,
-} from "../../HelpersComponents/ExploreAndCreateButtonsTopBanner/ExploreAndCreateButtons.tsx";
+import ButtonExplore from "@/HelpersComponents/ExploreAndCreateButtonsTopBanner/ButtonExplore.tsx";
+import ButtonCreate from "@/HelpersComponents/ExploreAndCreateButtonsTopBanner/ButtonCreate.tsx";
 
 const MobileTopBanner = () => {
   return (

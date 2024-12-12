@@ -1,6 +1,6 @@
 import classes from "./Card.module.scss";
-import Ethereum from "../../../../Pictures/Ethereum.png";
-import { CardSlice } from "../../../../ReduxFeatures/CardSlice/CardSlice.ts";
+import Ethereum from "@/Pictures/Ethereum.png";
+import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 
 interface CardProps {
   card: CardSlice;

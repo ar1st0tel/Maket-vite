@@ -25,6 +25,12 @@ export default [
       react: {
         version: "detect",
       },
+      "import/resolver": {
+        alias: {
+          map: [["@", "./src"]],
+          extensions: [".ts", ".tsx", ".js", ".jsx"],
+        },
+      },
     },
     rules: {
       "react/react-in-jsx-scope": "off",

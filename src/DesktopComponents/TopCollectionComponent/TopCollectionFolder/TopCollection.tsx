@@ -2,11 +2,12 @@ import classes from "./TopCollection.module.scss";
 import ExploreAll from "../../../HelpersComponents/ExploreAll/ExploreAll.tsx";
 import LineTC from "./LineTC/LineTC.tsx";
 import { connect, ConnectedProps } from "react-redux";
-import { fetchLinesAsync } from "../../../Api/AsyncThunk/FetchLinesAsync.ts";
-import { RootState } from "../../../ReduxFeatures/Store/Store.ts";
+import { fetchLinesAsync } from "@/Api/AsyncThunk/FetchLinesAsync.ts";
+import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import TableTitle from "./TableTitle/TableTitle.tsx";
-import { LineSlice } from "../../../ReduxFeatures/LineSlice/LineSlice.ts";
+import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 import { useEffect } from "react";
+import { linesOnPage } from "@/MobileComponents/MobileTopCollectionComponent/MobileTopCollection.tsx";
 
 const connector = connect(
   (state: RootState) => ({
@@ -27,7 +28,7 @@ const TopCollection = connector(
     fetchLinesAsync,
   }: CollectionProps) => {
     useEffect(() => {
-      fetchLinesAsync(4);
+      fetchLinesAsync(linesOnPage);
     }, [fetchLinesAsync]);
 
     if (isPending) {
@@ -46,18 +47,7 @@ const TopCollection = connector(
             <TableTitle />
             <div className={classes.line}>
               {LineArray.map((lineItem: LineSlice) => (
-                <LineTC
-                  key={lineItem.id}
-                  id={lineItem.id}
-                  pic={lineItem.pic}
-                  name={lineItem.name}
-                  author={lineItem.author}
-                  volume={lineItem.volume}
-                  dayPercent={lineItem.dayPercent}
-                  floorPrice={lineItem.floorPrice}
-                  owners={lineItem.owners}
-                  items={lineItem.items}
-                />
+                <LineTC key={lineItem.id} line={lineItem} />
               ))}
             </div>
           </div>

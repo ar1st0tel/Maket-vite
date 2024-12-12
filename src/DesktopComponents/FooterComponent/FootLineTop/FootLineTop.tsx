@@ -6,22 +6,22 @@ const FootLineTop = () => {
     <div>
       <div className={classes.box}>
         <div>
-          <NavLink className={classes.a} to="#S">
+          <NavLink className={classes.link} to="#S">
             Privacy Policy
           </NavLink>
         </div>
         <div>
-          <NavLink className={classes.a} to="#S">
+          <NavLink className={classes.link} to="#S">
             Team & Conditions
           </NavLink>
         </div>
         <div>
-          <NavLink className={classes.a} to="#S">
+          <NavLink className={classes.link} to="#S">
             About Us
           </NavLink>
         </div>
         <div>
-          <NavLink className={classes.a} to="#S">
+          <NavLink className={classes.link} to="#S">
             Contact
           </NavLink>
         </div>

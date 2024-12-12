@@ -1,6 +1,6 @@
 import classes from "./MobileLineTC.module.scss";
 import Ethereum from "../../../Pictures/Ethereum.png";
-import { LineSlice } from "../../../ReduxFeatures/LineSlice/LineSlice.ts";
+import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 
 interface MobileLineTCProps {
   line: LineSlice;

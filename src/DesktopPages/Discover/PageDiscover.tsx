@@ -4,8 +4,8 @@ import ContentAndLoading, {
   LoadingImg,
 } from "./ContentAndLoading/ContentAndLoading.tsx";
 import { connect, ConnectedProps } from "react-redux";
-import { RootState } from "../../ReduxFeatures/Store/Store.ts";
-import { fetchCardsAsync } from "../../Api/AsyncThunk/FetchCardsAsync.ts";
+import { RootState } from "@/ReduxFeatures/Store/Store.ts";
+import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import { useEffect } from "react";
 
 const connector = connect(
@@ -15,7 +15,7 @@ const connector = connect(
     isError: state.CardSlice.isError,
     isPending: state.CardSlice.isPending,
   }),
-  { fetchCardsAsync },
+  { fetchCardsAsync }
 );
 type Props = ConnectedProps<typeof connector>;
 
@@ -44,6 +44,6 @@ const PageDiscover = connector(
         </>
       );
     }
-  },
+  }
 );
 export default PageDiscover;

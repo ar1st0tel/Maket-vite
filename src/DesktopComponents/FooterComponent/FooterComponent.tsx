@@ -9,7 +9,7 @@ const FooterComponent = () => {
     <div className={classes.appWrapper}>
       <div className={classes.table}>
         <div className={classes.line1}>
-          <NavLink className={classes.a} to="#S">
+          <NavLink className={classes.link} to="#S">
             <div className={classes.whiteLogo}>
               <img src={LogoWhite} alt="1" /> DiveSea
             </div>

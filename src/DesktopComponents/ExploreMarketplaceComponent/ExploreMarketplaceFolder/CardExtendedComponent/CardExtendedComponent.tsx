@@ -1,10 +1,10 @@
 import { connect, ConnectedProps } from "react-redux";
-import { RootState } from "../../ReduxFeatures/Store/Store.ts";
-import { fetchCardsAsync } from "../../Api/AsyncThunk/FetchCardsAsync.ts";
-import { CardSlice } from "../../ReduxFeatures/CardSlice/CardSlice.ts";
-import CardExtended from "../ExploreMarketplaceComponent/ExploreMarketplaceFolder/CardExtended/CardExtended.tsx";
+import { RootState } from "@/ReduxFeatures/Store/Store.ts";
+import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
+import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
+import CardExtended from "../CardExtended/CardExtended.tsx";
 import { useEffect } from "react";
-import ArrowLeft from "../../Pictures/ArrowLeft.png";
+import ArrowLeft from "../../../../Pictures/ArrowLeft.png";
 import classes from "./CardExtendedComponent.module.scss";
 
 const connector = connect(
@@ -17,6 +17,7 @@ const connector = connect(
   { fetchCardsAsync }
 );
 type CardExtendedProps = ConnectedProps<typeof connector>;
+const CardExtendedOnPage = 1;
 const CardExtendedComponent = connector(
   ({
     CardExposed,
@@ -26,7 +27,7 @@ const CardExtendedComponent = connector(
     fetchCardsAsync,
   }: CardExtendedProps) => {
     useEffect(() => {
-      fetchCardsAsync(1);
+      fetchCardsAsync(CardExtendedOnPage);
     }, [fetchCardsAsync]);
     if (isPending) {
       return <div>...loading...</div>;
@@ -45,21 +46,7 @@ const CardExtendedComponent = connector(
             Product Detail
           </div>
           {CardExposed.map((ItemToShow: CardSlice) => (
-            <CardExtended
-              key={ItemToShow.id}
-              id={ItemToShow.id}
-              name={ItemToShow.name}
-              price={ItemToShow.price}
-              img={ItemToShow.img}
-              description={
-                ItemToShow.description ? ItemToShow.description : "-"
-              }
-              author={ItemToShow.author ? ItemToShow.author : "-"}
-              authorPic={ItemToShow.authorPic ? ItemToShow.authorPic : "-"}
-              owner={ItemToShow.owner ? ItemToShow.owner : "-"}
-              ownerPic={ItemToShow.ownerPic ? ItemToShow.ownerPic : "-"}
-              timeOfEnd={ItemToShow.timeOfEnd ? ItemToShow.timeOfEnd : "-"}
-            />
+            <CardExtended key={ItemToShow.id} cardExtended={ItemToShow} />
           ))}
         </>
       );

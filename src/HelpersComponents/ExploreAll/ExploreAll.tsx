@@ -3,7 +3,7 @@ import classes from "./ExploreAll.module.scss";
 const ExploreAll = () => {
   return (
     <div className={classes.explore}>
-      <a className={classes.a} href="#S">
+      <a className={classes.link} href="#S">
         Explore All →
       </a>
     </div>

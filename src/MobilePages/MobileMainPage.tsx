@@ -1,9 +1,11 @@
 import MobileHeader from "../MobileComponents/MobileHeaderComponent/MobileHeader.tsx";
 import MobileTopBanner from "../MobileComponents/MobileTopBanner/MobileTopBanner.tsx";
 import CardsPreview from "../MobileComponents/MobileCardsPreviewComponent/CardsPreview.tsx";
-import MobileTopCollection from "../MobileComponents/MobileTopCollectionComponent/MobileTopCollection.tsx";
+import MobileTopCollection, {
+  linesOnPage,
+} from "../MobileComponents/MobileTopCollectionComponent/MobileTopCollection.tsx";
 import MobileExploreMarketplace from "../MobileComponents/MobileExploreMarketplaceComponent/MobileExploreMarketplace.tsx";
-import MobileFooter from "../MobileComponents/MobileFooterComponent/MobielFooter.tsx";
+import MobileFooter from "../MobileComponents/MobileFooterComponent/MobileFooter.tsx";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "../ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "../Api/AsyncThunk/FetchCardsAsync.ts";
@@ -23,11 +25,11 @@ const MobileMainPage = connector(
   ({ cards, isLoaded, isError, isPending, fetchCardsAsync }: Props) => {
     const [message, setMessage] = useState(false);
     useEffect(() => {
-      fetchCardsAsync(4);
+      fetchCardsAsync(linesOnPage);
     }, [fetchCardsAsync]);
 
     useEffect(() => {
-      let delay: number;
+      let delay: ReturnType<typeof setTimeout>;
       if (!cards || cards.length === 0) {
         delay = setTimeout(() => {
           setMessage(true);

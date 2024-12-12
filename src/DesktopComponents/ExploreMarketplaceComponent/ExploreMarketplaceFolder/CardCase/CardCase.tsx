@@ -1,11 +1,11 @@
 import classes from "./CardCase.module.scss";
 import Card from "../Card/Card.tsx";
-import { CardSlice } from "../../../../ReduxFeatures/CardSlice/CardSlice.ts";
+import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 import { connect, ConnectedProps } from "react-redux";
-import { fetchCardsAsync } from "../../../../Api/AsyncThunk/FetchCardsAsync.ts";
+import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 /*import {useState} from "react";*/
 /*import Pagination from "../Paginator/Paginator.tsx";*/
-import { RootState } from "../../../../ReduxFeatures/Store/Store.ts";
+import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 
 //Закомментировал Пагинатор
 //В {CardArray.map((cardItem: CardSlice) => ( заменить CardArray на currentItems чтобы работало
@@ -15,7 +15,7 @@ const connector = connect(
     isPending: state.CardSlice.isPending,
     isError: state.CardSlice.isError,
   }),
-  { fetchCardsAsync },
+  { fetchCardsAsync }
 );
 type CardCaseProps = ConnectedProps<typeof connector>;
 const CardCase = connector(
@@ -63,6 +63,6 @@ const CardCase = connector(
         />*/}
       </div>
     );
-  },
+  }
 );
 export { CardCase };

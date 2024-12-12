@@ -1,51 +1,45 @@
 import classes from ".././CardExtended/CardExtended.module.scss";
 import EthereumBig from "../../../../Pictures/EthereumBig.png";
 import BidPicture from "../../../../Pictures/BidPicture.png";
+import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 
-const CardExtended = (props: {
-  id: string;
-  name: string;
-  price: string;
-  img: string;
-  description: string;
-  author: string;
-  authorPic: string;
-  owner: string;
-  ownerPic: string;
-  timeOfEnd: string;
-}) => {
+interface CardExtendedProps {
+  cardExtended: CardSlice;
+}
+
+const CardExtended: React.FC<CardExtendedProps> = ({ cardExtended }) => {
   return (
-    <div className={classes.card} key={props.id}>
+    <div className={classes.card} key={cardExtended.id}>
       <div className={classes.picContainer}>
         <img
           className={classes.img}
-          src={props.img}
-          alt={props.name}
+          src={cardExtended.img}
+          alt={cardExtended.name}
           loading="lazy"
         />
       </div>
       <div className={classes.nameAndDescription}>
         <div className={classes.cardName}>
-          <div className={classes.titleName}>Project {props.name}</div>
-          <div className={classes.description}>{props.description}</div>
+          <div className={classes.titleName}>Project {cardExtended.name}</div>
+          <div className={classes.description}>{cardExtended.description}</div>
         </div>
         <div className={classes.authorAndOwner}>
           <div className={classes.author}>
             <div className={classes.authorImgContainer}>
-              <img src={props.authorPic} alt={props.author} />
+              <img src={cardExtended.authorPic} alt={cardExtended.author} />
             </div>
             <span>
               <div className={classes.greyText}>Created by</div>
-              <div className={classes.blackText}>{props.author}</div>
+              <div className={classes.blackText}>{cardExtended.author}</div>
             </span>
           </div>
           <div className={classes.author}>
             <div className={classes.authorImgContainer}>
-              <img src={props.ownerPic} alt={props.owner} />
+              <img src={cardExtended.ownerPic} alt={cardExtended.owner} />
             </div>
             <span>
               <div className={classes.greyText}>Owned by</div>
-              <div className={classes.blackText}>{props.owner}</div>
+              <div className={classes.blackText}>{cardExtended.owner}</div>
             </span>
           </div>
         </div>
@@ -59,14 +53,16 @@ const CardExtended = (props: {
                   alt="1"
                   className={classes.ethereumImg}
                 />
-                {props.price}
+                {cardExtended.price}
               </div>
             </div>
           </div>
           <div className={classes.info}>
             <div className={classes.greyTextEnd}>End in</div>
             <div>
-              <div className={classes.blackTextLight}>{props.timeOfEnd}</div>
+              <div className={classes.blackTextLight}>
+                {cardExtended.timeOfEnd}
+              </div>
             </div>
           </div>
         </div>
