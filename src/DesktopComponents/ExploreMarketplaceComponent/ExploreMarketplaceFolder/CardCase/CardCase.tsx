@@ -29,10 +29,12 @@ const CardCase = connector(
     return (
       <div className={classes.line}>
         {CardArray.map((cardItem: CardSlice) => (
-          <Card key={cardItem.id} card={cardItem} />
+          <div key={cardItem.id}>
+            <Card card={cardItem} />
+          </div>
         ))}
       </div>
     );
   }
 );
-export { CardCase };
+export default CardCase;

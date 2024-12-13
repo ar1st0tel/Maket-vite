@@ -2,7 +2,7 @@ import CardExtendedComponent from "@/DesktopComponents/CardExtendedComponent/Car
 import NavigationComponent from "@/DesktopComponents/NavigationComponent/NavigationComponent.tsx";
 import FooterComponent from "@/DesktopComponents/FooterComponent/FooterComponent.tsx";
 
-const CardExtendedPages = () => {
+const PageCardExtended = () => {
   return (
     <>
       <NavigationComponent />
@@ -11,4 +11,4 @@ const CardExtendedPages = () => {
     </>
   );
 };
-export default CardExtendedPages;
+export default PageCardExtended;

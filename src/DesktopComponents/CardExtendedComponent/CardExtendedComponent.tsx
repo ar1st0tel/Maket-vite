@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import ArrowLeft from "@/Pictures/ArrowLeft.png";
 import classes from "./CardExtendedComponent.module.scss";
 import CardsFromCreator from "@/DesktopComponents/CardExtendedComponent/CardsFromCreator/CardsFromCreator.tsx";
+import { useParams } from "react-router-dom";
 
 const connector = connect(
   (state: RootState) => ({
@@ -26,6 +27,7 @@ const CardExtendedComponent = connector(
     isLoaded,
     fetchCardsAsync,
   }: CardExtendedProps) => {
+    const { id } = useParams<{ id: string }>();
     useEffect(() => {
       fetchCardsAsync();
     }, [fetchCardsAsync]);
@@ -39,7 +41,8 @@ const CardExtendedComponent = connector(
       return <div>There are no cards unfortunately</div>;
     }
     if (isLoaded) {
-      const mainCard = CardExposed[0];
+      const mainCard = CardExposed.find((card) => card.id === id);
+      if (!mainCard) return <div>Card does not exist!</div>;
       const restCards = CardExposed.filter(
         (card) => card.author === mainCard.author && card.id !== mainCard.id
       );
