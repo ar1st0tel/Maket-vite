@@ -1,5 +1,5 @@
 import classes from "./SearchArea.module.scss";
-import Search from "../../../Pictures/Search.png";
+import Search from "@/Pictures/Search.png";
 
 const SearchArea = () => {
   return (

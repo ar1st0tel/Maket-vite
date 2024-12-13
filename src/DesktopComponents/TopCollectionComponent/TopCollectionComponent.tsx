@@ -1,5 +1,5 @@
-import TopCollection from "./TopCollectionFolder/TopCollection.tsx";
 import classes from "./TopCollectionComponent.module.scss";
+import TopCollection from "@/DesktopComponents/TopCollectionComponent/TopCollectionFolder/TopCollection.tsx";
 
 const TopCollectionComponent = () => {
   return (

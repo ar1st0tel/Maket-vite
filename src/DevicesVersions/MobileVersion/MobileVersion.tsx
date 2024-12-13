@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import classes from "./MobileVersion.module.scss";
-import MobileMainPage from "../../MobilePages/MobileMainPage.tsx";
-import MobileDiscoverPage from "../../MobilePages/MobileDiscoverPage.tsx";
+import MobileDiscoverPage from "@/MobilePages/MobileDiscoverPage.tsx";
+import MobileMainPage from "@/MobilePages/MobileMainPage.tsx";
 
 const MobileVersion = () => {
   return (

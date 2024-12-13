@@ -1,4 +1,4 @@
-@import "src/variables";
+@use "src/variables" as *;
 
 .boxSearch {
   width: 350px;

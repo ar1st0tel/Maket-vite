@@ -1,5 +1,3 @@
-import NavigationComponent from "../../DesktopComponents/NavigationComponent/NavigationComponent.tsx";
-import FooterComponent from "../../DesktopComponents/FooterComponent/FooterComponent.tsx";
 import ContentAndLoading, {
   LoadingImg,
 } from "./ContentAndLoading/ContentAndLoading.tsx";
@@ -7,6 +5,8 @@ import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import { useEffect } from "react";
+import NavigationComponent from "@/DesktopComponents/NavigationComponent/NavigationComponent.tsx";
+import FooterComponent from "@/DesktopComponents/FooterComponent/FooterComponent.tsx";
 
 const connector = connect(
   (state: RootState) => ({

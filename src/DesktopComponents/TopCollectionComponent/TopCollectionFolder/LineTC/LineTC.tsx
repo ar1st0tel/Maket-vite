@@ -1,5 +1,5 @@
 import classes from "./LineTC.module.scss";
-import Ethereum from "../../../../Pictures/Ethereum.png";
+import Ethereum from "@/Pictures/Ethereum.png";
 import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 
 interface LineTCProps {

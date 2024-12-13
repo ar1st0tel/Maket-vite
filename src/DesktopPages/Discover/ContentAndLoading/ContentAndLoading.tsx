@@ -1,7 +1,6 @@
 import classes from "./ContentAndLoading.module.scss";
-
-import Loading from "../../../Pictures/Loading.png";
-import ExploreMarketplace from "../../../DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
+import Loading from "@/Pictures/Loading.png";
+import ExploreMarketplace from "@/DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
 
 const ContentAndLoading = () => {
   return (

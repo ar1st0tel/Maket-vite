@@ -2,10 +2,11 @@ import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
-import CardExtended from "../CardExtended/CardExtended.tsx";
+import CardExtended from "@/DesktopComponents/CardExtendedComponent/CardExtended/CardExtended.tsx";
 import { useEffect } from "react";
-import ArrowLeft from "../../../../Pictures/ArrowLeft.png";
+import ArrowLeft from "@/Pictures/ArrowLeft.png";
 import classes from "./CardExtendedComponent.module.scss";
+import CardsFromCreator from "@/DesktopComponents/CardExtendedComponent/CardsFromCreator/CardsFromCreator.tsx";
 
 const connector = connect(
   (state: RootState) => ({
@@ -17,7 +18,6 @@ const connector = connect(
   { fetchCardsAsync }
 );
 type CardExtendedProps = ConnectedProps<typeof connector>;
-const CardExtendedOnPage = 1;
 const CardExtendedComponent = connector(
   ({
     CardExposed,
@@ -27,7 +27,7 @@ const CardExtendedComponent = connector(
     fetchCardsAsync,
   }: CardExtendedProps) => {
     useEffect(() => {
-      fetchCardsAsync(CardExtendedOnPage);
+      fetchCardsAsync();
     }, [fetchCardsAsync]);
     if (isPending) {
       return <div>...loading...</div>;
@@ -39,15 +39,23 @@ const CardExtendedComponent = connector(
       return <div>There are no cards unfortunately</div>;
     }
     if (isLoaded) {
+      const mainCard = CardExposed[0];
+      const restCards = CardExposed.filter(
+        (card) => card.author === mainCard.author && card.id !== mainCard.id
+      );
       return (
         <>
           <div className={classes.title}>
             <img src={ArrowLeft} alt="1" />
             Product Detail
           </div>
-          {CardExposed.map((ItemToShow: CardSlice) => (
-            <CardExtended key={ItemToShow.id} cardExtended={ItemToShow} />
-          ))}
+          <CardExtended key={mainCard.id} cardExtended={mainCard} />
+          <div className={classes.fromCreatorTitle}>From Creator</div>
+          <div className={classes.itemsTable}>
+            {restCards.slice(0, 5).map((itemToShow: CardSlice) => (
+              <CardsFromCreator key={itemToShow.id} card={itemToShow} />
+            ))}
+          </div>
         </>
       );
     }

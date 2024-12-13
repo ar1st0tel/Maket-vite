@@ -1,11 +1,11 @@
 import classes from "./MobileTopCollection.module.scss";
-import ExploreAll from "../../HelpersComponents/ExploreAll/ExploreAll.tsx";
-import MobileLineTC from "./MobileLineTC/MobileLineTC.tsx";
 import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchLinesAsync } from "@/Api/AsyncThunk/FetchLinesAsync.ts";
 import { useEffect } from "react";
+import MobileLineTC from "@/MobileComponents/MobileTopCollectionComponent/MobileLineTC/MobileLineTC.tsx";
+import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
 
 const connector = connect(
   (state: RootState) => ({

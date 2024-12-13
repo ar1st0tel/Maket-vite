@@ -1,5 +1,5 @@
-import LogoBlack from "../../Pictures/LogoBlack.png";
-import OptionsMobile from "../../Pictures/OptionsMobile.png";
+import LogoBlack from "@/Pictures/LogoBlack.png";
+import OptionsMobile from "@/Pictures/OptionsMobile.png";
 import classes from "./MobileHeader.module.scss";
 
 const MobileHeader = () => {

@@ -1,7 +1,8 @@
-import NavigationTitles from "./NavigationTitles/NavigationTitles.tsx";
 import classes from "./NavigationComponent.module.scss";
-import SearchArea from "./SearchArea/SearchArea.tsx";
-import LogoBlack from "../../Pictures/LogoBlack.png";
+import LogoBlack from "@/Pictures/LogoBlack.png";
+import NavigationTitles from "@/DesktopComponents/NavigationComponent/NavigationTitles/NavigationTitles.tsx";
+import SearchArea from "@/DesktopComponents/NavigationComponent/SearchArea/SearchArea.tsx";
+
 const NavigationComponent = () => {
   return (
     <div className={classes.headerBack}>

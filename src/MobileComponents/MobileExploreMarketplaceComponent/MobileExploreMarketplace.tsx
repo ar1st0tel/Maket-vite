@@ -1,6 +1,6 @@
-import ExploreMarketplace from "../../DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
-import ExploreAll from "../../HelpersComponents/ExploreAll/ExploreAll.tsx";
 import classes from "./MobileExploreMarketplace.module.scss";
+import ExploreMarketplace from "@/DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
+import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
 
 const MobileExploreMarketplace = () => {
   return (

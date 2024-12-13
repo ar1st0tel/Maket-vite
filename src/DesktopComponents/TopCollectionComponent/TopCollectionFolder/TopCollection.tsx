@@ -1,13 +1,13 @@
 import classes from "./TopCollection.module.scss";
-import ExploreAll from "../../../HelpersComponents/ExploreAll/ExploreAll.tsx";
-import LineTC from "./LineTC/LineTC.tsx";
 import { connect, ConnectedProps } from "react-redux";
 import { fetchLinesAsync } from "@/Api/AsyncThunk/FetchLinesAsync.ts";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
-import TableTitle from "./TableTitle/TableTitle.tsx";
 import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 import { useEffect } from "react";
 import { linesOnPage } from "@/MobileComponents/MobileTopCollectionComponent/MobileTopCollection.tsx";
+import TableTitle from "@/DesktopComponents/TopCollectionComponent/TopCollectionFolder/TableTitle/TableTitle.tsx";
+import LineTC from "@/DesktopComponents/TopCollectionComponent/TopCollectionFolder/LineTC/LineTC.tsx";
+import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
 
 const connector = connect(
   (state: RootState) => ({

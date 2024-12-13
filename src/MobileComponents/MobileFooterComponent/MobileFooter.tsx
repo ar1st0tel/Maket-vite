@@ -1,9 +1,9 @@
 import classes from "./MobileFooter.module.scss";
-import LogoWhite from "../../Pictures/LogoWhite.png";
-import Inst from "../../Pictures/Inst.png";
-import FB from "../../Pictures/FB.png";
-import LinkedIn from "../../Pictures/LinkedIn.png";
-import Twitter from "../../Pictures/Twitter.png";
+import LogoWhite from "@/Pictures/LogoWhite.png";
+import Inst from "@/Pictures/Inst.png";
+import FB from "@/Pictures/FB.png";
+import LinkedIn from "@/Pictures/LinkedIn.png";
+import Twitter from "@/Pictures/Twitter.png";
 
 const MobileFooter = () => {
   return (

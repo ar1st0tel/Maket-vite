@@ -1,8 +1,8 @@
 import classes from "./FooterComponent.module.scss";
-import FootLineTop from "./FootLineTop/FootLineTop.tsx";
-import FootLineBottom from "./FootLineBottom/FootLineBottom.tsx";
-import LogoWhite from "../../Pictures/LogoWhite.png";
+import LogoWhite from "@/Pictures/LogoWhite.png";
 import { NavLink } from "react-router-dom";
+import FootLineTop from "@/DesktopComponents/FooterComponent/FootLineTop/FootLineTop.tsx";
+import FootLineBottom from "@/DesktopComponents/FooterComponent/FootLineBottom/FootLineBottom.tsx";
 
 const FooterComponent = () => {
   return (

@@ -1,14 +1,14 @@
-import MobileHeader from "../MobileComponents/MobileHeaderComponent/MobileHeader.tsx";
-import MobileTopBanner from "../MobileComponents/MobileTopBanner/MobileTopBanner.tsx";
+import { useEffect, useState } from "react";
+import { connect, ConnectedProps } from "react-redux";
+import { RootState } from "@/ReduxFeatures/Store/Store.ts";
+import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import MobileTopCollection, {
   linesOnPage,
-} from "../MobileComponents/MobileTopCollectionComponent/MobileTopCollection.tsx";
-import MobileExploreMarketplace from "../MobileComponents/MobileExploreMarketplaceComponent/MobileExploreMarketplace.tsx";
-import MobileFooter from "../MobileComponents/MobileFooterComponent/MobileFooter.tsx";
-import { connect, ConnectedProps } from "react-redux";
-import { RootState } from "../ReduxFeatures/Store/Store.ts";
-import { fetchCardsAsync } from "../Api/AsyncThunk/FetchCardsAsync.ts";
-import { useEffect, useState } from "react";
+} from "@/MobileComponents/MobileTopCollectionComponent/MobileTopCollection.tsx";
+import MobileHeader from "@/MobileComponents/MobileHeaderComponent/MobileHeader.tsx";
+import MobileTopBanner from "@/MobileComponents/MobileTopBanner/MobileTopBanner.tsx";
+import MobileExploreMarketplace from "@/MobileComponents/MobileExploreMarketplaceComponent/MobileExploreMarketplace.tsx";
+import MobileFooter from "@/MobileComponents/MobileFooterComponent/MobileFooter.tsx";
 
 const connector = connect(
   (state: RootState) => ({

@@ -1,12 +1,12 @@
 import classes from "./DesktopVersion.module.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PageMain from "../../DesktopPages/PageMain.tsx";
-import PageDiscover from "../../DesktopPages/Discover/PageDiscover.tsx";
-import PageCreators from "../../DesktopPages/Creators/PageCreators.tsx";
-import PageSells from "../../DesktopPages/Sells/PageSells.tsx";
-import PageStats from "../../DesktopPages/Stats/PageStats.tsx";
-import PAGE_TEST_ANOTHER_PROJECT from "../../DesktopPages/PAGE_TEST_ANOTHER_PROJECT.tsx";
-import CardExtendedPages from "../../DesktopPages/CardExtendedPage/PageCardExtended.tsx";
+import PageMain from "@/DesktopPages/PageMain.tsx";
+import PageDiscover from "@/DesktopPages/Discover/PageDiscover.tsx";
+import PageCreators from "@/DesktopPages/Creators/PageCreators.tsx";
+import PageSells from "@/DesktopPages/Sells/PageSells.tsx";
+import PageStats from "@/DesktopPages/Stats/PageStats.tsx";
+import PAGE_TEST_ANOTHER_PROJECT from "@/DesktopPages/PAGE_TEST_ANOTHER_PROJECT.tsx";
+import CardExtendedPages from "@/DesktopPages/CardExtendedPage/PageCardExtended.tsx";
 
 const DesktopVersion = () => {
   return (

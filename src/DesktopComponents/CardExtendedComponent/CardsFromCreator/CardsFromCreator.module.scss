@@ -1,3 +1,4 @@
+
 .item {
   display: flex;
   flex-direction: column;
@@ -5,25 +6,25 @@
   background: #fff;
   border-radius: 23px;
   width: fit-content;
+  height: 300px;
   cursor: pointer;
   box-shadow: 19px 12px 15px rgba(0, 0, 0, 0.1);
 }
 
 .item:hover {
   border: 1px solid firebrick;
-  border-radius: 50px;
+  border-radius: 35px;
 }
 
 .cardContainer {
-  padding: 15px;
-  width: 254px;
+  padding: 15px 15px 5px 15px;
+  width: 190px;
 }
 
 .img {
-  grid-area: img;
   justify-self: center;
-  width: 254px;
-  max-height: 254px;
+  width: 190px;
+  height: 168px;
   border-radius: 19px;
 }
 
@@ -35,32 +36,35 @@
 }
 
 .name {
-  grid-area: name;
   color: #141416;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
 }
 
 .lineInfo {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
 }
 
 .info {
-  grid-area: info;
-  color: #94a3b8;
-  font-size: 14px;
+  color: #141416;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: Poppins, "sans-serif";
 }
 
 .priceLine {
   display: flex;
   align-items: center;
+  font-weight: 500;
 }
 
-.bid {
-  grid-area: bid;
+.likes {
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .buttonBid {
