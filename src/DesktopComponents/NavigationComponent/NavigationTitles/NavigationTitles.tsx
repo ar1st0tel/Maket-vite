@@ -13,8 +13,8 @@ const NavigationTitles = () => {
   return (
     <div className={classes.nav}>
       <div className={classes.boxSmall}>
-        <a
-          href="/discover"
+        <NavLink
+          to="/discover"
           className={classes.item}
           onClick={() => changeColor("DISCOVER")}
           style={{
@@ -23,7 +23,7 @@ const NavigationTitles = () => {
           }}
         >
           DISCOVER
-        </a>
+        </NavLink>
         <NavLink
           to="/creators"
           className={classes.item}

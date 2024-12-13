@@ -16,7 +16,9 @@
     display: none;
   }
 }
-
+.item {
+  margin-left: 16px;
+}
 .searchArea {
   border: none;
   font-family: Poppins, sans-serif;
@@ -26,3 +28,4 @@
   align-content: center;
   outline: none;
 }
+
