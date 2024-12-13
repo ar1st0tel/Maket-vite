@@ -6,6 +6,7 @@ import PageCreators from "../../DesktopPages/Creators/PageCreators.tsx";
 import PageSells from "../../DesktopPages/Sells/PageSells.tsx";
 import PageStats from "../../DesktopPages/Stats/PageStats.tsx";
 import PAGE_TEST_ANOTHER_PROJECT from "../../DesktopPages/PAGE_TEST_ANOTHER_PROJECT.tsx";
+import CardExtendedPages from "../../DesktopPages/CardExtendedPage/PageCardExtended.tsx";
 
 const DesktopVersion= () => {
     return(
@@ -18,6 +19,7 @@ const DesktopVersion= () => {
                     <Route path="/sells" element={<PageSells/>}/>
                     <Route path="/stats" element={<PageStats/>}/>
                     <Route path="/test" element={<PAGE_TEST_ANOTHER_PROJECT/>}/>
+                    <Route path="/card" element={<CardExtendedPages/>}/>
                 </Routes>
             </div>
         </BrowserRouter>

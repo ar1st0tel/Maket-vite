@@ -1,7 +1,7 @@
 import classes from "../Footer.module.scss";
 import {NavLink} from "react-router-dom";
 
-const FootLine1 = () => {
+const FootLineTop = () => {
     return (<div>
             <div className={classes.box}>
                 <div>
@@ -20,4 +20,4 @@ const FootLine1 = () => {
         </div>
     )
 }
-export default FootLine1
+export default FootLineTop;

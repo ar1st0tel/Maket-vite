@@ -5,7 +5,7 @@ import LinkedIn from "../../../Pictures/LinkedIn.png";
 import Twitter from "../../../Pictures/Twitter.png";
 import {NavLink} from "react-router-dom";
 
-const FootLine2 = () => {
+const FootLineBottom = () => {
     return (<div className={classes.logos}>
             <div className={classes.box1}>
                 <div>
@@ -24,4 +24,4 @@ const FootLine2 = () => {
         </div>
     )
 }
-export default FootLine2
+export default FootLineBottom;

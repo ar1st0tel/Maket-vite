@@ -81,6 +81,9 @@ $max-width: 375px;
 .img {
   grid-area: img;
   justify-self: center;
+  max-width: 254px;
+  max-height: 254px;
+  border-radius: 19px;
 }
 .description {
   display: flex;
@@ -135,3 +138,4 @@ $max-width: 375px;
   text-decoration: none;
   color: #ACADB9;
 }
+
