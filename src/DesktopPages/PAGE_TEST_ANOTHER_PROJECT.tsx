@@ -1,99 +1,80 @@
+import NavigationComponent from "@/DesktopComponents/NavigationComponent/NavigationComponent.tsx";
 import classes from "./TEST.module.scss";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import LogoBlack from "@/Pictures/LogoBlack.png";
-import Search from "@/Pictures/Search.png";
-import OptionsMobile from "@/Pictures/OptionsMobile.png";
+import Inst from "@/Pictures/Inst.png";
+import LinkedIn from "@/Pictures/LinkedIn.png";
+import FB from "@/Pictures/FB.png";
+import Twitter from "@/Pictures/Twitter.png";
+import LogoWhite from "@/Pictures/LogoWhite.png";
 
 function PAGE_TEST_ANOTHER_PROJECT() {
   return (
     <>
       <NavigationComponent />
+      <FooterComponent />
     </>
   );
 }
 
 export default PAGE_TEST_ANOTHER_PROJECT;
 
-const NavigationTitles = () => {
-  const [selectedItem, setSelectedItem] = useState<string>(() => {
-    return localStorage.getItem("selectedItem") || "";
-  });
-  const changeColor = (item: string) => {
-    setSelectedItem(item);
-    localStorage.setItem("selectedItem", item);
-  };
+const FootLineBottom = () => {
   return (
-    <div className={classes.nav}>
-      <div className={classes.boxSmall}>
-        <NavLink
-          to="/discover"
-          className={
-            selectedItem === "DISCOVER" ? classes.itemBlack : classes.itemGray
-          }
-          onClick={() => changeColor("DISCOVER")}
-        >
-          DISCOVER
+    <>
+      <div className={classes.box1}>
+        <NavLink to="#S">
+          <img src={Inst} alt="1" />
         </NavLink>
-        <NavLink
-          to="/creators"
-          className={
-            selectedItem === "CREATORS" ? classes.itemBlack : classes.itemGray
-          }
-          onClick={() => changeColor("CREATORS")}
-        >
-          CREATORS
+        <NavLink to="#S">
+          <img src={LinkedIn} alt="1" />
         </NavLink>
-        <NavLink
-          to="/sells"
-          className={
-            selectedItem === "SELLS" ? classes.itemBlack : classes.itemGray
-          }
-          onClick={() => changeColor("SELLS")}
-        >
-          SELLS
+        <NavLink to="#S">
+          <img src={FB} alt="1" />
         </NavLink>
-        <NavLink
-          to="/stats"
-          className={
-            selectedItem === "STATS" ? classes.itemBlack : classes.itemGray
-          }
-          onClick={() => changeColor("STATS")}
-        >
-          STATS
+        <NavLink to="#S">
+          <img src={Twitter} alt="1" />
         </NavLink>
       </div>
-    </div>
+    </>
   );
 };
-const NavigationComponent = () => {
+
+const FootLineTop = () => {
   return (
-    <div className={classes.headerBack}>
+    <>
       <div className={classes.box}>
-        <NavLink to="/">
-          <div className={classes.logoMobile}>
-            <img className={classes.imgMobile} src={LogoBlack} alt="1" />
-            <span className={classes.name}>DiveSea</span>
+        <NavLink className={classes.link} to="#S">
+          Privacy Policy
+        </NavLink>
+        <NavLink className={classes.link} to="#S">
+          Team & Conditions
+        </NavLink>
+        <NavLink className={classes.link} to="#S">
+          About Us
+        </NavLink>
+        <NavLink className={classes.link} to="#S">
+          Contact
+        </NavLink>
+      </div>
+    </>
+  );
+};
+
+const FooterComponent = () => {
+  return (
+    <div className={classes.table}>
+      <div className={classes.line1}>
+        <NavLink className={classes.link} to="#S">
+          <div className={classes.whiteLogo}>
+            <img src={LogoWhite} alt="1" /> DiveSea
           </div>
         </NavLink>
-        <NavigationTitles />
-        <SearchArea />
-        <button className={classes.boxWallet}>CONNECT WALLET</button>
-        <img className={classes.optionMobile} src={OptionsMobile} alt="1" />
+        <FootLineTop />
       </div>
-    </div>
-  );
-};
-
-const SearchArea = () => {
-  return (
-    <div className={classes.boxSearch}>
-      <img className={classes.item} src={Search} alt="1" />
-
-      <input
-        className={classes.searchArea}
-        placeholder="Search Art Work / Creator"
-      />
+      <div className={classes.line2}>
+        <div className={classes.rights}>© 2023 EATLY All Rights Reserved.</div>
+        <FootLineBottom />
+      </div>
     </div>
   );
 };
