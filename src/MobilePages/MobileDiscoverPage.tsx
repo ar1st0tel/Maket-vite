@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import MobileHeader from "@/MobileComponents/MobileHeaderComponent/MobileHeader.tsx";
-import MobileExploreMarketplace from "@/MobileComponents/MobileExploreMarketplaceComponent/MobileExploreMarketplace.tsx";
 import MobileFooter from "@/MobileComponents/MobileFooterComponent/MobileFooter.tsx";
+import MobileExploreMarketplace from "@/MobileComponents/MobileExploreMarketplaceComponent/MobileExploreMarketplace.tsx";
 
 const connector = connect(
   (state: RootState) => ({

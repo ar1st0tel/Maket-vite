@@ -42,8 +42,8 @@ const ExploreMarketplace = () => {
             </div>
           </button>
         </div>
-        <CardCase />
       </div>
+      <CardCase />
     </>
   );
 };

@@ -18,10 +18,19 @@
   gap: 0 3vw;
   color: #606060;
 }
-.item:active,
-.item:hover,
-.item {
+.itemBlack:active,
+.itemBlack:hover,
+.itemBlack {
+  text-decoration: none;
+  justify-self: center;
+  color: black;
+  cursor: pointer;
+}
+.itemGray:active,
+.itemGray:hover,
+.itemGray {
   text-decoration: none;
   color: #606060;
   justify-self: center;
+  cursor: pointer;
 }

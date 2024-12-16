@@ -3,15 +3,23 @@ import Ethereum from "@/Pictures/Ethereum.png";
 import Verification from "@/Pictures/Verification.png";
 import Heart from "@/Pictures/Heart.png";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
+import { useNavigate } from "react-router-dom";
 
 interface CardsFromCreatorProps {
   card: CardSlice;
 }
 
 const CardsFromCreator: React.FC<CardsFromCreatorProps> = ({ card }) => {
+  const navigate = useNavigate();
+  const handleCardClick = (id: string) => {
+    navigate(`/card/${id}`);
+  };
   return (
     <div className={classes.item} key={card.id}>
-      <div className={classes.cardContainer}>
+      <div
+        className={classes.cardContainer}
+        onClick={() => handleCardClick(card.id)}
+      >
         <img
           className={classes.img}
           src={card.img}

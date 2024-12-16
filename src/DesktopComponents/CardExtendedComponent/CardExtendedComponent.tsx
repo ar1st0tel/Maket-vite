@@ -8,6 +8,8 @@ import ArrowLeft from "@/Pictures/ArrowLeft.png";
 import classes from "./CardExtendedComponent.module.scss";
 import CardsFromCreator from "@/DesktopComponents/CardExtendedComponent/CardsFromCreator/CardsFromCreator.tsx";
 import { useParams } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import Card from "@/DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceFolder/Card/Card.tsx";
 
 const connector = connect(
   (state: RootState) => ({
@@ -27,6 +29,7 @@ const CardExtendedComponent = connector(
     isLoaded,
     fetchCardsAsync,
   }: CardExtendedProps) => {
+    const isMobile = useMediaQuery({ query: "(max-width: 375px)" });
     const { id } = useParams<{ id: string }>();
     useEffect(() => {
       fetchCardsAsync();
@@ -55,9 +58,17 @@ const CardExtendedComponent = connector(
           <CardExtended key={mainCard.id} cardExtended={mainCard} />
           <div className={classes.fromCreatorTitle}>From Creator</div>
           <div className={classes.itemsTable}>
-            {restCards.slice(0, 5).map((itemToShow: CardSlice) => (
-              <CardsFromCreator key={itemToShow.id} card={itemToShow} />
-            ))}
+            {!isMobile
+              ? restCards
+                  .slice(0, 5)
+                  .map((itemToShow: CardSlice) => (
+                    <CardsFromCreator key={itemToShow.id} card={itemToShow} />
+                  ))
+              : restCards
+                  .slice(0, 3)
+                  .map((itemToShow: CardSlice) => (
+                    <Card key={itemToShow.id} card={itemToShow} />
+                  ))}
           </div>
         </>
       );

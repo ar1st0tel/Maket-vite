@@ -1,6 +1,7 @@
 @use "src/variables" as *;
 .line {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   flex-wrap: wrap;
   justify-content: space-around;
