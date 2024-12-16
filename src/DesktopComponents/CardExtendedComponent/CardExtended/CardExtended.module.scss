@@ -71,14 +71,14 @@
   height: 66px;
 }
 
-.greyText {
+.grayText {
   color: #8d8d8d;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
 }
 
-.greyTextEnd {
+.grayTextEnd {
   display: flex;
   color: #8d8d8d;
   font-weight: 400;
@@ -96,6 +96,7 @@
 
 .blackTextBold {
   display: flex;
+  align-items: center;
   color: #000;
   font-weight: 600;
   font-size: 33px;
@@ -156,7 +157,8 @@
     width: 286px;
   }
 
-  .picContainer, .img {
+  .picContainer,
+  .img {
     width: 284px;
     height: auto;
   }
@@ -167,17 +169,18 @@
   }
   .authorAndOwner {
     width: 100%;
+    height: 65px;
   }
 
   .titleName {
-    margin-top: 22px ;
+    margin-top: 22px;
     font-size: 16px;
     font-weight: 600;
     line-height: 23px;
   }
 
   .cardName {
-    gap: 6px
+    gap: 6px;
   }
 
   .description {
@@ -185,7 +188,7 @@
     font-size: 13px;
     font-weight: 400;
     line-height: 20px;
-    margin-bottom: 58px;
+    margin-bottom: 50px;
   }
   .authorImgContainer {
     width: auto;
@@ -196,7 +199,7 @@
     width: 37px;
     height: 37px;
   }
-  .greyText{
+  .grayText {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
@@ -206,10 +209,27 @@
     font-weight: 500;
     line-height: 20px;
   }
-
+  .grayTextEnd {
+    font-size: 13px;
+  }
   .author {
     flex-direction: row;
     height: auto;
+  }
+
+  .blackTextBold {
+    font-size: 20px;
+    line-height: 29px;
+  }
+  .blackTextLight {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .info {
+    justify-content: center;
+  }
+  .lineInfo {
+    margin-bottom: 30px;
   }
 
   .buttonBid {

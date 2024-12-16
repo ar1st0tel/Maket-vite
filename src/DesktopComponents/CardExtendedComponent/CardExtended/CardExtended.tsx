@@ -29,7 +29,7 @@ const CardExtended: React.FC<CardExtendedProps> = ({ cardExtended }) => {
               <img src={cardExtended.authorPic} alt={cardExtended.author} />
             </div>
             <span>
-              <div className={classes.greyText}>Created by</div>
+              <div className={classes.grayText}>Created by</div>
               <div className={classes.blackText}>{cardExtended.author}</div>
             </span>
           </div>
@@ -38,14 +38,14 @@ const CardExtended: React.FC<CardExtendedProps> = ({ cardExtended }) => {
               <img src={cardExtended.ownerPic} alt={cardExtended.owner} />
             </div>
             <span>
-              <div className={classes.greyText}>Owned by</div>
+              <div className={classes.grayText}>Owned by</div>
               <div className={classes.blackText}>{cardExtended.owner}</div>
             </span>
           </div>
         </div>
         <div className={classes.lineInfo}>
           <div className={classes.info}>
-            <div className={classes.greyText}>Current bid</div>
+            <div className={classes.grayText}>Current bid</div>
             <div>
               <div className={classes.blackTextBold}>
                 <img
@@ -58,7 +58,7 @@ const CardExtended: React.FC<CardExtendedProps> = ({ cardExtended }) => {
             </div>
           </div>
           <div className={classes.info}>
-            <div className={classes.greyTextEnd}>End in</div>
+            <div className={classes.grayTextEnd}>End in</div>
             <div>
               <div className={classes.blackTextLight}>
                 {cardExtended.timeOfEnd}

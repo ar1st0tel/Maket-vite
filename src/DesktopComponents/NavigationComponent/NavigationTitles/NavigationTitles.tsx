@@ -15,45 +15,37 @@ const NavigationTitles = () => {
       <div className={classes.boxSmall}>
         <NavLink
           to="/discover"
-          className={classes.item}
+          className={
+            selectedItem === "DISCOVER" ? classes.itemBlack : classes.itemGray
+          }
           onClick={() => changeColor("DISCOVER")}
-          style={{
-            color: selectedItem === "DISCOVER" ? "black" : "gray",
-            cursor: "pointer",
-          }}
         >
           DISCOVER
         </NavLink>
         <NavLink
           to="/creators"
-          className={classes.item}
+          className={
+            selectedItem === "CREATORS" ? classes.itemBlack : classes.itemGray
+          }
           onClick={() => changeColor("CREATORS")}
-          style={{
-            color: selectedItem === "CREATORS" ? "black" : "gray",
-            cursor: "pointer",
-          }}
         >
           CREATORS
         </NavLink>
         <NavLink
           to="/sells"
-          className={classes.item}
+          className={
+            selectedItem === "SELLS" ? classes.itemBlack : classes.itemGray
+          }
           onClick={() => changeColor("SELLS")}
-          style={{
-            color: selectedItem === "SELLS" ? "black" : "gray",
-            cursor: "pointer",
-          }}
         >
           SELLS
         </NavLink>
         <NavLink
           to="/stats"
-          className={classes.item}
+          className={
+            selectedItem === "STATS" ? classes.itemBlack : classes.itemGray
+          }
           onClick={() => changeColor("STATS")}
-          style={{
-            color: selectedItem === "STATS" ? "black" : "gray",
-            cursor: "pointer",
-          }}
         >
           STATS
         </NavLink>
