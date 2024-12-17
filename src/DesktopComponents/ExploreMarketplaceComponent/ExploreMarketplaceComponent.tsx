@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
-import { cardsOnPage } from "@/MobilePages/MobileDiscoverPage.tsx";
 import { LoadingImg } from "@/DesktopPages/Discover/ContentAndLoading/ContentAndLoading.tsx";
 import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
+import { useMediaQuery } from "react-responsive";
 
 const connector = connect(
   (state: RootState) => ({
@@ -18,11 +18,13 @@ const connector = connect(
   { fetchCardsAsync }
 );
 type Props = ConnectedProps<typeof connector>;
-
+let cardsOnPage = 8;
 const ExploreMarketplaceComponent = connector(
   ({ cards, isLoaded, isError, isPending, fetchCardsAsync }: Props) => {
+    const isMobile = useMediaQuery({ maxWidth: 375 });
     const [message, setMessage] = useState(false);
     useEffect(() => {
+      isMobile ? (cardsOnPage = 4) : cardsOnPage;
       fetchCardsAsync(cardsOnPage);
     }, [fetchCardsAsync]);
 

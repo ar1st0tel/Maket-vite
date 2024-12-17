@@ -6,11 +6,11 @@ const TableTitle = () => {
       <div className={classes.header}>Top Collection</div>
       <div className={classes.title}>
         <div className={classes.collection}>Collection</div>
-        <div>Volume</div>
-        <div>24h %</div>
-        <div>Floor Price</div>
-        <div>Owners</div>
-        <div>Items</div>
+        <div className={classes.volume}>Volume</div>
+        <div className={classes.dayPercent}>24h %</div>
+        <div className={classes.floorPrice}>Floor Price</div>
+        <div className={classes.owners}>Owners</div>
+        <div className={classes.items1}>Items</div>
       </div>
     </>
   );

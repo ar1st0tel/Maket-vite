@@ -45,11 +45,11 @@ const TopCollection = connector(
         <>
           <div className={classes.table}>
             <TableTitle />
-            <div className={classes.line}>
+            <>
               {LineArray.map((lineItem: LineSlice) => (
                 <LineTC key={lineItem.id} line={lineItem} />
               ))}
-            </div>
+            </>
           </div>
           <div className={classes.explore}>
             <ExploreAll />

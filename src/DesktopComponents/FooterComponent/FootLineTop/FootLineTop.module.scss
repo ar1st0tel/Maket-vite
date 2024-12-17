@@ -1,7 +1,8 @@
+@use "src/variables" as *;
+
 .box {
-  display: grid;
-  place-items: center end;
-  grid-template-columns: repeat(4, auto);
+  display: flex;
+  align-items: center;
   gap: 70px;
   color: #606060;
 }
@@ -10,5 +11,17 @@
 .link:hover,
 .link {
   text-decoration: none;
+  font-size: 18px;
   color: #606060;
+}
+
+@media screen and (max-width: $max-width-mobile){
+  .box {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+  .link {
+    font-size: 15px;
+  }
 }

@@ -1,17 +1,24 @@
 @use "src/variables" as *;
 
 .headerBack {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin: 45px 60px;
   display: grid;
 }
 
 .box {
-  display: grid;
-  place-items: center center;
-  margin-bottom: 100px;
-  grid-template-columns: repeat(4, auto);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
   color: #606060;
+}
+@media screen and (max-width: $max-width-mobile) {
+  .box {
+    border-bottom: 1px solid #cbcbcb;
+  }
+  .headerBack{
+    margin: 30px;
+  }
 }
 
 .logoMobile {

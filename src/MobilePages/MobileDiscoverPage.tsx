@@ -16,7 +16,7 @@ const connector = connect(
   { fetchCardsAsync }
 );
 type Props = ConnectedProps<typeof connector>;
-export const cardsOnPage = 8;
+const cardsOnPage = 8;
 const MobileDiscoverPage = connector(
   ({ cards, isLoaded, isError, isPending, fetchCardsAsync }: Props) => {
     const [message, setMessage] = useState(false);

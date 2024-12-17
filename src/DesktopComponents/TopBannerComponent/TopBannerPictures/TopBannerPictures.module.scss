@@ -63,13 +63,18 @@
   width: 40%;
   align-self: center;
 }
+@media screen and (max-width: $max-width-mobile) {
+  .arrow {
+    width: 50%;
+  }
+}
 
 .dots {
 }
 
 @media screen and (max-width: $max-width-mobile) {
   .dots {
-    width: 46px;
+    width: 55px;
   }
 }
 

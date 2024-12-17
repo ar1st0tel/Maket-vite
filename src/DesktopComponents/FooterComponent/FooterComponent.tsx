@@ -6,23 +6,21 @@ import FootLineBottom from "@/DesktopComponents/FooterComponent/FootLineBottom/F
 
 const FooterComponent = () => {
   return (
-    <div className={classes.appWrapper}>
-      <div className={classes.table}>
-        <div className={classes.line1}>
-          <NavLink className={classes.link} to="#S">
-            <div className={classes.whiteLogo}>
-              <img src={LogoWhite} alt="1" /> DiveSea
-            </div>
-          </NavLink>
-          <FootLineTop />
-        </div>
-        <div className={classes.line2}>
-          <div className={classes.rights}>
-            © 2023 EATLY All Rights Reserved.
+    <div className={classes.table}>
+      <div className={classes.line1}>
+        <NavLink className={classes.link} to="#S">
+          <div className={classes.whiteLogo}>
+            <img className={classes.wavesWhite} src={LogoWhite} alt="1" />{" "}
+            DiveSea
           </div>
-          <FootLineBottom />
-        </div>
+        </NavLink>
+        <FootLineTop />
       </div>
+      <div className={classes.line2}>
+        <div className={classes.rights}>© 2023 EATLY All Rights Reserved.</div>
+        <FootLineBottom />
+      </div>
+      <div className={classes.line3}>© 2023 DiveSea All Rights Reserved.</div>
     </div>
   );
 };

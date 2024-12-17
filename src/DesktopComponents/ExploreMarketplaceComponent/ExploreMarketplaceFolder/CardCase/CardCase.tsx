@@ -29,9 +29,9 @@ const CardCase = connector(
     return (
       <div className={classes.line}>
         {CardArray.map((cardItem: CardSlice) => (
-          <div key={cardItem.id}>
+          <span key={cardItem.id} className={classes.cardContainer}>
             <Card card={cardItem} />
-          </div>
+          </span>
         ))}
       </div>
     );
