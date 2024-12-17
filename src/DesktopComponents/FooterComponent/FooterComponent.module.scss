@@ -1,33 +1,26 @@
+@use "src/variables" as *;
+
 .table {
   background: #141416;
-  width: 1440px;
   color: #b9b9b9;
-  display: grid;
-  grid-template: "line1 line1" 1fr "line2 line2" 1fr / 1fr 1fr;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 60px;
 }
 
 .line1 {
-  grid-area: line1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-content: center;
-  align-items: center;
-  width: 1340px;
-  margin: 0 auto;
-  border-bottom: 1px solid #818181;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1.5px solid #818181;
 }
 
 .line2 {
-  grid-area: line2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-content: center;
-  align-items: center;
-  width: 1340px;
-  padding: 57px 0;
-  border-top: 1px solid #818181;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin: 60px 10px 0 10px;
+  justify-content: space-between;
 }
 
 .rights {
@@ -39,17 +32,58 @@
   color: white;
   display: flex;
   align-items: center;
-  gap: 1vw;
+  gap: 10px;
   font-size: 30px;
 }
 
-.appWrapper {
-  width: 1440px;
-  display: grid;
-  justify-items: center;
-  grid-auto-columns: 1fr;
+.link,
+.link:active {
+  color: #818181;
 }
 
-.link:active {
-  color: black;
+.line3 {
+  display: none;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .table {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 33px;
+    padding: 0;
+  }
+  .line1 {
+    flex-direction: column;
+    padding: 0;
+    margin: 30px 0 30px 30px;
+    border-bottom: 0;
+  }
+  .line2 {
+    margin: 30px 30px 30px 0;
+  }
+  .rights {
+    display: none;
+  }
+  .whiteLogo {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .wavesWhite {
+    width: 44px;
+    height: 44px;
+  }
+  .line3 {
+    width: 100%;
+    margin: 0 30px 30px 30px;
+    justify-content: center;
+    border-top: 1.5px solid #818181;
+    padding-top: 30px;
+    color: #999999;
+    display: flex;
+    font-size: 14px;
+  }
+  .link {
+    font-size: 15px;
+  }
 }

@@ -1,13 +1,11 @@
+@use "src/variables" as *;
+
 .table {
   font-family: Poppins, sans-serif;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   text-align: end;
   row-gap: 2vh;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas:
-    "header"
-    "title"
-    "line";
 }
 .items {
   display: grid;
@@ -15,12 +13,13 @@
 }
 
 .explore {
-  display: grid;
-  justify-content: end;
+  display: flex;
+  justify-content: flex-end;
   color: #acadb9;
 }
 
-.line {
-  display: grid;
-  grid-area: line;
+@media screen and (max-width: $max-width-mobile) {
+  .explore {
+    justify-content: center;
+  }
 }

@@ -5,6 +5,11 @@ import TopBannerText from "@/DesktopComponents/TopBannerComponent/TopBannerText/
 const TopBannerComponent = () => {
   return (
     <div className={classes.content1Back}>
+      <div className={classes.bord}></div>
+      <div className={classes.creators}>
+        <span>&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;</span>
+        <span className={classes.letterSapce}>OVER 1M CREATORS</span>
+      </div>
       <div className={classes.table}>
         <TopBannerText />
         <TopBannerPictures />

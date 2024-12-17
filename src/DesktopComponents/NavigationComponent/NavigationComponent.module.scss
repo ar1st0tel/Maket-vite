@@ -1,8 +1,7 @@
 @use "src/variables" as *;
 
 .headerBack {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin: 45px 60px;
   display: grid;
 }
 
@@ -10,13 +9,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 30px;
   padding-bottom: 30px;
   color: #606060;
 }
 @media screen and (max-width: $max-width-mobile) {
   .box {
     border-bottom: 1px solid #cbcbcb;
+  }
+  .headerBack{
+    margin: 30px;
   }
 }
 

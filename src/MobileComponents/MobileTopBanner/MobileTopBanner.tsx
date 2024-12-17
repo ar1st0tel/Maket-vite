@@ -5,6 +5,7 @@ import TrustPilotName from "@/Pictures/TrustPilotName.png";
 import Stars from "@/Pictures/Stars.png";
 import ButtonExplore from "@/HelpersComponents/ExploreAndCreateButtonsTopBanner/ButtonExplore.tsx";
 import ButtonCreate from "@/HelpersComponents/ExploreAndCreateButtonsTopBanner/ButtonCreate.tsx";
+import TopBannerPictures from "@/DesktopComponents/TopBannerComponent/TopBannerPictures/TopBannerPictures.tsx";
 
 const MobileTopBanner = () => {
   return (
@@ -42,6 +43,7 @@ const MobileTopBanner = () => {
           <span>4900+</span>
         </div>
       </div>
+      <TopBannerPictures />
     </div>
   );
 };
