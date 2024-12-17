@@ -2,6 +2,7 @@ import NavigationComponent from "@/DesktopComponents/NavigationComponent/Navigat
 import FooterComponent from "@/DesktopComponents/FooterComponent/FooterComponent.tsx";
 import TopBannerComponent from "@/DesktopComponents/TopBannerComponent/TopBannerComponent.tsx";
 import TopCollectionComponent from "@/DesktopComponents/TopCollectionComponent/TopCollectionComponent.tsx";
+import ExploreMarketplaceComponent from "@/DesktopComponents/ExploreMarketplaceComponent/ExploreMarketplaceComponent.tsx";
 
 function PAGE_TEST_ANOTHER_PROJECT() {
   return (
@@ -9,6 +10,7 @@ function PAGE_TEST_ANOTHER_PROJECT() {
       <NavigationComponent />
       <TopBannerComponent />
       <TopCollectionComponent />
+      <ExploreMarketplaceComponent />
       <FooterComponent />
     </>
   );
