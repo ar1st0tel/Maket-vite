@@ -24,7 +24,9 @@ const ExploreMarketplaceComponent = connector(
     const isMobile = useMediaQuery({ maxWidth: 375 });
     const [message, setMessage] = useState(false);
     useEffect(() => {
-      isMobile ? (cardsOnPage = 4) : cardsOnPage;
+      if (isMobile) {
+        cardsOnPage = 4;
+      }
       fetchCardsAsync(cardsOnPage);
     }, [fetchCardsAsync]);
 
