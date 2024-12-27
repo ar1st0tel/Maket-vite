@@ -31,7 +31,7 @@ const RenderBidList = ({
     itemCount={bidList.length}
     itemSize={isMobile ? 90 : 110}
     width="100%"
-    height={isMobile ? 255 : 330}
+    height={isMobile ? 265 : 330}
   >
     {({ index, style }: ListChildComponentProps) => (
       <div key={bidList[index].id} style={style}>

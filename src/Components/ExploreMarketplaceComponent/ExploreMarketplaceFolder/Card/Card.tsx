@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ card }) => {
         <div className={classes.name}>{card.name}</div>
         <div className={classes.lineInfo}>
           <div className={classes.info}>
-            <div>Current bid</div>
+            <span>Current bid</span>
             <div className={classes.priceLine}>
               <img src={Ethereum} alt="1" /> {card.price}
             </div>

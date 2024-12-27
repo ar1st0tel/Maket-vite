@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
-import classes from "@/Components/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.module.scss";
+import classes from "./ExploreMarketplaceHeader.module.scss";
 import Category from "@/Pictures/Category.png";
 import Collection from "@/Pictures/Collection.png";
 import Price from "@/Pictures/Price.png";
