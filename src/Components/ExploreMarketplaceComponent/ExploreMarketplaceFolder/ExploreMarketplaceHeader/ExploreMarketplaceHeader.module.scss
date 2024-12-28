@@ -34,6 +34,9 @@
   .buttonBorder {
     border: 2px solid $color-custom-black;
     border-radius: 14px;
+    &:hover{
+      border-radius: 17px;
+    }
   }
 }
 

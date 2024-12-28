@@ -1,9 +1,9 @@
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
 import classes from "./ExploreMarketplaceHeader.module.scss";
-import Category from "@/Pictures/Category.png";
-import Collection from "@/Pictures/Collection.png";
-import Price from "@/Pictures/Price.png";
+import Category from "@/pictures/Category.png";
+import Collection from "@/pictures/Collection.png";
+import Price from "@/pictures/Price.png";
 
 const ExploreMarketplaceHeader = () => {
   const isMobile = useMediaQuery({ maxWidth: 425 });

@@ -4,16 +4,15 @@
   display: flex;
   flex-direction: column;
   border: 1px solid $color-custom-black;
-  background: $color-custom-white;
+  background: $color-white;
   border-radius: 23px;
   width: fit-content;
   cursor: pointer;
   box-shadow: 19px 12px 15px rgba(0, 0, 0, 0.1);
-}
-
-.item:hover {
-  border: 1px solid $color-custom-black;
-  border-radius: 30px;
+  &:hover{
+    border: 1px solid $color-custom-black;
+    border-radius: 30px;
+  }
 }
 
 .cardContainer {

@@ -13,10 +13,10 @@
   justify-self: center;
   padding: 18px 50px 18px 18px;
   width: 97%;
-}
 
-.line:hover {
-  box-shadow: -2px 5px 5px 0px $color-custom-light-grey;
+  &:hover {
+    box-shadow: -2px 5px 5px 0px $color-custom-light-grey;
+  }
 }
 
 .left {
@@ -36,26 +36,26 @@
   border-radius: 50%;
   background: $color-custom-black;
   overflow: hidden;
-}
 
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .logoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .verification {
   position: absolute;
   top: 0;
   right: 0;
-}
 
-.verification img {
-  width: 17px;
-  height: 17px;
-  background: $color-custom-white;
-  border-radius: 50%;
-  padding: 1px;
+  .verificationImg {
+    width: 17px;
+    height: 17px;
+    background: $color-custom-white;
+    border-radius: 50%;
+    padding: 1px;
+  }
 }
 
 .name {
@@ -79,10 +79,10 @@
   flex-direction: row;
   align-items: center;
   gap: 5px;
-}
 
-.priceLine img {
-  height: 22px;
+  .priceLineImg {
+    height: 22px;
+  }
 }
 
 .price {
@@ -112,15 +112,19 @@
     font-size: 11px;
     line-height: 13px;
   }
-  .verification img {
-    width: 13px;
-    height: 13px;
+  .verification {
+    .verificationImg {
+      width: 13px;
+      height: 13px;
+    }
   }
+
   .price {
     font-size: 15px;
     line-height: 21px;
-  }
-  .priceLine img {
-    height: 15px;
+
+    .priceLineImg {
+      height: 15px;
+    }
   }
 }

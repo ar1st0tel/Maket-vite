@@ -62,11 +62,11 @@
   color: $color-custom-black;
   font-size: 24px;
   gap: 5px;
-}
 
-.value img {
-  height: 25px;
-  width: auto;
+  .valueImg {
+    height: 25px;
+    width: auto;
+  }
 }
 
 .mobileValue {
@@ -133,10 +133,11 @@
     font-weight: 500;
     gap: 4px;
     color: $color-custom-black;
-  }
-  .mobileVolume img {
-    height: 15px;
-    width: auto;
+
+    .mobileVolumeImg {
+      height: 15px;
+      width: auto;
+    }
   }
   .mobileDayPercent {
     display: flex;

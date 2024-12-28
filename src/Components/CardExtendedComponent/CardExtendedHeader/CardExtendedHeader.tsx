@@ -1,5 +1,5 @@
 import classes from "./CardExtendedHeader.module.scss";
-import ArrowLeft from "@/Pictures/ArrowLeft.png";
+import ArrowLeft from "@/pictures/ArrowLeft.png";
 import React from "react";
 
 interface CardExtendedHeaderProps {
@@ -11,7 +11,12 @@ const CardExtendedHeader: React.FC<CardExtendedHeaderProps> = ({
 }: CardExtendedHeaderProps) => {
   return (
     <div className={classes.title}>
-      <img src={ArrowLeft} alt="1" onClick={goBack} />
+      <img
+        className={classes.titleImg}
+        src={ArrowLeft}
+        alt="1"
+        onClick={goBack}
+      />
       Product Detail
     </div>
   );
