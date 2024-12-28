@@ -1,9 +1,9 @@
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchBidListAsync } from "@/Api/AsyncThunk/FetchBidListAsync/FetchBidListAsync.ts";
-import { useMediaQuery } from "react-responsive";
 import { useEffect } from "react";
 import { RenderBidList } from "@/Components/BidCardComponent/RenderBidList/RenderBidList.tsx";
+import { useIsMobile } from "@/HelpersComponents/helpers/Hooks/useIsMobile.ts";
 
 const mapStateToProps = (state: RootState) => ({
   isLoaded: state.BidListSlice.isLoaded,
@@ -25,7 +25,7 @@ const BidListCase = connector(
     bidList,
     fetchBidListAsync,
   }: BidListComponentProps) => {
-    const isMobile = useMediaQuery({ maxWidth: 425 });
+    const isMobile = useIsMobile();
     useEffect(() => {
       fetchBidListAsync();
     }, []);

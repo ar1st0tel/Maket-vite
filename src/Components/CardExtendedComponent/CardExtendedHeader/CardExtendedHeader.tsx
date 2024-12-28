@@ -6,9 +6,7 @@ interface CardExtendedHeaderProps {
   goBack: () => void;
 }
 
-const CardExtendedHeader: React.FC<CardExtendedHeaderProps> = ({
-  goBack,
-}: CardExtendedHeaderProps) => {
+const CardExtendedHeader: React.FC<CardExtendedHeaderProps> = ({ goBack }) => {
   return (
     <div className={classes.title}>
       <img

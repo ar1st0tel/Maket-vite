@@ -2,7 +2,7 @@ import classes from "./BidCardComponent.module.scss";
 import BidListCase from "@/Components/BidCardComponent/BidListCase/BidListCase.tsx";
 import BidHistoryHeader from "@/Components/BidCardComponent/BidHistoryHeader/BidHistoryHeader.tsx";
 import BidInputSection from "@/Components/BidCardComponent/BidInputSection/BidInputSection.tsx";
-import useBidInput from "@/HelpersComponents/Hooks/useBidInput.ts";
+import useBidInput from "@/HelpersComponents/helpers/Hooks/useBidInput.ts";
 
 const BidCardComponent = () => {
   const bidInput = useBidInput("");
